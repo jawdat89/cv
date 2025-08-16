@@ -1,9 +1,10 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { setTheme } from '../store/cvSlice';
-import LanguageSelector from './LanguageSelector';
-import { FaSun, FaMoon, FaPrint, FaDownload } from 'react-icons/fa';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/store";
+import { setTheme } from "@/store/cvSlice";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useI18n } from "@/hooks";
+import { FaSun, FaMoon, FaPrint, FaDownload } from "react-icons/fa";
 
 interface HeaderProps {
   title?: string;
@@ -20,15 +21,16 @@ const Header: React.FC<HeaderProps> = ({
   showDownload = false,
   onPrint,
   onDownload,
-  children
+  children,
 }) => {
+  const { t } = useI18n();
   const dispatch = useDispatch();
   const theme = useSelector((state: RootState) => state.cv.theme);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     dispatch(setTheme(newTheme));
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
   const handlePrint = () => {
@@ -43,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({
     if (onDownload) {
       onDownload();
     } else {
-      console.log('Download functionality not implemented');
+      console.log("Download functionality not implemented");
     }
   };
 
@@ -59,39 +61,45 @@ const Header: React.FC<HeaderProps> = ({
             )}
             {children}
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <LanguageSelector />
-            
+
             <button
               onClick={toggleTheme}
               className="flex items-center justify-center w-10 h-10 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-              title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+              title={
+                theme === "light"
+                  ? t("actions.switchToDark")
+                  : t("actions.switchToLight")
+              }
             >
-              {theme === 'light' ? (
+              {theme === "light" ? (
                 <FaMoon className="w-4 h-4" />
               ) : (
                 <FaSun className="w-4 h-4" />
               )}
             </button>
-            
+
             {showPrint && (
               <button
                 onClick={handlePrint}
                 className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
               >
                 <FaPrint className="w-4 h-4" />
-                <span className="hidden sm:inline">Print</span>
+                <span className="hidden sm:inline">{t("actions.print")}</span>
               </button>
             )}
-            
+
             {showDownload && (
               <button
                 onClick={handleDownload}
                 className="flex items-center space-x-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
               >
                 <FaDownload className="w-4 h-4" />
-                <span className="hidden sm:inline">Download PDF</span>
+                <span className="hidden sm:inline">
+                  {t("actions.downloadPDF")}
+                </span>
               </button>
             )}
           </div>

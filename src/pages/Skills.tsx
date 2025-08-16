@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { addSkill, updateSkill, removeSkill } from '../store/cvSlice';
-import { toast } from 'react-toastify';
-import { FaPlus, FaEdit, FaTrash, FaCode } from 'react-icons/fa';
-import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/store";
+import { addSkill, updateSkill, removeSkill } from "@/store/cvSlice";
+import { toast } from "react-toastify";
+import { FaPlus, FaEdit, FaTrash, FaCode } from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
 
 interface SkillForm {
   name: string;
-  level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  level: "beginner" | "intermediate" | "advanced" | "expert";
   category: string;
 }
 
@@ -18,57 +18,91 @@ const Skills = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formData, setFormData] = useState<SkillForm>({
-    name: '',
-    level: 'intermediate',
-    category: ''
+    name: "",
+    level: "intermediate",
+    category: "",
   });
 
-  const handleInputChange = (field: keyof SkillForm, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = (
+    field: keyof SkillForm,
+    value: string | boolean
+  ) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = () => {
     if (!formData.name) {
-      toast.error('Please enter a skill name');
+      toast.error("Please enter a skill name");
       return;
     }
 
     const skillData = {
-      ...formData,
-      id: editingId || uuidv4()
+      id: editingId || uuidv4(),
+      name: formData.name,
+      proficiency: getProficiencyFromLevel(formData.level),
+      category: formData.category,
     };
 
     if (editingId) {
       dispatch(updateSkill({ id: editingId, data: skillData }));
-      toast.success('Skill updated successfully!');
+      toast.success("Skill updated successfully!");
     } else {
       dispatch(addSkill(skillData));
-      toast.success('Skill added successfully!');
+      toast.success("Skill added successfully!");
     }
 
     resetForm();
   };
 
-  const handleEdit = (skill: any) => {
+  const getProficiencyFromLevel = (level: string): number => {
+    switch (level) {
+      case "beginner":
+        return 25;
+      case "intermediate":
+        return 50;
+      case "advanced":
+        return 75;
+      case "expert":
+        return 100;
+      default:
+        return 50;
+    }
+  };
+
+  const getLevelFromProficiency = (
+    proficiency: number
+  ): "beginner" | "intermediate" | "advanced" | "expert" => {
+    if (proficiency <= 25) return "beginner";
+    if (proficiency <= 50) return "intermediate";
+    if (proficiency <= 75) return "advanced";
+    return "expert";
+  };
+
+  const handleEdit = (skill: {
+    id: string;
+    name: string;
+    proficiency: number;
+    category: string;
+  }) => {
     setEditingId(skill.id);
     setFormData({
       name: skill.name,
-      level: skill.level,
-      category: skill.category
+      level: getLevelFromProficiency(skill.proficiency),
+      category: skill.category,
     });
     setIsAdding(true);
   };
 
   const handleDelete = (id: string) => {
     dispatch(removeSkill(id));
-    toast.success('Skill removed successfully!');
+    toast.success("Skill removed successfully!");
   };
 
   const resetForm = () => {
     setFormData({
-      name: '',
-      level: 'intermediate',
-      category: ''
+      name: "",
+      level: "intermediate",
+      category: "",
     });
     setIsAdding(false);
     setEditingId(null);
@@ -76,16 +110,21 @@ const Skills = () => {
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'beginner': return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
-      case 'intermediate': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
-      case 'advanced': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-      case 'expert': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
-      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
+      case "beginner":
+        return "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
+      case "intermediate":
+        return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
+      case "advanced":
+        return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
+      case "expert":
+        return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200";
+      default:
+        return "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
     }
   };
 
   const groupedSkills = skills.reduce((acc, skill) => {
-    const category = skill.category || 'Other';
+    const category = skill.category || "Other";
     if (!acc[category]) {
       acc[category] = [];
     }
@@ -122,12 +161,9 @@ const Skills = () => {
         <div className="cv-section mb-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-              {editingId ? 'Edit Skill' : 'Add New Skill'}
+              {editingId ? "Edit Skill" : "Add New Skill"}
             </h2>
-            <button
-              onClick={resetForm}
-              className="cv-button-secondary"
-            >
+            <button onClick={resetForm} className="cv-button-secondary">
               Cancel
             </button>
           </div>
@@ -142,7 +178,7 @@ const Skills = () => {
               <input
                 type="text"
                 value={formData.name}
-                onChange={(e) => handleInputChange('name', e.target.value)}
+                onChange={(e) => handleInputChange("name", e.target.value)}
                 className="cv-input"
                 placeholder="e.g., JavaScript, Project Management"
               />
@@ -155,7 +191,7 @@ const Skills = () => {
               </label>
               <select
                 value={formData.level}
-                onChange={(e) => handleInputChange('level', e.target.value)}
+                onChange={(e) => handleInputChange("level", e.target.value)}
                 className="cv-input"
               >
                 <option value="beginner">Beginner</option>
@@ -173,7 +209,7 @@ const Skills = () => {
               <input
                 type="text"
                 value={formData.category}
-                onChange={(e) => handleInputChange('category', e.target.value)}
+                onChange={(e) => handleInputChange("category", e.target.value)}
                 className="cv-input"
                 placeholder="e.g., Programming, Soft Skills"
               />
@@ -182,11 +218,8 @@ const Skills = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end">
-            <button
-              onClick={handleSubmit}
-              className="cv-button"
-            >
-              {editingId ? 'Update Skill' : 'Add Skill'}
+            <button onClick={handleSubmit} className="cv-button">
+              {editingId ? "Update Skill" : "Add Skill"}
             </button>
           </div>
         </div>
@@ -202,13 +235,20 @@ const Skills = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {categorySkills.map((skill) => (
-                  <div key={skill.id} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                  <div
+                    key={skill.id}
+                    className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg"
+                  >
                     <div className="flex-1">
                       <h4 className="font-medium text-gray-900 dark:text-white">
                         {skill.name}
                       </h4>
-                      <span className={`inline-block px-2 py-1 text-xs rounded-full ${getLevelColor(skill.level)}`}>
-                        {skill.level}
+                      <span
+                        className={`inline-block px-2 py-1 text-xs rounded-full ${getLevelColor(
+                          getLevelFromProficiency(skill.proficiency)
+                        )}`}
+                      >
+                        {getLevelFromProficiency(skill.proficiency)}
                       </span>
                     </div>
                     <div className="flex gap-2 ml-3">
@@ -240,12 +280,10 @@ const Skills = () => {
             No skills added yet
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Start by adding your technical and soft skills to showcase your competencies.
+            Start by adding your technical and soft skills to showcase your
+            competencies.
           </p>
-          <button
-            onClick={() => setIsAdding(true)}
-            className="cv-button"
-          >
+          <button onClick={() => setIsAdding(true)} className="cv-button">
             Add Your First Skill
           </button>
         </div>

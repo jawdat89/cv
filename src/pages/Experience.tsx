@@ -1,10 +1,21 @@
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { addExperience, updateExperience, removeExperience } from '../store/cvSlice';
-import { toast } from 'react-toastify';
-import { FaPlus, FaEdit, FaTrash, FaBriefcase, FaMapMarkerAlt, FaCalendar } from 'react-icons/fa';
-import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/store";
+import {
+  addExperience,
+  updateExperience,
+  removeExperience,
+} from "@/store/cvSlice";
+import { toast } from "react-toastify";
+import {
+  FaPlus,
+  FaEdit,
+  FaTrash,
+  FaBriefcase,
+  FaMapMarkerAlt,
+  FaCalendar,
+} from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
 
 interface ExperienceForm {
   company: string;
@@ -23,55 +34,61 @@ const Experience = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formData, setFormData] = useState<ExperienceForm>({
-    company: '',
-    position: '',
-    location: '',
-    startDate: '',
-    endDate: '',
+    company: "",
+    position: "",
+    location: "",
+    startDate: "",
+    endDate: "",
     current: false,
-    description: '',
-    achievements: ['']
+    description: "",
+    achievements: [""],
   });
 
   const handleInputChange = (field: keyof ExperienceForm, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleAchievementChange = (index: number, value: string) => {
     const newAchievements = [...formData.achievements];
     newAchievements[index] = value;
-    setFormData(prev => ({ ...prev, achievements: newAchievements }));
+    setFormData((prev) => ({ ...prev, achievements: newAchievements }));
   };
 
   const addAchievement = () => {
-    setFormData(prev => ({ ...prev, achievements: [...prev.achievements, ''] }));
+    setFormData((prev) => ({
+      ...prev,
+      achievements: [...prev.achievements, ""],
+    }));
   };
 
   const removeAchievement = (index: number) => {
-    setFormData(prev => ({ 
-      ...prev, 
-      achievements: prev.achievements.filter((_, i) => i !== index) 
+    setFormData((prev) => ({
+      ...prev,
+      achievements: prev.achievements.filter((_, i) => i !== index),
     }));
   };
 
   const handleSubmit = () => {
     if (!formData.company || !formData.position || !formData.startDate) {
-      toast.error('Please fill in all required fields');
+      toast.error("Please fill in all required fields");
       return;
     }
 
     const experienceData = {
       ...formData,
+      title: formData.position, // Use position as title
       id: editingId || uuidv4(),
-      achievements: formData.achievements.filter(achievement => achievement.trim() !== '')
+      achievements: formData.achievements.filter(
+        (achievement) => achievement.trim() !== ""
+      ),
     };
 
     if (editingId) {
       dispatch(updateExperience({ id: editingId, data: experienceData }));
-      toast.success('Experience updated successfully!');
+      toast.success("Experience updated successfully!");
     } else {
       dispatch(addExperience(experienceData));
-      toast.success('Experience added successfully!');
+      toast.success("Experience added successfully!");
     }
 
     resetForm();
@@ -87,26 +104,27 @@ const Experience = () => {
       endDate: experience.endDate,
       current: experience.current,
       description: experience.description,
-      achievements: experience.achievements.length > 0 ? experience.achievements : ['']
+      achievements:
+        experience.achievements.length > 0 ? experience.achievements : [""],
     });
     setIsAdding(true);
   };
 
   const handleDelete = (id: string) => {
     dispatch(removeExperience(id));
-    toast.success('Experience removed successfully!');
+    toast.success("Experience removed successfully!");
   };
 
   const resetForm = () => {
     setFormData({
-      company: '',
-      position: '',
-      location: '',
-      startDate: '',
-      endDate: '',
+      company: "",
+      position: "",
+      location: "",
+      startDate: "",
+      endDate: "",
       current: false,
-      description: '',
-      achievements: ['']
+      description: "",
+      achievements: [""],
     });
     setIsAdding(false);
     setEditingId(null);
@@ -141,12 +159,9 @@ const Experience = () => {
         <div className="cv-section mb-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-              {editingId ? 'Edit Experience' : 'Add New Experience'}
+              {editingId ? "Edit Experience" : "Add New Experience"}
             </h2>
-            <button
-              onClick={resetForm}
-              className="cv-button-secondary"
-            >
+            <button onClick={resetForm} className="cv-button-secondary">
               Cancel
             </button>
           </div>
@@ -161,7 +176,7 @@ const Experience = () => {
               <input
                 type="text"
                 value={formData.company}
-                onChange={(e) => handleInputChange('company', e.target.value)}
+                onChange={(e) => handleInputChange("company", e.target.value)}
                 className="cv-input"
                 placeholder="Enter company name"
               />
@@ -175,7 +190,7 @@ const Experience = () => {
               <input
                 type="text"
                 value={formData.position}
-                onChange={(e) => handleInputChange('position', e.target.value)}
+                onChange={(e) => handleInputChange("position", e.target.value)}
                 className="cv-input"
                 placeholder="Enter job title"
               />
@@ -190,7 +205,7 @@ const Experience = () => {
               <input
                 type="text"
                 value={formData.location}
-                onChange={(e) => handleInputChange('location', e.target.value)}
+                onChange={(e) => handleInputChange("location", e.target.value)}
                 className="cv-input"
                 placeholder="Enter location"
               />
@@ -205,7 +220,7 @@ const Experience = () => {
               <input
                 type="month"
                 value={formData.startDate}
-                onChange={(e) => handleInputChange('startDate', e.target.value)}
+                onChange={(e) => handleInputChange("startDate", e.target.value)}
                 className="cv-input"
               />
             </div>
@@ -218,7 +233,7 @@ const Experience = () => {
               <input
                 type="month"
                 value={formData.endDate}
-                onChange={(e) => handleInputChange('endDate', e.target.value)}
+                onChange={(e) => handleInputChange("endDate", e.target.value)}
                 className="cv-input"
                 disabled={formData.current}
               />
@@ -230,10 +245,13 @@ const Experience = () => {
                 type="checkbox"
                 id="current"
                 checked={formData.current}
-                onChange={(e) => handleInputChange('current', e.target.checked)}
+                onChange={(e) => handleInputChange("current", e.target.checked)}
                 className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
               />
-              <label htmlFor="current" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+              <label
+                htmlFor="current"
+                className="ml-2 text-sm text-gray-700 dark:text-gray-300"
+              >
                 I currently work here
               </label>
             </div>
@@ -246,7 +264,7 @@ const Experience = () => {
             </label>
             <textarea
               value={formData.description}
-              onChange={(e) => handleInputChange('description', e.target.value)}
+              onChange={(e) => handleInputChange("description", e.target.value)}
               rows={4}
               className="cv-input resize-none"
               placeholder="Describe your role and responsibilities..."
@@ -263,7 +281,9 @@ const Experience = () => {
                 <input
                   type="text"
                   value={achievement}
-                  onChange={(e) => handleAchievementChange(index, e.target.value)}
+                  onChange={(e) =>
+                    handleAchievementChange(index, e.target.value)
+                  }
                   className="cv-input flex-1"
                   placeholder={`Achievement ${index + 1}`}
                 />
@@ -288,11 +308,8 @@ const Experience = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end">
-            <button
-              onClick={handleSubmit}
-              className="cv-button"
-            >
-              {editingId ? 'Update Experience' : 'Add Experience'}
+            <button onClick={handleSubmit} className="cv-button">
+              {editingId ? "Update Experience" : "Add Experience"}
             </button>
           </div>
         </div>
@@ -309,7 +326,8 @@ const Experience = () => {
                 </h3>
                 <p className="text-primary font-medium">{experience.company}</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  {experience.location} • {experience.startDate} - {experience.current ? 'Present' : experience.endDate}
+                  {experience.location} • {experience.startDate} -{" "}
+                  {experience.current ? "Present" : experience.endDate}
                 </p>
               </div>
               <div className="flex gap-2">
@@ -327,16 +345,18 @@ const Experience = () => {
                 </button>
               </div>
             </div>
-            
+
             {experience.description && (
               <p className="text-gray-700 dark:text-gray-300 mb-3">
                 {experience.description}
               </p>
             )}
-            
+
             {experience.achievements.length > 0 && (
               <div>
-                <h4 className="font-medium text-gray-900 dark:text-white mb-2">Key Achievements:</h4>
+                <h4 className="font-medium text-gray-900 dark:text-white mb-2">
+                  Key Achievements:
+                </h4>
                 <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
                   {experience.achievements.map((achievement, index) => (
                     <li key={index}>{achievement}</li>
@@ -355,12 +375,10 @@ const Experience = () => {
             No experience added yet
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Start by adding your work experience to showcase your professional background.
+            Start by adding your work experience to showcase your professional
+            background.
           </p>
-          <button
-            onClick={() => setIsAdding(true)}
-            className="cv-button"
-          >
+          <button onClick={() => setIsAdding(true)} className="cv-button">
             Add Your First Experience
           </button>
         </div>

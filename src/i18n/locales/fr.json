@@ -1,22 +1,53 @@
 {
   "navigation": {
+    "dashboard": "Tableau de bord",
     "personalInfo": "Informations Personnelles",
     "experience": "Expérience",
     "education": "Formation",
-    "skills": "Compétences",
+    "expertise": "Expertise",
     "projects": "Projets",
-    "certifications": "Certifications",
-    "languages": "Langues"
+    "languages": "Langues",
+    "preview": "Aperçu",
+    "templates": "Modèles"
+  },
+  "personalInfo": {
+    "title": "Informations Personnelles",
+    "description": "Remplissez vos informations personnelles de base. Elles apparaîtront en haut de votre CV.",
+    "firstName": "Prénom",
+    "firstNameRequired": "Le prénom est requis",
+    "firstNamePlaceholder": "Entrez votre prénom",
+    "lastName": "Nom de Famille",
+    "lastNameRequired": "Le nom de famille est requis",
+    "lastNamePlaceholder": "Entrez votre nom de famille",
+    "email": "Adresse E-mail",
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Adresse e-mail invalide",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "phone": "Numéro de Téléphone",
+    "phonePlaceholder": "Entrez votre numéro de téléphone",
+    "address": "Adresse",
+    "addressPlaceholder": "Entrez votre adresse",
+    "linkedin": "Profil LinkedIn",
+    "linkedinPlaceholder": "https://linkedin.com/in/yourprofile",
+    "website": "Site Web Personnel",
+    "websitePlaceholder": "https://yourwebsite.com",
+    "summary": "Résumé Professionnel",
+    "summaryPlaceholder": "Écrivez un bref résumé professionnel sur vous-même, vos objectifs de carrière et ce que vous apportez...",
+    "summaryHelp": "Ceci est un aperçu bref qui apparaît en haut de votre CV. Gardez-le concis et percutant.",
+    "saveButton": "Enregistrer les Informations Personnelles",
+    "saveSuccess": "Informations personnelles enregistrées avec succès !"
   },
   "actions": {
     "print": "Imprimer",
-    "downloadPDF": "Télécharger PDF",
+    "downloadPDF": "PDF",
     "switchToDark": "Passer au mode sombre",
     "switchToLight": "Passer au mode clair"
   },
   "hero": {
     "title": "Développeur Full Stack & Ingénieur Logiciel",
-    "available": "Disponible pour des opportunités"
+    "available": "Disponible pour des opportunités",
+    "employer1": "Manager d'Automatisation et de Surveillance chez Strauss Group",
+    "employer2": "Ingénieur Logiciel Freelance chez BestTuqay"
   },
   "sections": {
     "personalInfo": {
@@ -46,37 +77,100 @@
   },
   "sampleData": {
     "personalInfo": {
-      "summary": "Développeur Full Stack expérimenté avec une passion pour créer des applications web innovantes. Compétent dans les technologies et frameworks modernes avec un accent sur l'expérience utilisateur et les performances."
+      "summary": "Ingénieur en Automatisation et Surveillance expérimenté avec 5+ années d'expertise dans les systèmes d'automatisation industrielle et le génie électrique. Ancien Développeur Full Stack avec une solide formation en React, Node.js et technologies cloud. Passionné par la conception et l'implémentation de solutions d'automatisation, la maintenance des systèmes électriques et l'optimisation des processus de production. Bilan prouvé de livraison de solutions d'automatisation de haute qualité et de support technique."
     },
     "experience": {
-      "title": "Développeur Full Stack Senior",
-      "company": "Entreprise Technologique",
-      "description": "Dirigé le développement de plusieurs applications web utilisant React, Node.js et les technologies cloud.",
+      "title": "Manager en Automatisation et Surveillance",
+      "company": "Groupe Strauss",
+      "description": "Responsable de la conception, de l'implémentation et de la maintenance des systèmes d'automatisation et des solutions de surveillance avec expertise en génie électrique.",
       "achievements": [
-        "Amélioré les performances de 40%",
-        "Mentoré des développeurs juniors",
-        "Implémenté des pipelines CI/CD"
+        "Concevoir et implémenter des systèmes d'automatisation pour les processus industriels",
+        "Développer des solutions de surveillance pour les systèmes électriques et mécaniques",
+        "Maintenir et dépanner les systèmes et équipements électriques",
+        "Assurer la conformité aux normes et réglementations de sécurité électrique",
+        "Collaborer avec des équipes multifonctionnelles pour optimiser les processus de production",
+        "Fournir un support technique et une formation pour les systèmes d'automatisation"
       ]
     },
     "education": {
-      "degree": "Licence en Sciences",
+      "degree": "Licence",
       "field": "Informatique",
-      "description": "Diplômé avec mention en Informatique avec une spécialisation en génie logiciel."
+      "description": "Actuellement en cours de licence en Informatique à Atid Maloot."
     },
     "projects": {
       "title": "Plateforme E-commerce",
       "description": "Une plateforme e-commerce full-stack construite avec React, Node.js et MongoDB."
     },
     "certifications": {
-      "name": "Développeur Certifié AWS",
-      "issuer": "Amazon Web Services",
-      "description": "Certifié en développement et déploiement cloud AWS."
+      "name": "SAP EWM 100",
+      "issuer": "SAP",
+      "description": "Certifié en implémentation et configuration de la gestion d'entrepôt étendue SAP (EWM)."
     }
   },
   "skillCategories": {
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Base de Données",
-    "cloud": "Cloud"
+    "cloud": "Cloud",
+    "versionControl": "Contrôle de Version",
+    "devOps": "DevOps"
+  },
+  "expertise": {
+    "title": "Expertise",
+    "subtitle": "Gérez vos compétences et certifications pour mettre en valeur votre expertise professionnelle.",
+    "skills": {
+      "title": "Compétences",
+      "addSkill": "Ajouter une compétence",
+      "editSkill": "Modifier la compétence",
+      "addNewSkill": "Ajouter une nouvelle compétence",
+      "updateSkill": "Mettre à jour la compétence",
+      "skillName": "Nom de la compétence",
+      "proficiencyLevel": "Niveau de maîtrise",
+      "category": "Catégorie",
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé",
+      "expert": "Expert",
+      "noSkills": "Aucune compétence ajoutée",
+      "noSkillsDescription": "Commencez par ajouter vos compétences techniques et douces.",
+      "addFirstSkill": "Ajouter votre première compétence",
+      "skillNamePlaceholder": "ex: JavaScript, Gestion de projet",
+      "categoryPlaceholder": "ex: Programmation, Compétences douces"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "addCertification": "Ajouter une certification",
+      "editCertification": "Modifier la certification",
+      "addNewCertification": "Ajouter une nouvelle certification",
+      "updateCertification": "Mettre à jour la certification",
+      "certificationName": "Nom de la certification",
+      "issuingOrganization": "Organisation émettrice",
+      "date": "Date",
+      "link": "Lien",
+      "description": "Description",
+      "noCertifications": "Aucune certification ajoutée",
+      "noCertificationsDescription": "Ajoutez vos certifications professionnelles et vos qualifications.",
+      "addFirstCertification": "Ajouter votre première certification",
+      "certificationNamePlaceholder": "ex: Développeur certifié AWS",
+      "issuerPlaceholder": "ex: Amazon Web Services",
+      "linkPlaceholder": "https://...",
+      "descriptionPlaceholder": "Description brève de la certification...",
+      "issued": "Délivrée",
+      "verifyCertification": "Vérifier la certification"
+    },
+    "common": {
+      "cancel": "Annuler",
+      "required": "requis"
+    },
+    "toast": {
+      "skillNameRequired": "Veuillez saisir un nom de compétence",
+      "skillUpdated": "Compétence mise à jour avec succès !",
+      "skillAdded": "Compétence ajoutée avec succès !",
+      "skillRemoved": "Compétence supprimée avec succès !",
+      "certificationFieldsRequired": "Veuillez remplir tous les champs requis",
+      "certificationUpdated": "Certification mise à jour avec succès !",
+      "certificationAdded": "Certification ajoutée avec succès !",
+      "certificationRemoved": "Certification supprimée avec succès !"
+    }
   }
 }

@@ -1,9 +1,17 @@
-import { useForm } from 'react-hook-form';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { updatePersonalInfo } from '../store/cvSlice';
-import { toast } from 'react-toastify';
-import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGlobe } from 'react-icons/fa';
+import { useForm } from "react-hook-form";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/store";
+import { updatePersonalInfo } from "@/store/cvSlice";
+import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
+import {
+  FaUser,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGlobe,
+} from "react-icons/fa";
 
 interface PersonalInfoForm {
   firstName: string;
@@ -18,20 +26,21 @@ interface PersonalInfoForm {
 
 const PersonalInfo = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const personalInfo = useSelector((state: RootState) => state.cv.personalInfo);
 
   const {
     register,
     handleSubmit,
     formState: { errors, isDirty },
-    reset
+    reset,
   } = useForm<PersonalInfoForm>({
-    defaultValues: personalInfo
+    defaultValues: personalInfo,
   });
 
   const onSubmit = (data: PersonalInfoForm) => {
     dispatch(updatePersonalInfo(data));
-    toast.success('Personal information saved successfully!');
+    toast.success(t("personalInfo.saveSuccess"));
     reset(data);
   };
 
@@ -39,10 +48,10 @@ const PersonalInfo = () => {
     <div className="max-w-4xl mx-auto">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Personal Information
+          {t("personalInfo.title")}
         </h1>
         <p className="text-gray-600 dark:text-gray-400">
-          Fill in your basic personal information. This will appear at the top of your CV.
+          {t("personalInfo.description")}
         </p>
       </div>
 
@@ -52,32 +61,40 @@ const PersonalInfo = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaUser className="inline w-4 h-4 mr-2" />
-              First Name *
+              {t("personalInfo.firstName")} *
             </label>
             <input
               type="text"
-              {...register('firstName', { required: 'First name is required' })}
+              {...register("firstName", {
+                required: t("personalInfo.firstNameRequired"),
+              })}
               className="cv-input"
-              placeholder="Enter your first name"
+              placeholder={t("personalInfo.firstNamePlaceholder")}
             />
             {errors.firstName && (
-              <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
+              <p className="mt-1 text-sm text-red-600">
+                {errors.firstName.message}
+              </p>
             )}
           </div>
 
           {/* Last Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Last Name *
+              {t("personalInfo.lastName")} *
             </label>
             <input
               type="text"
-              {...register('lastName', { required: 'Last name is required' })}
+              {...register("lastName", {
+                required: t("personalInfo.lastNameRequired"),
+              })}
               className="cv-input"
-              placeholder="Enter your last name"
+              placeholder={t("personalInfo.lastNamePlaceholder")}
             />
             {errors.lastName && (
-              <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
+              <p className="mt-1 text-sm text-red-600">
+                {errors.lastName.message}
+              </p>
             )}
           </div>
 
@@ -85,22 +102,24 @@ const PersonalInfo = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaEnvelope className="inline w-4 h-4 mr-2" />
-              Email Address *
+              {t("personalInfo.email")} *
             </label>
             <input
               type="email"
-              {...register('email', { 
-                required: 'Email is required',
+              {...register("email", {
+                required: t("personalInfo.emailRequired"),
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: 'Invalid email address'
-                }
+                  message: t("personalInfo.emailInvalid"),
+                },
               })}
               className="cv-input"
-              placeholder="Enter your email address"
+              placeholder={t("personalInfo.emailPlaceholder")}
             />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+              <p className="mt-1 text-sm text-red-600">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
@@ -108,13 +127,13 @@ const PersonalInfo = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaPhone className="inline w-4 h-4 mr-2" />
-              Phone Number
+              {t("personalInfo.phone")}
             </label>
             <input
               type="tel"
-              {...register('phone')}
+              {...register("phone")}
               className="cv-input"
-              placeholder="Enter your phone number"
+              placeholder={t("personalInfo.phonePlaceholder")}
             />
           </div>
 
@@ -122,13 +141,13 @@ const PersonalInfo = () => {
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaMapMarkerAlt className="inline w-4 h-4 mr-2" />
-              Address
+              {t("personalInfo.address")}
             </label>
             <input
               type="text"
-              {...register('address')}
+              {...register("address")}
               className="cv-input"
-              placeholder="Enter your address"
+              placeholder={t("personalInfo.addressPlaceholder")}
             />
           </div>
 
@@ -136,13 +155,13 @@ const PersonalInfo = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaLinkedin className="inline w-4 h-4 mr-2" />
-              LinkedIn Profile
+              {t("personalInfo.linkedin")}
             </label>
             <input
               type="url"
-              {...register('linkedin')}
+              {...register("linkedin")}
               className="cv-input"
-              placeholder="https://linkedin.com/in/yourprofile"
+              placeholder={t("personalInfo.linkedinPlaceholder")}
             />
           </div>
 
@@ -150,29 +169,29 @@ const PersonalInfo = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaGlobe className="inline w-4 h-4 mr-2" />
-              Personal Website
+              {t("personalInfo.website")}
             </label>
             <input
               type="url"
-              {...register('website')}
+              {...register("website")}
               className="cv-input"
-              placeholder="https://yourwebsite.com"
+              placeholder={t("personalInfo.websitePlaceholder")}
             />
           </div>
 
           {/* Professional Summary */}
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Professional Summary
+              {t("personalInfo.summary")}
             </label>
             <textarea
-              {...register('summary')}
+              {...register("summary")}
               rows={4}
               className="cv-input resize-none"
-              placeholder="Write a brief professional summary about yourself, your career goals, and what you bring to the table..."
+              placeholder={t("personalInfo.summaryPlaceholder")}
             />
             <p className="mt-1 text-sm text-gray-500">
-              This is a brief overview that appears at the top of your CV. Keep it concise and impactful.
+              {t("personalInfo.summaryHelp")}
             </p>
           </div>
         </div>
@@ -184,7 +203,7 @@ const PersonalInfo = () => {
             disabled={!isDirty}
             className="cv-button disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Save Personal Information
+            {t("personalInfo.saveButton")}
           </button>
         </div>
       </form>

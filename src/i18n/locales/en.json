@@ -1,41 +1,121 @@
 {
   "navigation": {
+    "dashboard": "Dashboard",
     "personalInfo": "Personal Info",
     "experience": "Experience",
     "education": "Education",
-    "skills": "Skills",
+    "expertise": "Expertise",
     "projects": "Projects",
-    "certifications": "Certifications",
-    "languages": "Languages"
+    "languages": "Languages",
+    "preview": "Preview",
+    "templates": "Templates"
+  },
+  "personalInfo": {
+    "title": "Personal Information",
+    "description": "Fill in your basic personal information. This will appear at the top of your CV.",
+    "firstName": "First Name",
+    "firstNameRequired": "First name is required",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last Name",
+    "lastNameRequired": "Last name is required",
+    "lastNamePlaceholder": "Enter your last name",
+    "email": "Email Address",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "emailPlaceholder": "Enter your email address",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "address": "Address",
+    "addressPlaceholder": "Enter your address",
+    "linkedin": "LinkedIn Profile",
+    "linkedinPlaceholder": "https://linkedin.com/in/yourprofile",
+    "website": "Personal Website",
+    "websitePlaceholder": "https://yourwebsite.com",
+    "summary": "Professional Summary",
+    "summaryPlaceholder": "Write a brief professional summary about yourself, your career goals, and what you bring to the table...",
+    "summaryHelp": "This is a brief overview that appears at the top of your CV. Keep it concise and impactful.",
+    "saveButton": "Save Personal Information",
+    "saveSuccess": "Personal information saved successfully!"
   },
   "actions": {
     "print": "Print",
-    "downloadPDF": "Download PDF",
+    "downloadPDF": "PDF",
     "switchToDark": "Switch to dark mode",
     "switchToLight": "Switch to light mode"
   },
   "hero": {
-    "title": "Full Stack Developer & Software Engineer",
-    "available": "Available for opportunities"
+    "title": "Full Stack Developer & Automation Engineer",
+    "available": "Available for opportunities",
+    "employer1": "Automation and Monitoring Manager at Strauss Group",
+    "employer2": "Freelance Software Engineer at BestTuqay"
   },
   "sections": {
     "personalInfo": {
       "title": "Personal Information",
       "aboutMe": "About Me",
-      "contactDetails": "Contact Details"
+      "contactDetails": "Contact Details",
+      "summary": "Experienced Automation and Monitoring Engineer with 5+ years of expertise in industrial automation systems and electrical engineering. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, maintaining electrical systems, and optimizing production processes. Proven track record of delivering high-quality automation solutions and technical support."
     },
     "experience": {
       "title": "Work Experience",
-      "present": "Present"
+      "present": "Present",
+      "strauss": {
+        "title": "Automation and Monitoring Manager",
+        "company": "Strauss Group",
+        "description": "As Automation Manager at Strauss-Group's Chilled Warehouse (Dairy & Shaked), I oversee all end-to-end automation processes to ensure efficient, reliable, and high-quality warehouse operations. My role involves managing and continuously optimising SAP ECC and SAP EWM systems, as well as providing hands-on support and integrating HMI PLCs to enhance warehouse automation. I serve as a strategic liaison between operations and IT, delivering expert SAP consulting for the new Shaked industry and supporting ongoing system enhancements. I collaborate with cross-functional teams to streamline deliveries, materials management, and quality assurance, and actively participate in management meetings to drive strategic decisions and continuous improvement initiatives. My focus is on achieving operational excellence, maintaining system reliability, and enabling the seamless integration of new technologies to meet the evolving needs of the warehouse environment."
+      },
+      "besttuqay": {
+        "title": "Freelance Software Engineer",
+        "company": "BestTuqay",
+        "description": "Developed and maintained web applications using modern technologies. Collaborated with clients to understand requirements and deliver high-quality solutions."
+      }
     },
     "education": {
-      "title": "Education"
+      "title": "Education",
+      "atid": {
+        "institution": "Atid Maloot",
+        "degree": "Control & Automation Engineering",
+        "field": "Automation & Control",
+        "description": "Currently pursuing a Control & Automation Engineering degree with electrical license."
+      },
+      "bsc": {
+        "institution": "BSc in Computer Science (on hold)",
+        "degree": "BSc",
+        "field": "Computer Science",
+        "description": "BSc in Computer Science with a focus on software engineering, currently on hold."
+      },
+      "ort": {
+        "institution": "Ort Braude College of Engineering",
+        "degree": "Software Practical Engineer with honors",
+        "field": "Software Engineering",
+        "description": "Graduated with honors in Software Engineering with focus on software engineering and software development."
+      }
     },
     "skills": {
       "title": "Skills"
     },
     "projects": {
-      "title": "Projects"
+      "title": "Projects",
+      "ipresent": {
+        "title": "iPresent - Digital Signage System",
+        "description": "A comprehensive WPF-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (PDF, PPT, videos, images). Includes background synchronization service and role-based user management."
+      },
+      "imanage": {
+        "title": "iManage - Small Business ERP System",
+        "description": "A comprehensive ERP (Enterprise Resource Planning) system designed specifically for small businesses. Features include inventory management, customer relationship management (CRM), financial accounting, sales and purchase order processing, employee management, and reporting dashboards. Built with modern .NET Core backend and React frontend for optimal user experience and scalability."
+      },
+      "gofresh": {
+        "title": "GoFresh - Drinks Shop Menu App",
+        "description": "A digital menu application for a drinks shop built with serverless architecture. Features include dynamic menu management with Sanity.io integration, like functionality for menu items, real-time menu updates, and responsive design for customers to browse drinks and place orders."
+      },
+      "asend": {
+        "title": "ASend - Automated Congratulations Cards",
+        "description": "An automated congratulations card system built with Supabase for seamless card generation and customization. Features include automated card creation, customizable templates, real-time database management, and user-friendly interface for creating personalized congratulatory messages."
+      },
+      "myshop": {
+        "title": "myShop - Ticket Management System",
+        "description": "A comprehensive ticket management system designed to help manage user tickets across multiple platforms. Features include WPF desktop application for local machines, SyncService API for data synchronization, and React Native mobile app for on-the-go ticket management. Provides seamless ticket tracking, status updates, and cross-platform synchronization."
+      }
     },
     "certifications": {
       "title": "Certifications"
@@ -46,37 +126,100 @@
   },
   "sampleData": {
     "personalInfo": {
-      "summary": "Experienced Full Stack Developer with a passion for creating innovative web applications. Skilled in modern technologies and frameworks with a focus on user experience and performance."
+      "summary": "Experienced Automation and Monitoring Engineer with 5+ years of expertise in industrial automation systems and electrical engineering. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, maintaining electrical systems, and optimizing production processes. Proven track record of delivering high-quality automation solutions and technical support."
     },
     "experience": {
-      "title": "Senior Full Stack Developer",
-      "company": "Tech Company",
-      "description": "Led development of multiple web applications using React, Node.js, and cloud technologies.",
+      "title": "Automation and Monitoring Manager",
+      "company": "Strauss Group",
+      "description": "Responsible for designing, implementing, and maintaining automation systems and monitoring solutions with electrical engineering expertise.",
       "achievements": [
-        "Improved performance by 40%",
-        "Mentored junior developers",
-        "Implemented CI/CD pipelines"
+        "Design and implement automation systems for industrial processes",
+        "Develop monitoring solutions for electrical and mechanical systems",
+        "Maintain and troubleshoot electrical systems and equipment",
+        "Ensure compliance with electrical safety standards and regulations",
+        "Collaborate with cross-functional teams to optimize production processes",
+        "Provide technical support and training for automation systems"
       ]
     },
     "education": {
-      "degree": "Bachelor of Science",
+      "degree": "Bachelor's Degree",
       "field": "Computer Science",
-      "description": "Graduated with honors in Computer Science with focus on software engineering."
+      "description": "Currently pursuing a Bachelor's degree in Computer Science at Atid Maloot."
     },
     "projects": {
       "title": "E-commerce Platform",
       "description": "A full-stack e-commerce platform built with React, Node.js, and MongoDB."
     },
     "certifications": {
-      "name": "AWS Certified Developer",
-      "issuer": "Amazon Web Services",
-      "description": "Certified in AWS cloud development and deployment."
+      "name": "SAP EWM 100",
+      "issuer": "SAP",
+      "description": "Certified in SAP Extended Warehouse Management (EWM) implementation and configuration."
     }
   },
   "skillCategories": {
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Database",
-    "cloud": "Cloud"
+    "cloud": "Cloud",
+    "versionControl": "Version Control",
+    "devOps": "DevOps"
+  },
+  "expertise": {
+    "title": "Expertise",
+    "subtitle": "Manage your skills and certifications to showcase your professional expertise.",
+    "skills": {
+      "title": "Skills",
+      "addSkill": "Add Skill",
+      "editSkill": "Edit Skill",
+      "addNewSkill": "Add New Skill",
+      "updateSkill": "Update Skill",
+      "skillName": "Skill Name",
+      "proficiencyLevel": "Proficiency Level",
+      "category": "Category",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert",
+      "noSkills": "No skills added yet",
+      "noSkillsDescription": "Start by adding your technical and soft skills.",
+      "addFirstSkill": "Add Your First Skill",
+      "skillNamePlaceholder": "e.g., JavaScript, Project Management",
+      "categoryPlaceholder": "e.g., Programming, Soft Skills"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "addCertification": "Add Certification",
+      "editCertification": "Edit Certification",
+      "addNewCertification": "Add New Certification",
+      "updateCertification": "Update Certification",
+      "certificationName": "Certification Name",
+      "issuingOrganization": "Issuing Organization",
+      "date": "Date",
+      "link": "Link",
+      "description": "Description",
+      "noCertifications": "No certifications added yet",
+      "noCertificationsDescription": "Add your professional certifications and credentials.",
+      "addFirstCertification": "Add Your First Certification",
+      "certificationNamePlaceholder": "e.g., AWS Certified Developer",
+      "issuerPlaceholder": "e.g., Amazon Web Services",
+      "linkPlaceholder": "https://...",
+      "descriptionPlaceholder": "Brief description of the certification...",
+      "issued": "Issued",
+      "verifyCertification": "Verify Certification"
+    },
+    "common": {
+      "cancel": "Cancel",
+      "required": "required"
+    },
+    "toast": {
+      "skillNameRequired": "Please enter a skill name",
+      "skillUpdated": "Skill updated successfully!",
+      "skillAdded": "Skill added successfully!",
+      "skillRemoved": "Skill removed successfully!",
+      "certificationFieldsRequired": "Please fill in all required fields",
+      "certificationUpdated": "Certification updated successfully!",
+      "certificationAdded": "Certification added successfully!",
+      "certificationRemoved": "Certification removed successfully!"
+    }
   }
 }

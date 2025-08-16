@@ -1,45 +1,21 @@
 // vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { VitePWA } from "vite-plugin-pwa";
 import path from "path";
 
+// Determine if we are in development mode
 const isDevelopment = process.env.NODE_ENV === "development";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
-  plugins: [
-    react(),
-    VitePWA({
-      registerType: "autoUpdate",
-      ...(isDevelopment && {
-        devOptions: {
-          enabled: true, // Enable PWA in development mode only
-        },
-      }),
-      workbox: {
-        cleanupOutdatedCaches: true,
-        skipWaiting: true,
-        clientsClaim: true,
-        runtimeCaching: [
-          {
-            urlPattern: new RegExp("^https://api.github.com"),
-            handler: "NetworkFirst",
-            options: {
-              cacheName: "api-cache",
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 300,
-              },
-            },
-          },
-        ],
-      },
-    }),
-  ],
+  plugins: [react()],
   server: {
     hmr: {},
     port: 5173,
+  },
+  // Disable service workers and precaching
+  define: {
+    __SW_DISABLED__: true,
   },
   resolve: {
     alias: {
@@ -54,7 +30,6 @@ export default defineConfig({
       "@/types": path.resolve(__dirname, "./src/types"),
       "@/utils": path.resolve(__dirname, "./src/utils"),
       "@/api": path.resolve(__dirname, "./src/api"),
-      "@/test": path.resolve(__dirname, "./src/test"),
     },
   },
   build: {

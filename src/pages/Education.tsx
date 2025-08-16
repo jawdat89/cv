@@ -1,10 +1,20 @@
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { addEducation, updateEducation, removeEducation } from '../store/cvSlice';
-import { toast } from 'react-toastify';
-import { FaPlus, FaEdit, FaTrash, FaGraduationCap, FaCalendar } from 'react-icons/fa';
-import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/store";
+import {
+  addEducation,
+  updateEducation,
+  removeEducation,
+} from "@/store/cvSlice";
+import { toast } from "react-toastify";
+import {
+  FaPlus,
+  FaEdit,
+  FaTrash,
+  FaGraduationCap,
+  FaCalendar,
+} from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
 
 interface EducationForm {
   institution: string;
@@ -23,37 +33,37 @@ const Education = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formData, setFormData] = useState<EducationForm>({
-    institution: '',
-    degree: '',
-    field: '',
-    startDate: '',
-    endDate: '',
+    institution: "",
+    degree: "",
+    field: "",
+    startDate: "",
+    endDate: "",
     current: false,
-    gpa: '',
-    description: ''
+    gpa: "",
+    description: "",
   });
 
   const handleInputChange = (field: keyof EducationForm, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = () => {
     if (!formData.institution || !formData.degree || !formData.startDate) {
-      toast.error('Please fill in all required fields');
+      toast.error("Please fill in all required fields");
       return;
     }
 
     const educationData = {
       ...formData,
-      id: editingId || uuidv4()
+      id: editingId || uuidv4(),
     };
 
     if (editingId) {
       dispatch(updateEducation({ id: editingId, data: educationData }));
-      toast.success('Education updated successfully!');
+      toast.success("Education updated successfully!");
     } else {
       dispatch(addEducation(educationData));
-      toast.success('Education added successfully!');
+      toast.success("Education added successfully!");
     }
 
     resetForm();
@@ -69,26 +79,26 @@ const Education = () => {
       endDate: edu.endDate,
       current: edu.current,
       gpa: edu.gpa,
-      description: edu.description
+      description: edu.description,
     });
     setIsAdding(true);
   };
 
   const handleDelete = (id: string) => {
     dispatch(removeEducation(id));
-    toast.success('Education removed successfully!');
+    toast.success("Education removed successfully!");
   };
 
   const resetForm = () => {
     setFormData({
-      institution: '',
-      degree: '',
-      field: '',
-      startDate: '',
-      endDate: '',
+      institution: "",
+      degree: "",
+      field: "",
+      startDate: "",
+      endDate: "",
       current: false,
-      gpa: '',
-      description: ''
+      gpa: "",
+      description: "",
     });
     setIsAdding(false);
     setEditingId(null);
@@ -123,12 +133,9 @@ const Education = () => {
         <div className="cv-section mb-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-              {editingId ? 'Edit Education' : 'Add New Education'}
+              {editingId ? "Edit Education" : "Add New Education"}
             </h2>
-            <button
-              onClick={resetForm}
-              className="cv-button-secondary"
-            >
+            <button onClick={resetForm} className="cv-button-secondary">
               Cancel
             </button>
           </div>
@@ -143,7 +150,9 @@ const Education = () => {
               <input
                 type="text"
                 value={formData.institution}
-                onChange={(e) => handleInputChange('institution', e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("institution", e.target.value)
+                }
                 className="cv-input"
                 placeholder="Enter institution name"
               />
@@ -157,7 +166,7 @@ const Education = () => {
               <input
                 type="text"
                 value={formData.degree}
-                onChange={(e) => handleInputChange('degree', e.target.value)}
+                onChange={(e) => handleInputChange("degree", e.target.value)}
                 className="cv-input"
                 placeholder="e.g., Bachelor's, Master's, PhD"
               />
@@ -171,7 +180,7 @@ const Education = () => {
               <input
                 type="text"
                 value={formData.field}
-                onChange={(e) => handleInputChange('field', e.target.value)}
+                onChange={(e) => handleInputChange("field", e.target.value)}
                 className="cv-input"
                 placeholder="e.g., Computer Science, Business Administration"
               />
@@ -185,7 +194,7 @@ const Education = () => {
               <input
                 type="text"
                 value={formData.gpa}
-                onChange={(e) => handleInputChange('gpa', e.target.value)}
+                onChange={(e) => handleInputChange("gpa", e.target.value)}
                 className="cv-input"
                 placeholder="e.g., 3.8/4.0"
               />
@@ -200,7 +209,7 @@ const Education = () => {
               <input
                 type="month"
                 value={formData.startDate}
-                onChange={(e) => handleInputChange('startDate', e.target.value)}
+                onChange={(e) => handleInputChange("startDate", e.target.value)}
                 className="cv-input"
               />
             </div>
@@ -213,7 +222,7 @@ const Education = () => {
               <input
                 type="month"
                 value={formData.endDate}
-                onChange={(e) => handleInputChange('endDate', e.target.value)}
+                onChange={(e) => handleInputChange("endDate", e.target.value)}
                 className="cv-input"
                 disabled={formData.current}
               />
@@ -225,10 +234,13 @@ const Education = () => {
                 type="checkbox"
                 id="current"
                 checked={formData.current}
-                onChange={(e) => handleInputChange('current', e.target.checked)}
+                onChange={(e) => handleInputChange("current", e.target.checked)}
                 className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
               />
-              <label htmlFor="current" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+              <label
+                htmlFor="current"
+                className="ml-2 text-sm text-gray-700 dark:text-gray-300"
+              >
                 I am currently studying here
               </label>
             </div>
@@ -241,7 +253,7 @@ const Education = () => {
             </label>
             <textarea
               value={formData.description}
-              onChange={(e) => handleInputChange('description', e.target.value)}
+              onChange={(e) => handleInputChange("description", e.target.value)}
               rows={4}
               className="cv-input resize-none"
               placeholder="Describe your studies, relevant coursework, projects, or achievements..."
@@ -250,11 +262,8 @@ const Education = () => {
 
           {/* Submit Button */}
           <div className="mt-6 flex justify-end">
-            <button
-              onClick={handleSubmit}
-              className="cv-button"
-            >
-              {editingId ? 'Update Education' : 'Add Education'}
+            <button onClick={handleSubmit} className="cv-button">
+              {editingId ? "Update Education" : "Add Education"}
             </button>
           </div>
         </div>
@@ -271,7 +280,7 @@ const Education = () => {
                 </h3>
                 <p className="text-primary font-medium">{edu.institution}</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  {edu.startDate} - {edu.current ? 'Present' : edu.endDate}
+                  {edu.startDate} - {edu.current ? "Present" : edu.endDate}
                   {edu.gpa && ` • GPA: ${edu.gpa}`}
                 </p>
               </div>
@@ -290,7 +299,7 @@ const Education = () => {
                 </button>
               </div>
             </div>
-            
+
             {edu.description && (
               <p className="text-gray-700 dark:text-gray-300">
                 {edu.description}
@@ -309,10 +318,7 @@ const Education = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             Start by adding your educational background and qualifications.
           </p>
-          <button
-            onClick={() => setIsAdding(true)}
-            className="cv-button"
-          >
+          <button onClick={() => setIsAdding(true)} className="cv-button">
             Add Your First Education
           </button>
         </div>
