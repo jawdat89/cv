@@ -106,7 +106,7 @@ const Dashboard: React.FC = () => {
                 className={clsx(
                   "hidden lg:flex ml-8",
                   direction === "rtl"
-                    ? "space-x-reverse space-x-1"
+                    ? "space-x-reverse space-x-1 mr-4"
                     : "space-x-1"
                 )}
               >
@@ -149,36 +149,46 @@ const Dashboard: React.FC = () => {
                   <FaSun className="w-4 h-4" />
                 )}
               </button>
-                             <button
-                 onClick={handlePrint}
-                 className={clsx(
-                   "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
-                   direction === "rtl"
-                     ? "space-x-reverse space-x-2"
-                     : "space-x-2"
-                 )}
-                 title="Download Hebrew CV"
-               >
-                 <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200">
-                   <IL className="w-full h-full object-cover" />
-                 </div>
-                 <span className="hidden sm:inline">CV</span>
-               </button>
-                             <button
-                 onClick={handleDownload}
-                 className={clsx(
-                   "flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm",
-                   direction === "rtl"
-                     ? "space-x-reverse space-x-2"
-                     : "space-x-2"
-                 )}
-                 title="Download English CV"
-               >
-                 <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200">
-                   <US className="w-full h-full object-cover" />
-                 </div>
-                 <span className="hidden sm:inline">CV</span>
-               </button>
+              <button
+                onClick={handlePrint}
+                className={clsx(
+                  "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
+                  direction === "rtl"
+                    ? "space-x-reverse space-x-2"
+                    : "space-x-2"
+                )}
+                title="Download Hebrew CV"
+              >
+                <div
+                  className={clsx(
+                    "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
+                    direction === "rtl" ? "ml-2" : ""
+                  )}
+                >
+                  <IL className="w-full h-full object-cover" />
+                </div>
+                <span className="hidden sm:inline">CV</span>
+              </button>
+              <button
+                onClick={handleDownload}
+                className={clsx(
+                  "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
+                  direction === "rtl"
+                    ? "space-x-reverse space-x-2"
+                    : "space-x-2"
+                )}
+                title="Download English CV"
+              >
+                <div
+                  className={clsx(
+                    "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
+                    direction === "rtl" ? "ml-2" : ""
+                  )}
+                >
+                  <US className="w-full h-full object-cover" />
+                </div>
+                <span className="hidden sm:inline">CV</span>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -228,24 +238,34 @@ const Dashboard: React.FC = () => {
                   </button>
                 ))}
                 <div className="pt-4 pb-2 flex space-x-2">
-                                     <button
-                     onClick={handlePrint}
-                     className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
-                   >
-                     <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200 mr-2">
-                       <IL className="w-full h-full object-cover" />
-                     </div>
-                     CV
-                   </button>
-                                     <button
-                     onClick={handleDownload}
-                     className="flex-1 flex items-center justify-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm"
-                   >
-                     <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200 mr-2">
-                       <US className="w-full h-full object-cover" />
-                     </div>
-                     CV
-                   </button>
+                  <button
+                    onClick={handlePrint}
+                    className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
+                  >
+                    <div
+                      className={clsx(
+                        "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
+                        direction === "rtl" ? "ml-2" : "mr-2"
+                      )}
+                    >
+                      <IL className="w-full h-full object-cover" />
+                    </div>
+                    CV
+                  </button>
+                  <button
+                    onClick={handleDownload}
+                    className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
+                  >
+                    <div
+                      className={clsx(
+                        "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
+                        direction === "rtl" ? "ml-2" : "mr-2"
+                      )}
+                    >
+                      <US className="w-full h-full object-cover" />
+                    </div>
+                    CV
+                  </button>
                 </div>
               </div>
             </div>

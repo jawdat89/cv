@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { RootState } from "@/store";
 import { setLanguage } from "@/store/cvSlice";
 import { FaGlobe, FaChevronDown } from "react-icons/fa";
-import { GB, SA, IL } from "country-flag-icons/react/3x2";
+import { US, SA, IL } from "country-flag-icons/react/3x2";
 import { useI18n } from "@/hooks";
 import clsx from "clsx";
 
@@ -20,9 +20,9 @@ const languages: Language[] = [
   {
     code: "en",
     name: "English",
-    flag: GB,
+    flag: US,
     nativeName: "English",
-    countryCode: "GB",
+    countryCode: "US",
   },
   {
     code: "ar",
@@ -116,7 +116,12 @@ const LanguageSelector: React.FC = () => {
         aria-label={`Current language: ${currentLang.name}. Click to change language.`}
       >
         <FaGlobe className="w-4 h-4 text-gray-600 dark:text-gray-300" />
-        <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200">
+        <div
+          className={clsx(
+            "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
+            direction === "rtl" ? "ml-2" : ""
+          )}
+        >
           <CurrentFlag className="w-full h-full object-cover" />
         </div>
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hidden sm:inline">
@@ -164,7 +169,12 @@ const LanguageSelector: React.FC = () => {
                   role="option"
                   aria-selected={currentLanguage === language.code}
                 >
-                  <div className="w-6 h-4 rounded-sm overflow-hidden border border-gray-200 flex-shrink-0">
+                  <div
+                    className={clsx(
+                      "w-6 h-4 rounded-sm overflow-hidden border border-gray-200 flex-shrink-0",
+                      direction === "rtl" ? "ml-2" : ""
+                    )}
+                  >
                     <FlagComponent className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col min-w-0">
