@@ -800,21 +800,21 @@ const Dashboard: React.FC = () => {
             viewport={{ once: true }}
             className="cv-section"
           >
-                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-               <FaCertificate
-                 className={clsx(
-                   "w-6 h-6 text-primary",
-                   direction === "rtl" ? "ml-3" : "mr-3"
-                 )}
-               />
-               {t("sections.certifications.title")}
-             </h2>
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <FaCertificate
+                className={clsx(
+                  "w-6 h-6 text-primary",
+                  direction === "rtl" ? "ml-3" : "mr-3"
+                )}
+              />
+              {t("sections.certifications.title")}
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {cvData.certifications.map((cert, index) => (
-                                 <div
-                   key={index}
-                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
-                 >
+                <div
+                  key={index}
+                  className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
+                >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {cert.name}
                   </h3>
@@ -850,10 +850,10 @@ const Dashboard: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {cvData.languages.map((lang, index) => (
-                                 <div
-                   key={index}
-                   className="text-center p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
-                 >
+                <div
+                  key={index}
+                  className="text-center p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
+                >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {lang.name}
                   </h3>

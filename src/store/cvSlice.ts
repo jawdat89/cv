@@ -87,28 +87,29 @@ const initialState: CVData = {
     linkedin: "linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
-      "Experienced Automation and Monitoring Engineer with 5+ years of expertise in industrial automation systems and electrical engineering. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, maintaining electrical systems, and optimizing production processes. Proven track record of delivering high-quality automation solutions and technical support.",
+      "Experienced Automation Manager and Logistics Manager with SAP EWM 100 certification, currently pursuing a Control & Automation Engineering degree. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, optimizing logistics processes, and leveraging SAP systems to drive operational excellence. Proven track record of delivering high-quality automation and logistics solutions with technical expertise.",
   },
   experience: [
-    {
-      id: "1",
-      title: "Automation and Monitoring Manager",
-      company: "Strauss Group",
-      position: "Automation and Monitoring Manager",
+         {
+       id: "1",
+       title: "Automation Manager & Logistics Manager",
+       company: "Strauss Group",
+       position: "Automation Manager & Logistics Manager",
       location: "Israel",
       startDate: "2025",
       endDate: "Present",
       current: true,
-      description:
-        "As Automation Manager at Strauss-Group's Chilled Warehouse (Dairy & Shaked), I oversee all end-to-end automation processes to ensure efficient, reliable, and high-quality warehouse operations. My role involves managing and continuously optimising SAP ECC and SAP EWM systems, as well as providing hands-on support and integrating HMI PLCs to enhance warehouse automation.\n\nI serve as a strategic liaison between operations and IT, delivering expert SAP consulting for the new Shaked industry and supporting ongoing system enhancements. I collaborate with cross-functional teams to streamline deliveries, materials management, and quality assurance, and actively participate in management meetings to drive strategic decisions and continuous improvement initiatives.\n\nMy focus is on achieving operational excellence, maintaining system reliability, and enabling the seamless integration of new technologies to meet the evolving needs of the warehouse environment.",
-      achievements: [
-        "Design and implement automation systems for industrial processes",
-        "Develop monitoring solutions for electrical and mechanical systems",
-        "Maintain and troubleshoot electrical systems and equipment",
-        "Ensure compliance with electrical safety standards and regulations",
-        "Collaborate with cross-functional teams to optimize production processes",
-        "Provide technical support and training for automation systems",
-      ],
+             description:
+         "As Automation Manager & Logistics Manager at Strauss-Group's Chilled Warehouse (Dairy & Shaked), I oversee both automation processes and logistics operations to ensure efficient, reliable, and high-quality warehouse performance. My role involves managing and continuously optimising SAP ECC and SAP EWM systems, coordinating logistics workflows, and integrating HMI PLCs to enhance warehouse automation.\n\nI serve as a strategic liaison between operations and IT, delivering expert SAP consulting for the new Shaked industry and supporting ongoing system enhancements. I collaborate with cross-functional teams to streamline deliveries, materials management, quality assurance, and logistics optimization, while actively participating in management meetings to drive strategic decisions and continuous improvement initiatives.\n\nMy focus is on achieving operational excellence, maintaining system reliability, optimizing logistics processes, and enabling the seamless integration of new technologies to meet the evolving needs of the warehouse environment.",
+             achievements: [
+         "Design and implement automation systems for industrial processes",
+         "Manage and optimize logistics operations and warehouse workflows",
+         "Develop monitoring solutions for electrical and mechanical systems",
+         "Coordinate SAP EWM 100 implementation and optimization",
+         "Ensure compliance with electrical safety standards and regulations",
+         "Collaborate with cross-functional teams to optimize production and logistics processes",
+         "Provide technical support and training for automation and SAP systems",
+       ],
     },
     {
       id: "2",
