@@ -15,13 +15,12 @@ import {
   FaProjectDiagram,
   FaCertificate,
   FaLanguage,
-  FaDownload,
-  FaPrint,
   FaSun,
   FaMoon,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import { US, IL } from "country-flag-icons/react/3x2";
 
 const Dashboard: React.FC = () => {
   const { t, currentLanguage, direction } = useI18n();
@@ -150,19 +149,21 @@ const Dashboard: React.FC = () => {
                   <FaSun className="w-4 h-4" />
                 )}
               </button>
-              <button
-                onClick={handlePrint}
-                className={clsx(
-                  "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
-                  direction === "rtl"
-                    ? "space-x-reverse space-x-2"
-                    : "space-x-2"
-                )}
-                title="Download Hebrew CV"
-              >
-                <FaPrint className="w-4 h-4" />
-                <span className="hidden sm:inline">Hebrew CV</span>
-              </button>
+                             <button
+                 onClick={handlePrint}
+                 className={clsx(
+                   "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
+                   direction === "rtl"
+                     ? "space-x-reverse space-x-2"
+                     : "space-x-2"
+                 )}
+                 title="Download Hebrew CV"
+               >
+                 <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200">
+                   <IL className="w-full h-full object-cover" />
+                 </div>
+                 <span className="hidden sm:inline">CV</span>
+               </button>
                              <button
                  onClick={handleDownload}
                  className={clsx(
@@ -173,10 +174,10 @@ const Dashboard: React.FC = () => {
                  )}
                  title="Download English CV"
                >
-                 <FaDownload className="w-4 h-4" />
-                 <span className="hidden sm:inline">
-                   English CV
-                 </span>
+                 <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200">
+                   <US className="w-full h-full object-cover" />
+                 </div>
+                 <span className="hidden sm:inline">CV</span>
                </button>
             </div>
 
@@ -231,15 +232,19 @@ const Dashboard: React.FC = () => {
                      onClick={handlePrint}
                      className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
                    >
-                     <FaPrint className="w-4 h-4 mr-2" />
-                     Hebrew CV
+                     <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200 mr-2">
+                       <IL className="w-full h-full object-cover" />
+                     </div>
+                     CV
                    </button>
                                      <button
                      onClick={handleDownload}
                      className="flex-1 flex items-center justify-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm"
                    >
-                     <FaDownload className="w-4 h-4 mr-2" />
-                     English CV
+                     <div className="w-5 h-4 rounded-sm overflow-hidden border border-gray-200 mr-2">
+                       <US className="w-full h-full object-cover" />
+                     </div>
+                     CV
                    </button>
                 </div>
               </div>
