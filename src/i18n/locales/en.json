@@ -68,6 +68,21 @@
         "title": "Freelance Software Engineer",
         "company": "BestTuqay",
         "description": "Developed and maintained web applications using modern technologies. Collaborated with clients to understand requirements and deliver high-quality solutions."
+      },
+      "innovisec": {
+        "title": "Senior Software Developer",
+        "company": "Innovisec, ICTS Europe",
+        "description": "Designed and developed scalable web applications using React, Angular, NodeJS, and .Net, ensuring efficient performance and user-friendly interfaces. Implemented real-time features using WebSocket technology, enhancing user engagement and interaction for dynamic applications. Led the development of cross-platform mobile applications with React Native, focusing on seamless user experiences across different devices."
+      },
+      "strauss_tech": {
+        "title": "Technical Support Specialist (Tier 1)",
+        "company": "Strauss-Group",
+        "description": "Managed user access and resolved technical issues across Active Directory, SAP, and other systems, enhancing system reliability. Provided comprehensive support for network troubleshooting. Supported SAP EWM/WMS and GUI, creating and maintaining essential support documentation to enhance operational efficiency and logistics management."
+      },
+      "qualitest": {
+        "title": "QA Automation and Manual Junior Tester",
+        "company": "Qualitest Haifa",
+        "description": "Enhanced software quality for Microsoft Security tools through both automated and manual testing. Developed robust Hyper-V and MS Server testing environments, focusing on UAG/TMG for precise scenarios. Led automation testing efforts, including hotfix installations, reporting, troubleshooting, and code adjustments using Microsoft tools. Executed detailed manual testing, configuring complex environments and ensuring compatibility across various infrastructures. Collaborated with Microsoft developers for on-demand testing, directly influencing software improvements with targeted feedback. Crafted and followed comprehensive test plans, scripts, and use cases, analyzing results to provide actionable optimization insights. Proficient in Forefront UAG/TMG 2010, Microsoft Exchange Server, SharePoint, and Active Directory Federation Services. Maintained office workstations, guaranteeing security and performance for Qualitest endpoint stations."
       }
     },
     "education": {

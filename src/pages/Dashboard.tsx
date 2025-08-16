@@ -372,6 +372,7 @@ const Dashboard: React.FC = () => {
                 <a
                   href={`tel:${cvData.personalInfo.phone.replace(/\s/g, "")}`}
                   className="hover:text-primary transition-colors"
+                  dir="ltr"
                 >
                   {cvData.personalInfo.phone}
                 </a>
@@ -393,6 +394,7 @@ const Dashboard: React.FC = () => {
                 <a
                   href={`tel:${cvData.personalInfo.phone.replace(/\s/g, "")}`}
                   className="hover:text-primary transition-colors flex items-center"
+                  dir="ltr"
                 >
                   📱 {cvData.personalInfo.phone}
                 </a>
@@ -449,6 +451,7 @@ const Dashboard: React.FC = () => {
                         ""
                       )}`}
                       className="hover:text-primary transition-colors"
+                      dir="ltr"
                     >
                       {cvData.personalInfo.phone}
                     </a>
@@ -509,7 +512,7 @@ const Dashboard: React.FC = () => {
                   {t("sections.experience.strauss.company")}
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  2023 - {t("sections.experience.present")}
+                  2025 - {t("sections.experience.present")}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
                   {t("sections.experience.strauss.description")}
@@ -525,10 +528,58 @@ const Dashboard: React.FC = () => {
                   {t("sections.experience.besttuqay.company")}
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  2022 - 2023
+                  2024 - {t("sections.experience.present")}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
                   {t("sections.experience.besttuqay.description")}
+                </p>
+              </div>
+
+              {/* Innovisec Experience */}
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {t("sections.experience.innovisec.title")}
+                </h3>
+                <p className="text-primary font-medium">
+                  {t("sections.experience.innovisec.company")}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  2019 - 2024
+                </p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {t("sections.experience.innovisec.description")}
+                </p>
+              </div>
+
+              {/* Strauss Technical Support Experience */}
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {t("sections.experience.strauss_tech.title")}
+                </h3>
+                <p className="text-primary font-medium">
+                  {t("sections.experience.strauss_tech.company")}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  2015 - 2018
+                </p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {t("sections.experience.strauss_tech.description")}
+                </p>
+              </div>
+
+              {/* Qualitest Experience */}
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {t("sections.experience.qualitest.title")}
+                </h3>
+                <p className="text-primary font-medium">
+                  {t("sections.experience.qualitest.company")}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  2010 - 2015
+                </p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {t("sections.experience.qualitest.description")}
                 </p>
               </div>
             </div>
