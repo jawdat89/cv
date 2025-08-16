@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "personalInfo": "المعلومات الشخصية",
+    "experience": "الخبرة",
+    "education": "التعليم",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "certifications": "الشهادات",
+    "languages": "اللغات"
+  },
+  "actions": {
+    "print": "طباعة",
+    "downloadPDF": "تحميل PDF",
+    "switchToDark": "التبديل إلى الوضع المظلم",
+    "switchToLight": "التبديل إلى الوضع الفاتح"
+  },
+  "hero": {
+    "title": "مطور ويب شامل ومهندس برمجيات",
+    "available": "متاح للفرص"
+  },
+  "sections": {
+    "personalInfo": {
+      "title": "المعلومات الشخصية",
+      "aboutMe": "نبذة عني",
+      "contactDetails": "تفاصيل الاتصال"
+    },
+    "experience": {
+      "title": "الخبرة العملية",
+      "present": "الحالي"
+    },
+    "education": {
+      "title": "التعليم"
+    },
+    "skills": {
+      "title": "المهارات"
+    },
+    "projects": {
+      "title": "المشاريع"
+    },
+    "certifications": {
+      "title": "الشهادات"
+    },
+    "languages": {
+      "title": "اللغات"
+    }
+  },
+  "sampleData": {
+    "personalInfo": {
+      "summary": "مطور ويب شامل ذو خبرة مع شغف بإنشاء تطبيقات ويب مبتكرة. ماهر في التقنيات والأطر الحديثة مع التركيز على تجربة المستخدم والأداء."
+    },
+    "experience": {
+      "title": "مطور ويب شامل كبير",
+      "company": "شركة تقنية",
+      "description": "قاد تطوير العديد من تطبيقات الويب باستخدام React و Node.js وتقنيات السحابة.",
+      "achievements": [
+        "تحسين الأداء بنسبة 40%",
+        "إرشاد المطورين المبتدئين",
+        "تنفيذ خطوط CI/CD"
+      ]
+    },
+    "education": {
+      "degree": "بكالوريوس العلوم",
+      "field": "علوم الحاسوب",
+      "description": "تخرج بامتياز في علوم الحاسوب مع التركيز على هندسة البرمجيات."
+    },
+    "projects": {
+      "title": "منصة التجارة الإلكترونية",
+      "description": "منصة تجارة إلكترونية شاملة مبنية بـ React و Node.js و MongoDB."
+    },
+    "certifications": {
+      "name": "مطور معتمد من AWS",
+      "issuer": "خدمات أمازون ويب",
+      "description": "معتمد في تطوير ونشر السحابة من AWS."
+    }
+  },
+  "skillCategories": {
+    "frontend": "واجهة المستخدم",
+    "backend": "الخلفية",
+    "database": "قاعدة البيانات",
+    "cloud": "السحابة"
+  }
+}

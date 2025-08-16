@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "personalInfo": "מידע אישי",
+    "experience": "ניסיון",
+    "education": "השכלה",
+    "skills": "כישורים",
+    "projects": "פרויקטים",
+    "certifications": "הסמכות",
+    "languages": "שפות"
+  },
+  "actions": {
+    "print": "הדפסה",
+    "downloadPDF": "הורדת PDF",
+    "switchToDark": "מעבר למצב כהה",
+    "switchToLight": "מעבר למצב בהיר"
+  },
+  "hero": {
+    "title": "מפתח Full Stack ומהנדס תוכנה",
+    "available": "זמין להזדמנויות"
+  },
+  "sections": {
+    "personalInfo": {
+      "title": "מידע אישי",
+      "aboutMe": "אודותיי",
+      "contactDetails": "פרטי קשר"
+    },
+    "experience": {
+      "title": "ניסיון עבודה",
+      "present": "הווה"
+    },
+    "education": {
+      "title": "השכלה"
+    },
+    "skills": {
+      "title": "כישורים"
+    },
+    "projects": {
+      "title": "פרויקטים"
+    },
+    "certifications": {
+      "title": "הסמכות"
+    },
+    "languages": {
+      "title": "שפות"
+    }
+  },
+  "sampleData": {
+    "personalInfo": {
+      "summary": "מפתח Full Stack מנוסה עם תשוקה ליצירת אפליקציות אינטרנט חדשניות. מיומן בטכנולוגיות ופריימוורקים מודרניים עם דגש על חוויית משתמש וביצועים."
+    },
+    "experience": {
+      "title": "מפתח Full Stack בכיר",
+      "company": "חברת טכנולוגיה",
+      "description": "הוביל פיתוח של מספר אפליקציות אינטרנט באמצעות React, Node.js וטכנולוגיות ענן.",
+      "achievements": [
+        "שיפר ביצועים ב-40%",
+        "ליווה מפתחים זוטרים",
+        "יישם צינורות CI/CD"
+      ]
+    },
+    "education": {
+      "degree": "תואר ראשון במדעים",
+      "field": "מדעי המחשב",
+      "description": "סיים בהצטיינות במדעי המחשב עם התמחות בהנדסת תוכנה."
+    },
+    "projects": {
+      "title": "פלטפורמת מסחר אלקטרוני",
+      "description": "פלטפורמת מסחר אלקטרוני מלאה שנבנתה עם React, Node.js ו-MongoDB."
+    },
+    "certifications": {
+      "name": "מפתח מוסמך AWS",
+      "issuer": "שירותי Amazon Web",
+      "description": "מוסמך בפיתוח ופריסת ענן AWS."
+    }
+  },
+  "skillCategories": {
+    "frontend": "ממשק משתמש",
+    "backend": "צד שרת",
+    "database": "מסד נתונים",
+    "cloud": "ענן"
+  }
+}

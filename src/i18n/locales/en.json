@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "personalInfo": "Personal Info",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "languages": "Languages"
+  },
+  "actions": {
+    "print": "Print",
+    "downloadPDF": "Download PDF",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  },
+  "hero": {
+    "title": "Full Stack Developer & Software Engineer",
+    "available": "Available for opportunities"
+  },
+  "sections": {
+    "personalInfo": {
+      "title": "Personal Information",
+      "aboutMe": "About Me",
+      "contactDetails": "Contact Details"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "present": "Present"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "certifications": {
+      "title": "Certifications"
+    },
+    "languages": {
+      "title": "Languages"
+    }
+  },
+  "sampleData": {
+    "personalInfo": {
+      "summary": "Experienced Full Stack Developer with a passion for creating innovative web applications. Skilled in modern technologies and frameworks with a focus on user experience and performance."
+    },
+    "experience": {
+      "title": "Senior Full Stack Developer",
+      "company": "Tech Company",
+      "description": "Led development of multiple web applications using React, Node.js, and cloud technologies.",
+      "achievements": [
+        "Improved performance by 40%",
+        "Mentored junior developers",
+        "Implemented CI/CD pipelines"
+      ]
+    },
+    "education": {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "description": "Graduated with honors in Computer Science with focus on software engineering."
+    },
+    "projects": {
+      "title": "E-commerce Platform",
+      "description": "A full-stack e-commerce platform built with React, Node.js, and MongoDB."
+    },
+    "certifications": {
+      "name": "AWS Certified Developer",
+      "issuer": "Amazon Web Services",
+      "description": "Certified in AWS cloud development and deployment."
+    }
+  },
+  "skillCategories": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "cloud": "Cloud"
+  }
+}

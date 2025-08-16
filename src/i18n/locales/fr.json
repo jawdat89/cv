@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "personalInfo": "Informations Personnelles",
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "certifications": "Certifications",
+    "languages": "Langues"
+  },
+  "actions": {
+    "print": "Imprimer",
+    "downloadPDF": "Télécharger PDF",
+    "switchToDark": "Passer au mode sombre",
+    "switchToLight": "Passer au mode clair"
+  },
+  "hero": {
+    "title": "Développeur Full Stack & Ingénieur Logiciel",
+    "available": "Disponible pour des opportunités"
+  },
+  "sections": {
+    "personalInfo": {
+      "title": "Informations Personnelles",
+      "aboutMe": "À Propos de Moi",
+      "contactDetails": "Détails de Contact"
+    },
+    "experience": {
+      "title": "Expérience Professionnelle",
+      "present": "Présent"
+    },
+    "education": {
+      "title": "Formation"
+    },
+    "skills": {
+      "title": "Compétences"
+    },
+    "projects": {
+      "title": "Projets"
+    },
+    "certifications": {
+      "title": "Certifications"
+    },
+    "languages": {
+      "title": "Langues"
+    }
+  },
+  "sampleData": {
+    "personalInfo": {
+      "summary": "Développeur Full Stack expérimenté avec une passion pour créer des applications web innovantes. Compétent dans les technologies et frameworks modernes avec un accent sur l'expérience utilisateur et les performances."
+    },
+    "experience": {
+      "title": "Développeur Full Stack Senior",
+      "company": "Entreprise Technologique",
+      "description": "Dirigé le développement de plusieurs applications web utilisant React, Node.js et les technologies cloud.",
+      "achievements": [
+        "Amélioré les performances de 40%",
+        "Mentoré des développeurs juniors",
+        "Implémenté des pipelines CI/CD"
+      ]
+    },
+    "education": {
+      "degree": "Licence en Sciences",
+      "field": "Informatique",
+      "description": "Diplômé avec mention en Informatique avec une spécialisation en génie logiciel."
+    },
+    "projects": {
+      "title": "Plateforme E-commerce",
+      "description": "Une plateforme e-commerce full-stack construite avec React, Node.js et MongoDB."
+    },
+    "certifications": {
+      "name": "Développeur Certifié AWS",
+      "issuer": "Amazon Web Services",
+      "description": "Certifié en développement et déploiement cloud AWS."
+    }
+  },
+  "skillCategories": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de Données",
+    "cloud": "Cloud"
+  }
+}

@@ -1,0 +1,9 @@
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/__tests__/**
+**/test/**
+vitest.config.ts
+vitest.setup.ts
+coverage/**
