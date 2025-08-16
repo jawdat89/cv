@@ -19,6 +19,8 @@ import {
   FaPrint,
   FaSun,
   FaMoon,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 
 const Dashboard: React.FC = () => {
@@ -27,6 +29,7 @@ const Dashboard: React.FC = () => {
   const dispatch = useDispatch();
   const [activeSection, setActiveSection] = useState("personal");
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Function to get the appropriate name based on current language
   const getLocalizedName = () => {
@@ -83,18 +86,15 @@ const Dashboard: React.FC = () => {
       <nav className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div
-              className={clsx(
-                "flex items-center",
-                direction === "rtl" ? "space-x-reverse space-x-8" : "space-x-8"
-              )}
-            >
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+            {/* Logo and Desktop Navigation */}
+            <div className="flex items-center">
+              <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
                 {getLocalizedName()}
               </h1>
+              {/* Desktop Navigation */}
               <div
                 className={clsx(
-                  "hidden md:flex",
+                  "hidden lg:flex ml-8",
                   direction === "rtl"
                     ? "space-x-reverse space-x-1"
                     : "space-x-1"
@@ -115,10 +115,12 @@ const Dashboard: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            {/* Desktop Actions */}
             <div
               className={clsx(
-                "flex items-center",
-                direction === "rtl" ? "space-x-reverse space-x-4" : "space-x-4"
+                "hidden md:flex items-center",
+                direction === "rtl" ? "space-x-reverse space-x-3" : "space-x-3"
               )}
             >
               <LanguageSelector />
@@ -140,7 +142,7 @@ const Dashboard: React.FC = () => {
               <button
                 onClick={handlePrint}
                 className={clsx(
-                  "flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors",
+                  "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
                   direction === "rtl"
                     ? "space-x-reverse space-x-2"
                     : "space-x-2"
@@ -152,7 +154,7 @@ const Dashboard: React.FC = () => {
               <button
                 onClick={handleDownload}
                 className={clsx(
-                  "flex items-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors",
+                  "flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm",
                   direction === "rtl"
                     ? "space-x-reverse space-x-2"
                     : "space-x-2"
@@ -164,7 +166,72 @@ const Dashboard: React.FC = () => {
                 </span>
               </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center space-x-2">
+              <LanguageSelector />
+              <button
+                onClick={toggleTheme}
+                className="flex items-center justify-center w-10 h-10 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                {cvData.theme === "light" ? (
+                  <FaMoon className="w-4 h-4" />
+                ) : (
+                  <FaSun className="w-4 h-4" />
+                )}
+              </button>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="flex items-center justify-center w-10 h-10 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                {isMobileMenuOpen ? (
+                  <FaTimes className="w-5 h-5" />
+                ) : (
+                  <FaBars className="w-5 h-5" />
+                )}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 dark:border-gray-700">
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {sections.map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => {
+                      scrollToSection(section.id);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      activeSection === section.id
+                        ? "bg-primary text-white"
+                        : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    }`}
+                  >
+                    {section.title}
+                  </button>
+                ))}
+                <div className="pt-4 pb-2 flex space-x-2">
+                  <button
+                    onClick={handlePrint}
+                    className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
+                  >
+                    <FaPrint className="w-4 h-4 mr-2" />
+                    {t("actions.print")}
+                  </button>
+                  <button
+                    onClick={handleDownload}
+                    className="flex-1 flex items-center justify-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm"
+                  >
+                    <FaDownload className="w-4 h-4 mr-2" />
+                    {t("actions.downloadPDF")}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -176,29 +243,31 @@ const Dashboard: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 lg:p-8">
             <div
               className={clsx(
-                "flex items-center justify-center mb-4",
-                direction === "rtl" ? "space-x-reverse space-x-6" : "space-x-6"
+                "flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6",
+                direction === "rtl"
+                  ? "sm:space-x-reverse sm:space-x-6"
+                  : "sm:space-x-6"
               )}
             >
               <img
                 src="/images/IMG-20241010-WA0030.jpg"
                 alt={getLocalizedName()}
                 className={clsx(
-                  "w-24 h-24 rounded-full object-cover object-center border-4 border-primary shadow-lg transform -translate-y-2 cursor-pointer hover:scale-105 transition-transform",
-                  direction === "rtl" ? "translate-x-5" : "-translate-x-5"
+                  "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-center border-4 border-primary shadow-lg transform -translate-y-2 cursor-pointer hover:scale-105 transition-transform mb-4 sm:mb-0",
+                  direction === "rtl" ? "sm:translate-x-5" : "sm:-translate-x-5"
                 )}
                 style={{ objectPosition: "center 30%" }}
                 onClick={() => setIsImageModalOpen(true)}
                 title="Click to view full size"
               />
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white text-center sm:text-left">
                 {getLocalizedName()}
               </h1>
             </div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-6 text-center">
               {t("hero.title")}
             </p>
 
@@ -243,9 +312,10 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
 
+            {/* Contact Info - Desktop */}
             <div
               className={clsx(
-                "flex justify-center text-sm text-gray-500 dark:text-gray-400",
+                "hidden md:flex justify-center text-sm text-gray-500 dark:text-gray-400",
                 direction === "rtl" ? "space-x-reverse space-x-6" : "space-x-6"
               )}
             >
@@ -268,6 +338,27 @@ const Dashboard: React.FC = () => {
                   {cvData.personalInfo.phone}
                 </a>
               </span>
+            </div>
+
+            {/* Contact Info - Mobile */}
+            <div className="md:hidden space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <div className="flex items-center justify-center">
+                <span>📍 {t("hero.available")}</span>
+              </div>
+              <div className="flex flex-col items-center space-y-1">
+                <a
+                  href={`mailto:${cvData.personalInfo.email}`}
+                  className="hover:text-primary transition-colors flex items-center"
+                >
+                  📧 {cvData.personalInfo.email}
+                </a>
+                <a
+                  href={`tel:${cvData.personalInfo.phone.replace(/\s/g, "")}`}
+                  className="hover:text-primary transition-colors flex items-center"
+                >
+                  📱 {cvData.personalInfo.phone}
+                </a>
+              </div>
             </div>
           </div>
         </motion.section>
@@ -492,7 +583,7 @@ const Dashboard: React.FC = () => {
               />
               {t("sections.skills.title")}
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {Object.entries(
                 cvData.skills.reduce((acc, skill) => {
                   if (!acc[skill.category]) acc[skill.category] = [];
@@ -555,16 +646,16 @@ const Dashboard: React.FC = () => {
               />
               {t("sections.projects.title")}
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {/* iPresent Project */}
-              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t("sections.projects.ipresent.title")}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
                   {t("sections.projects.ipresent.description")}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {[
                     "WPF",
                     "C#",
@@ -709,21 +800,21 @@ const Dashboard: React.FC = () => {
             viewport={{ once: true }}
             className="cv-section"
           >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-              <FaCertificate
-                className={clsx(
-                  "w-6 h-6 text-primary",
-                  direction === "rtl" ? "ml-3" : "mr-3"
-                )}
-              />
-              {t("sections.certifications.title")}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+               <FaCertificate
+                 className={clsx(
+                   "w-6 h-6 text-primary",
+                   direction === "rtl" ? "ml-3" : "mr-3"
+                 )}
+               />
+               {t("sections.certifications.title")}
+             </h2>
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {cvData.certifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className="border border-gray-200 dark:border-gray-700 rounded-lg p-6"
-                >
+                                 <div
+                   key={index}
+                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
+                 >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {cert.name}
                   </h3>
@@ -757,12 +848,12 @@ const Dashboard: React.FC = () => {
               />
               {t("sections.languages.title")}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {cvData.languages.map((lang, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
-                >
+                                 <div
+                   key={index}
+                   className="text-center p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
+                 >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {lang.name}
                   </h3>
