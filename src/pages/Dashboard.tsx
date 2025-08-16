@@ -65,12 +65,23 @@ const Dashboard: React.FC = () => {
   };
 
   const handlePrint = () => {
-    window.print();
+    // Download Hebrew version PDF
+    const link = document.createElement("a");
+    link.href = "/static/Jawdat Abdullah - 2025.pdf";
+    link.download = "Jawdat Abdullah - Hebrew CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleDownload = () => {
-    // TODO: Implement PDF download functionality
-    console.log("Download CV as PDF");
+    // Download English version PDF
+    const link = document.createElement("a");
+    link.href = "/static/Jawdat Abdullah - 2025.pdf";
+    link.download = "Jawdat Abdullah - CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const toggleTheme = () => {
@@ -147,24 +158,26 @@ const Dashboard: React.FC = () => {
                     ? "space-x-reverse space-x-2"
                     : "space-x-2"
                 )}
+                title="Download Hebrew CV"
               >
                 <FaPrint className="w-4 h-4" />
-                <span className="hidden sm:inline">{t("actions.print")}</span>
+                <span className="hidden sm:inline">Hebrew CV</span>
               </button>
-              <button
-                onClick={handleDownload}
-                className={clsx(
-                  "flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm",
-                  direction === "rtl"
-                    ? "space-x-reverse space-x-2"
-                    : "space-x-2"
-                )}
-              >
-                <FaDownload className="w-4 h-4" />
-                <span className="hidden sm:inline">
-                  {t("actions.downloadPDF")}
-                </span>
-              </button>
+                             <button
+                 onClick={handleDownload}
+                 className={clsx(
+                   "flex items-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm",
+                   direction === "rtl"
+                     ? "space-x-reverse space-x-2"
+                     : "space-x-2"
+                 )}
+                 title="Download English CV"
+               >
+                 <FaDownload className="w-4 h-4" />
+                 <span className="hidden sm:inline">
+                   English CV
+                 </span>
+               </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -214,20 +227,20 @@ const Dashboard: React.FC = () => {
                   </button>
                 ))}
                 <div className="pt-4 pb-2 flex space-x-2">
-                  <button
-                    onClick={handlePrint}
-                    className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
-                  >
-                    <FaPrint className="w-4 h-4 mr-2" />
-                    {t("actions.print")}
-                  </button>
-                  <button
-                    onClick={handleDownload}
-                    className="flex-1 flex items-center justify-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm"
-                  >
-                    <FaDownload className="w-4 h-4 mr-2" />
-                    {t("actions.downloadPDF")}
-                  </button>
+                                     <button
+                     onClick={handlePrint}
+                     className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
+                   >
+                     <FaPrint className="w-4 h-4 mr-2" />
+                     Hebrew CV
+                   </button>
+                                     <button
+                     onClick={handleDownload}
+                     className="flex-1 flex items-center justify-center px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors text-sm"
+                   >
+                     <FaDownload className="w-4 h-4 mr-2" />
+                     English CV
+                   </button>
                 </div>
               </div>
             </div>
