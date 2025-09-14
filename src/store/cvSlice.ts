@@ -604,4 +604,5 @@ export const {
   resetCV,
 } = cvSlice.actions;
 
+export { cvSlice };
 export default cvSlice.reducer;

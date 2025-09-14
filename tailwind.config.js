@@ -180,12 +180,42 @@ module.exports = {
         "4xl": "2rem",
       },
       animation: {
-        'fade-in': 'fadeIn 0.3s ease-in-out forwards',
+        'fade-in': 'fadeIn var(--animate-duration, 0.6s) ease-out var(--animate-delay, 0s) forwards',
+        'slide-in-from-bottom': 'slideInFromBottom var(--animate-duration, 0.6s) ease-out var(--animate-delay, 0s) forwards',
+        'slide-in-from-left': 'slideInFromLeft var(--animate-duration, 0.6s) ease-out var(--animate-delay, 0s) forwards',
+        'slide-in-from-right': 'slideInFromRight var(--animate-duration, 0.6s) ease-out var(--animate-delay, 0s) forwards',
+        'slide-in-from-top': 'slideInFromTop var(--animate-duration, 0.6s) ease-out var(--animate-delay, 0s) forwards',
+        'zoom-in': 'zoomIn var(--animate-duration, 0.6s) ease-out var(--animate-delay, 0s) forwards',
+        'progress-fill': 'progressFill var(--animate-duration, 1.5s) ease-out var(--animate-delay, 0s) forwards',
       },
       keyframes: {
         fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideInFromBottom: {
+          '0%': { opacity: '0', transform: 'translateY(0.5rem)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInFromLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-0.5rem)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInFromRight: {
+          '0%': { opacity: '0', transform: 'translateX(0.5rem)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInFromTop: {
+          '0%': { opacity: '0', transform: 'translateY(-0.5rem)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        zoomIn: {
           '0%': { opacity: '0', transform: 'scale(0.95)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        progressFill: {
+          '0%': { width: '0%' },
+          '100%': { width: 'var(--progress-width, 100%)' },
         },
       },
     },

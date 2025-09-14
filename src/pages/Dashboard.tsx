@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import LanguageSelector from "@/components/LanguageSelector";
 import ImageModal from "@/components/ImageModal";
 import { HtmlRenderer } from "@/utils/htmlRenderer";
+import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
 import clsx from "clsx";
 import {
   FaUser,
@@ -489,7 +490,7 @@ const Dashboard: React.FC = () => {
 
         {/* Experience Section */}
         <section id="experience" className="mb-16">
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -644,12 +645,12 @@ const Dashboard: React.FC = () => {
 
         {/* Skills Section */}
         <section id="skills" className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="cv-section"
-          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="cv-section"
+            >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
               <FaCode
                 className={clsx(
@@ -679,24 +680,16 @@ const Dashboard: React.FC = () => {
                       }`
                     ) || category}
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {skills.map((skill, index) => (
-                      <div key={index}>
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="text-gray-700 dark:text-gray-300">
-                            {skill.name}
-                          </span>
-                          <span className="text-sm text-gray-500 dark:text-gray-400">
-                            {skill.proficiency}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div
-                            className="bg-primary h-2 rounded-full transition-all duration-300"
-                            style={{ width: `${skill.proficiency}%` }}
-                          ></div>
-                        </div>
-                      </div>
+                      <AnimatedProgressBar
+                        key={index}
+                        value={skill.proficiency}
+                        label={skill.name}
+                        showPercentage={true}
+                        className="mb-2"
+                        barClassName="bg-gradient-to-r from-primary to-primary-dark"
+                      />
                     ))}
                   </div>
                 </div>
