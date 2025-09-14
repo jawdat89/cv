@@ -40,6 +40,7 @@
   "actions": {
     "print": "Print",
     "downloadPDF": "PDF",
+    "downloadHebrewCV": "Hebrew CV",
     "switchToDark": "Switch to dark mode",
     "switchToLight": "Switch to light mode"
   },

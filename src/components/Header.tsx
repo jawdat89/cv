@@ -11,8 +11,10 @@ interface HeaderProps {
   title?: string;
   showPrint?: boolean;
   showDownload?: boolean;
+  showHebrewCV?: boolean;
   onPrint?: () => void;
   onDownload?: () => void;
+  onDownloadHebrewCV?: () => void;
   children?: React.ReactNode;
 }
 
@@ -20,8 +22,10 @@ const Header: React.FC<HeaderProps> = ({
   title,
   showPrint = false,
   showDownload = false,
+  showHebrewCV = false,
   onPrint,
   onDownload,
+  onDownloadHebrewCV,
   children,
 }) => {
   const { t } = useI18n();
@@ -47,6 +51,20 @@ const Header: React.FC<HeaderProps> = ({
       onDownload();
     } else {
       console.log("Download functionality not implemented");
+    }
+  };
+
+  const handleDownloadHebrewCV = () => {
+    if (onDownloadHebrewCV) {
+      onDownloadHebrewCV();
+    } else {
+      // Default behavior: download the Hebrew CV file
+      const link = document.createElement('a');
+      link.href = '/static/גודאת עבדאללה - קורות חיים 2025.pdf';
+      link.download = 'גודאת עבדאללה - קורות חיים 2025.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   };
 
@@ -100,6 +118,18 @@ const Header: React.FC<HeaderProps> = ({
                 <FaDownload className="w-4 h-4" />
                 <span className="hidden sm:inline">
                   {t("actions.downloadPDF")}
+                </span>
+              </button>
+            )}
+
+            {showHebrewCV && (
+              <button
+                onClick={handleDownloadHebrewCV}
+                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                <FaDownload className="w-4 h-4" />
+                <span className="hidden sm:inline">
+                  {t("actions.downloadHebrewCV")}
                 </span>
               </button>
             )}
