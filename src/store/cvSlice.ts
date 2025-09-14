@@ -87,20 +87,20 @@ const initialState: CVData = {
     linkedin: "linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
-      "Experienced Automation Manager and Logistics Manager with SAP EWM 100 certification, currently pursuing a Control & Automation Engineering degree. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, optimizing logistics processes, and leveraging SAP systems to drive operational excellence. Proven track record of delivering high-quality automation and logistics solutions with technical expertise.",
+      "I aspire to develop as an autonomous and leading developer in ERP systems, with emphasis on integrating advanced technologies, automation and innovation. Based on practical experience in SAP system management, software development and implementing autonomous solutions, I am committed to leading complex technological processes and bringing significant value to the organization.",
   },
   experience: [
     {
       id: "1",
-      title: "Automation Manager & Logistics Manager",
+      title: "Automation Manager",
       company: "Strauss Group",
-      position: "Automation Manager & Logistics Manager",
+      position: "Automation Manager",
       location: "Israel",
       startDate: "2025",
       endDate: "Present",
       current: true,
       description:
-        "As Automation Manager & Logistics Manager at Strauss-Group's Chilled Warehouse (Dairy & Shaked), I oversee both automation processes and logistics operations to ensure efficient, reliable, and high-quality warehouse performance. My role involves managing and continuously optimising SAP ECC and SAP EWM systems, coordinating logistics workflows, and integrating HMI PLCs to enhance warehouse automation.\n\nI serve as a strategic liaison between operations and IT, delivering expert SAP consulting for the new Shaked industry and supporting ongoing system enhancements. I collaborate with cross-functional teams to streamline deliveries, materials management, quality assurance, and logistics optimization, while actively participating in management meetings to drive strategic decisions and continuous improvement initiatives.\n\nMy focus is on achieving operational excellence, maintaining system reliability, optimizing logistics processes, and enabling the seamless integration of new technologies to meet the evolving needs of the warehouse environment.",
+        "Managing incoming and outgoing delivery processes in various warehouses using SAP EWM, SAP S/4HANA, and SAP WM, including RF device integration. Training new users, writing procedures and guides. Supervising warehouse process automation, including HMI PLCs integration. Partnering in implementing autonomous projects. Strategic liaison between operations and IT.",
       achievements: [
         "Design and implement automation systems for industrial processes",
         "Manage and optimize logistics operations and warehouse workflows",
@@ -121,7 +121,7 @@ const initialState: CVData = {
       endDate: "2024",
       current: false,
       description:
-        "Designed and developed scalable web applications using React, Angular, NodeJS, and .Net, ensuring efficient performance and user-friendly interfaces. Implemented real-time features using WebSocket technology, enhancing user engagement and interaction for dynamic applications. Led the development of cross-platform mobile applications with React Native, focusing on seamless user experiences across different devices.",
+        "Worked in a multidisciplinary development team with close collaboration in managing DevOps processes to improve workflow and advanced automation in D&R projects successfully implemented to PROD. Actively participated in managing technological projects, working as a team to ensure meeting deadlines and maintaining high quality. Implemented real-time solutions using WebSocket and R-Signal, which enhanced user engagement. Designed and developed applications in NodeJS, Angular, React, and .Net, with emphasis on performance and user experience. Developed cross-platform mobile applications with React Native. Implemented advanced algorithms and Serverless solutions in various Azure Services, to improve system performance and efficiency.",
       achievements: [
         "Designed and developed scalable web applications using React, Angular, NodeJS, and .Net",
         "Implemented real-time features using WebSocket technology",
@@ -198,7 +198,7 @@ const initialState: CVData = {
       institution: "Atid Maloot",
       degree: "Control & Automation Engineering",
       field: "Automation & Control",
-      startDate: "2024",
+      startDate: "2025",
       endDate: "Present",
       current: true,
       gpa: "",
@@ -207,18 +207,6 @@ const initialState: CVData = {
     },
     {
       id: "2",
-      institution: "BSc in Computer Science (on hold)",
-      degree: "BSc",
-      field: "Computer Science",
-      startDate: "2023",
-      endDate: "2024",
-      current: false,
-      gpa: "3.8",
-      description:
-        "BSc in Computer Science with a focus on software engineering, currently on hold.",
-    },
-    {
-      id: "3",
       institution: "Ort Braude College of Engineering",
       degree: "Software Practical Engineer with honors",
       field: "Software Engineering",
@@ -400,7 +388,7 @@ const initialState: CVData = {
       id: "1",
       name: "English",
       language: "English",
-      proficiency: "Advanced",
+      proficiency: "Professional",
     },
     {
       id: "2",

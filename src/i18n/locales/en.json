@@ -61,29 +61,29 @@
       "title": "Work Experience",
       "present": "Present",
       "strauss": {
-        "title": "Automation and Monitoring Manager",
+        "title": "Automation Manager",
         "company": "Strauss Group",
-        "description": "As Automation Manager at Strauss-Group's Chilled Warehouse (Dairy & Shaked), I oversee all end-to-end automation processes to ensure efficient, reliable, and high-quality warehouse operations. My role involves managing and continuously optimising SAP ECC and SAP EWM systems, as well as providing hands-on support and integrating HMI PLCs to enhance warehouse automation. I serve as a strategic liaison between operations and IT, delivering expert SAP consulting for the new Shaked industry and supporting ongoing system enhancements. I collaborate with cross-functional teams to streamline deliveries, materials management, and quality assurance, and actively participate in management meetings to drive strategic decisions and continuous improvement initiatives. My focus is on achieving operational excellence, maintaining system reliability, and enabling the seamless integration of new technologies to meet the evolving needs of the warehouse environment."
+        "description": "Managing delivery processes (inbound and outbound) in various warehouses, using <b>SAP EWM</b>, <b>SAP S/4HANA</b> on <b>SAP WM</b>, including integration of <b>RF</b> devices. Training new users, writing procedures and guides. Supervising warehouse process automation, including integration of <b>PLCs HMI</b>. Partner in implementing autonomous projects. Strategic liaison between operations and <b>IT</b>."
       },
       "besttuqay": {
         "title": "Freelance Software Engineer",
         "company": "BestTuqay",
-        "description": "Developed and maintained web applications using modern technologies. Collaborated with clients to understand requirements and deliver high-quality solutions."
+        "description": "Developed and maintained web applications using <b>modern technologies</b>. Collaborated with clients to understand requirements and deliver high-quality solutions."
       },
       "innovisec": {
         "title": "Senior Software Developer",
         "company": "Innovisec, ICTS Europe",
-        "description": "Designed and developed scalable web applications using React, Angular, NodeJS, and .Net, ensuring efficient performance and user-friendly interfaces. Implemented real-time features using WebSocket technology, enhancing user engagement and interaction for dynamic applications. Led the development of cross-platform mobile applications with React Native, focusing on seamless user experiences across different devices."
+        "description": "Worked in a multidisciplinary development team, with close collaboration in managing <b>DevOps</b> processes to improve workflow and advanced automation in <b>D&R</b> projects that were successfully implemented to <b>PROD</b>. Actively participated in managing technological projects, with teamwork to ensure meeting deadlines and maintaining high quality. Implemented real-time solutions using <b>WebSocket</b> and <b>R-Signal</b>, which enhanced user engagement. Designed and developed applications in <b>NodeJS</b>, <b>Angular</b>, <b>React</b> and <b>.Net</b> languages, with emphasis on performance and user experience. Developed cross-platform mobile applications with <b>React Native</b>. Implemented advanced algorithms and <b>Serverless</b> solutions in various <b>Azure Services</b>, to improve performance and system efficiency."
       },
       "strauss_tech": {
         "title": "Technical Support Specialist (Tier 1)",
         "company": "Strauss-Group",
-        "description": "Managed user access and resolved technical issues across Active Directory, SAP, and other systems, enhancing system reliability. Provided comprehensive support for network troubleshooting. Supported SAP EWM/WMS and GUI, creating and maintaining essential support documentation to enhance operational efficiency and logistics management."
+        "description": "Managed user access and resolved technical issues across <b>Active Directory</b>, <b>SAP</b>, and other systems, enhancing system reliability. Provided comprehensive support for network troubleshooting. Supported <b>SAP EWM/WMS</b> and <b>GUI</b>, creating and maintaining essential support documentation to enhance operational efficiency and logistics management."
       },
       "qualitest": {
         "title": "QA Automation and Manual Junior Tester",
         "company": "Qualitest Haifa",
-        "description": "Enhanced software quality for Microsoft Security tools through both automated and manual testing. Developed robust Hyper-V and MS Server testing environments, focusing on UAG/TMG for precise scenarios. Led automation testing efforts, including hotfix installations, reporting, troubleshooting, and code adjustments using Microsoft tools. Executed detailed manual testing, configuring complex environments and ensuring compatibility across various infrastructures. Collaborated with Microsoft developers for on-demand testing, directly influencing software improvements with targeted feedback. Crafted and followed comprehensive test plans, scripts, and use cases, analyzing results to provide actionable optimization insights. Proficient in Forefront UAG/TMG 2010, Microsoft Exchange Server, SharePoint, and Active Directory Federation Services. Maintained office workstations, guaranteeing security and performance for Qualitest endpoint stations."
+        "description": "Enhanced software quality for <b>Microsoft Security</b> tools through both automated and manual testing. Developed robust <b>Hyper-V</b> and <b>MS Server</b> testing environments, focusing on <b>UAG/TMG</b> for precise scenarios. Led automation testing efforts, including hotfix installations, reporting, troubleshooting, and code adjustments using <b>Microsoft tools</b>. Executed detailed manual testing, configuring complex environments and ensuring compatibility across various infrastructures. Collaborated with <b>Microsoft developers</b> for on-demand testing, directly influencing software improvements with targeted feedback. Crafted and followed comprehensive test plans, scripts, and use cases, analyzing results to provide actionable optimization insights. Proficient in <b>Forefront UAG/TMG 2010</b>, <b>Microsoft Exchange Server</b>, <b>SharePoint</b>, and <b>Active Directory Federation Services</b>. Maintained office workstations, guaranteeing security and performance for Qualitest endpoint stations."
       }
     },
     "education": {
@@ -93,12 +93,6 @@
         "degree": "Control & Automation Engineering",
         "field": "Automation & Control",
         "description": "Currently pursuing a Control & Automation Engineering degree with electrical license."
-      },
-      "bsc": {
-        "institution": "BSc in Computer Science (on hold)",
-        "degree": "BSc",
-        "field": "Computer Science",
-        "description": "BSc in Computer Science with a focus on software engineering, currently on hold."
       },
       "ort": {
         "institution": "Ort Braude College of Engineering",
@@ -114,23 +108,23 @@
       "title": "Projects",
       "ipresent": {
         "title": "iPresent - Digital Signage System",
-        "description": "A comprehensive WPF-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (PDF, PPT, videos, images). Includes background synchronization service and role-based user management."
+        "description": "A comprehensive <b>WPF</b>-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (<b>PDF</b>, <b>PPT</b>, videos, images). Includes background synchronization service and role-based user management."
       },
       "imanage": {
         "title": "iManage - Small Business ERP System",
-        "description": "A comprehensive ERP (Enterprise Resource Planning) system designed specifically for small businesses. Features include inventory management, customer relationship management (CRM), financial accounting, sales and purchase order processing, employee management, and reporting dashboards. Built with modern .NET Core backend and React frontend for optimal user experience and scalability."
+        "description": "A comprehensive <b>ERP</b> (Enterprise Resource Planning) system designed specifically for small businesses. Features include inventory management, customer relationship management (<b>CRM</b>), financial accounting, sales and purchase order processing, employee management, and reporting dashboards. Built with modern <b>.NET Core</b> backend and <b>React</b> frontend for optimal user experience and scalability."
       },
       "gofresh": {
         "title": "GoFresh - Drinks Shop Menu App",
-        "description": "A digital menu application for a drinks shop built with serverless architecture. Features include dynamic menu management with Sanity.io integration, like functionality for menu items, real-time menu updates, and responsive design for customers to browse drinks and place orders."
+        "description": "A digital menu application for a drinks shop built with <b>serverless architecture</b>. Features include dynamic menu management with <b>Sanity.io</b> integration, like functionality for menu items, real-time menu updates, and responsive design for customers to browse drinks and place orders."
       },
       "asend": {
         "title": "ASend - Automated Congratulations Cards",
-        "description": "An automated congratulations card system built with Supabase for seamless card generation and customization. Features include automated card creation, customizable templates, real-time database management, and user-friendly interface for creating personalized congratulatory messages."
+        "description": "An automated congratulations card system built with <b>Supabase</b> for seamless card generation and customization. Features include automated card creation, customizable templates, real-time database management, and user-friendly interface for creating personalized congratulatory messages."
       },
       "myshop": {
         "title": "myShop - Ticket Management System",
-        "description": "A comprehensive ticket management system designed to help manage user tickets across multiple platforms. Features include WPF desktop application for local machines, SyncService API for data synchronization, and React Native mobile app for on-the-go ticket management. Provides seamless ticket tracking, status updates, and cross-platform synchronization."
+        "description": "A comprehensive ticket management system designed to help manage user tickets across multiple platforms. Replaced legacy <b>WPF</b> code with modern <b>Node.js</b> backend, <b>React</b> frontend, local <b>API</b> architecture, and multiple end-user <b>PWAs</b> (Progressive Web Apps). Provides seamless ticket tracking, status updates, and cross-platform synchronization with improved performance and user experience."
       }
     },
     "certifications": {
@@ -139,6 +133,18 @@
     "languages": {
       "title": "Languages"
     }
+  },
+  "languageNames": {
+    "English": "English",
+    "Arabic": "Arabic", 
+    "Hebrew": "Hebrew"
+  },
+  "proficiencyLevels": {
+    "Professional": "Professional",
+    "Native": "Native",
+    "Advanced": "Advanced",
+    "Intermediate": "Intermediate",
+    "Beginner": "Beginner"
   },
   "sampleData": {
     "personalInfo": {

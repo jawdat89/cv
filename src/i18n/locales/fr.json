@@ -139,6 +139,18 @@
       "title": "Langues"
     }
   },
+  "languageNames": {
+    "English": "Anglais",
+    "Arabic": "Arabe", 
+    "Hebrew": "Hébreu"
+  },
+  "proficiencyLevels": {
+    "Professional": "Professionnel",
+    "Native": "Langue maternelle",
+    "Advanced": "Avancé",
+    "Intermediate": "Intermédiaire",
+    "Beginner": "Débutant"
+  },
   "sampleData": {
     "personalInfo": {
       "summary": "Ingénieur en Automatisation et Surveillance expérimenté avec 5+ années d'expertise dans les systèmes d'automatisation industrielle et le génie électrique. Ancien Développeur Full Stack avec une solide formation en React, Node.js et technologies cloud. Passionné par la conception et l'implémentation de solutions d'automatisation, la maintenance des systèmes électriques et l'optimisation des processus de production. Bilan prouvé de livraison de solutions d'automatisation de haute qualité et de support technique."

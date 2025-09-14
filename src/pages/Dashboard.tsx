@@ -6,6 +6,7 @@ import { setTheme } from "@/store/cvSlice";
 import { motion } from "framer-motion";
 import LanguageSelector from "@/components/LanguageSelector";
 import ImageModal from "@/components/ImageModal";
+import { HtmlRenderer } from "@/utils/htmlRenderer";
 import clsx from "clsx";
 import {
   FaUser,
@@ -516,7 +517,7 @@ const Dashboard: React.FC = () => {
                   2025 - {t("sections.experience.present")}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t("sections.experience.strauss.description")}
+                  <HtmlRenderer content={t("sections.experience.strauss.description")} />
                 </p>
               </div>
 
@@ -532,7 +533,7 @@ const Dashboard: React.FC = () => {
                   2024 - {t("sections.experience.present")}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t("sections.experience.besttuqay.description")}
+                  <HtmlRenderer content={t("sections.experience.besttuqay.description")} />
                 </p>
               </div>
 
@@ -548,7 +549,7 @@ const Dashboard: React.FC = () => {
                   2019 - 2024
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t("sections.experience.innovisec.description")}
+                  <HtmlRenderer content={t("sections.experience.innovisec.description")} />
                 </p>
               </div>
 
@@ -564,7 +565,7 @@ const Dashboard: React.FC = () => {
                   2015 - 2018
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t("sections.experience.strauss_tech.description")}
+                  <HtmlRenderer content={t("sections.experience.strauss_tech.description")} />
                 </p>
               </div>
 
@@ -580,7 +581,7 @@ const Dashboard: React.FC = () => {
                   2010 - 2015
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {t("sections.experience.qualitest.description")}
+                  <HtmlRenderer content={t("sections.experience.qualitest.description")} />
                 </p>
               </div>
             </div>
@@ -614,28 +615,13 @@ const Dashboard: React.FC = () => {
                   {t("sections.education.atid.institution")}
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  2024 - {t("sections.experience.present")}
+                  2025 - {t("sections.experience.present")}
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
                   {t("sections.education.atid.description")}
                 </p>
               </div>
 
-              {/* BSc Computer Science Education */}
-              <div className="border-l-4 border-primary pl-6">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {t("sections.education.bsc.degree")}
-                </h3>
-                <p className="text-primary font-medium">
-                  {t("sections.education.bsc.institution")}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  2023 - 2024
-                </p>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {t("sections.education.bsc.description")}
-                </p>
-              </div>
 
               {/* Ort Braude Education */}
               <div className="border-l-4 border-primary pl-6">
@@ -743,7 +729,7 @@ const Dashboard: React.FC = () => {
                   {t("sections.projects.ipresent.title")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-                  {t("sections.projects.ipresent.description")}
+                  <HtmlRenderer content={t("sections.projects.ipresent.description")} />
                 </p>
                 <div className="flex flex-wrap gap-1 sm:gap-2">
                   {[
@@ -771,7 +757,7 @@ const Dashboard: React.FC = () => {
                   {t("sections.projects.imanage.title")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t("sections.projects.imanage.description")}
+                  <HtmlRenderer content={t("sections.projects.imanage.description")} />
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -800,7 +786,7 @@ const Dashboard: React.FC = () => {
                   {t("sections.projects.gofresh.title")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t("sections.projects.gofresh.description")}
+                  <HtmlRenderer content={t("sections.projects.gofresh.description")} />
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -828,7 +814,7 @@ const Dashboard: React.FC = () => {
                   {t("sections.projects.asend.title")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t("sections.projects.asend.description")}
+                  <HtmlRenderer content={t("sections.projects.asend.description")} />
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -856,16 +842,16 @@ const Dashboard: React.FC = () => {
                   {t("sections.projects.myshop.title")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t("sections.projects.myshop.description")}
+                  <HtmlRenderer content={t("sections.projects.myshop.description")} />
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "WPF",
-                    "React Native",
-                    "C#",
+                    "Node.js",
+                    "React",
+                    "PWA",
                     "API Development",
-                    "SyncService",
-                    "Mobile Development",
+                    "Modern Architecture",
+                    "Web Development",
                     "Desktop Application",
                     "Cross-platform",
                   ].map((tech, techIndex) => (
@@ -945,10 +931,10 @@ const Dashboard: React.FC = () => {
                   className="text-center p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
                 >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {lang.name}
+                    {t(`languageNames.${lang.name}`) || lang.name}
                   </h3>
                   <p className="text-sm text-primary font-medium leading-tight">
-                    {lang.proficiency}
+                    {t(`proficiencyLevels.${lang.proficiency}`) || lang.proficiency}
                   </p>
                 </div>
               ))}
