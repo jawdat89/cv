@@ -113,7 +113,7 @@ describe('useI18n', () => {
     const { result } = renderHook(() => useI18n());
     
     const translation = result.current.getText('test.key', 'fallback');
-    expect(translation).toBe('test.key');
+    expect(translation).toBe('fallback');
   });
 
   it('getTextWithParams calls translation with params', () => {

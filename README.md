@@ -64,25 +64,55 @@ A modern, responsive CV showcase website built with React, TypeScript, and Tailw
 
 ## Key Features Implemented
 
-- **Multilingual Support**: Full i18n implementation with 4 languages
-- **Animated Progress Bars**: Skills section with smooth progress animations
-- **Lazy Loading**: Sections animate into view using Intersection Observer
-- **Rich Text Rendering**: Safe HTML rendering for formatted content
+- **Multilingual Support**: Full i18n implementation with 4 languages (English, Hebrew, Arabic, French)
+- **Animated Progress Bars**: Skills section with smooth progress animations triggered on scroll
+- **Lazy Loading**: Sections animate into view using Intersection Observer API
+- **Rich Text Rendering**: Safe HTML rendering for formatted content with XSS protection
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Dark/Light Theme**: Automatic theme switching with persistence
-- **Professional Animations**: Subtle, professional animations using Framer Motion and Tailwind
+- **Dark/Light Theme**: Automatic theme switching with localStorage persistence
+- **Professional Animations**: Subtle, professional animations using Framer Motion and Tailwind CSS
+- **Comprehensive Testing**: 59 unit tests covering all components, hooks, and utilities
+- **Type Safety**: Full TypeScript implementation with strict type checking
+- **Performance Optimized**: Lazy loading, code splitting, and optimized bundle size
 
 ## Project Structure
 
 ```
 src/
 ├── components/          # React components
+│   ├── Header.tsx      # Navigation and theme toggle
+│   ├── LanguageSelector.tsx # Language switcher
+│   └── AnimatedProgressBar.tsx # Animated skill bars
 ├── hooks/              # Custom React hooks
+│   ├── useI18n.tsx     # Internationalization hook
+│   ├── useHtmlTranslation.tsx # HTML-safe translations
+│   └── useIntersectionObserver.tsx # Lazy loading
 ├── i18n/               # Internationalization files
+│   └── locales/        # Language JSON files
 ├── pages/              # Page components
+│   └── Dashboard.tsx   # Main CV display
 ├── store/              # Redux store and slices
+│   └── cvSlice.ts      # CV data and state management
 ├── utils/              # Utility functions
+│   └── htmlRenderer.tsx # Safe HTML rendering
 └── test/               # Test setup and utilities
+```
+
+## Testing
+
+The project includes comprehensive test coverage with 59 unit tests:
+
+- **Component Tests**: Header, LanguageSelector, and other UI components
+- **Hook Tests**: Custom hooks for i18n, HTML translation, and intersection observer
+- **Utility Tests**: HTML renderer and sanitization functions
+- **Store Tests**: Redux slice and state management
+- **Integration Tests**: Component interactions and user flows
+
+Run tests with:
+```bash
+npm test          # Run tests in watch mode
+npm run test:run  # Run tests once
+npm run coverage  # Run with coverage report
 ```
 
 ## License

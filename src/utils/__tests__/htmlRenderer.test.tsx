@@ -44,14 +44,14 @@ describe('HtmlRenderer', () => {
 
   it('renders line breaks correctly', () => {
     render(<HtmlRenderer content="Line 1<br/>Line 2" />);
-    const container = screen.getByText('Line 1');
+    const container = screen.getByText(/Line 1/);
     expect(container).toBeInTheDocument();
   });
 
   it('sanitizes dangerous HTML tags', () => {
     render(<HtmlRenderer content="<script>alert('xss')</script>Safe content" />);
-    expect(screen.getByText('Safe content')).toBeInTheDocument();
-    expect(screen.queryByText("alert('xss')")).not.toBeInTheDocument();
+    expect(screen.getByText(/Safe content/)).toBeInTheDocument();
+    expect(screen.queryByText(/alert\('xss'\)/)).not.toBeInTheDocument();
   });
 
   it('sanitizes dangerous attributes', () => {

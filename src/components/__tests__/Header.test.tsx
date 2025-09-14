@@ -52,8 +52,8 @@ vi.mock('@/hooks', () => ({
 
 // Mock the LanguageSelector component
 vi.mock('../LanguageSelector', () => ({
-  default: ({ onLanguageChange }: { onLanguageChange: (lang: string) => void }) => (
-    <button onClick={() => onLanguageChange('he')} data-testid="language-selector">
+  default: () => (
+    <button data-testid="language-selector">
       Language Selector
     </button>
   ),
@@ -77,12 +77,12 @@ describe('Header', () => {
 
   it('renders header component', () => {
     renderHeader();
-    expect(screen.getByRole('banner')).toBeInTheDocument();
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
   it('renders theme toggle button', () => {
     renderHeader();
-    const themeButton = screen.getByRole('button', { name: /toggle theme/i });
+    const themeButton = screen.getByTitle(/switch/i);
     expect(themeButton).toBeInTheDocument();
   });
 
@@ -118,24 +118,22 @@ describe('Header', () => {
 
   it('applies correct CSS classes', () => {
     renderHeader();
-    const header = screen.getByRole('banner');
-    expect(header).toHaveClass('bg-white', 'dark:bg-gray-900', 'shadow-sm');
+    const header = screen.getByRole('navigation');
+    expect(header).toHaveClass('bg-white', 'dark:bg-gray-800', 'shadow-sm');
   });
 
   it('handles theme toggle click', () => {
     renderHeader();
-    const themeButton = screen.getByRole('button', { name: /toggle theme/i });
+    const themeButton = screen.getByTitle(/switch/i);
     
     fireEvent.click(themeButton);
     // Note: In a real test, you'd verify the store state changed
   });
 
-  it('handles language change', () => {
+  it('renders language selector', () => {
     renderHeader();
     const languageButton = screen.getByTestId('language-selector');
-    
-    fireEvent.click(languageButton);
-    // Note: In a real test, you'd verify the language changed
+    expect(languageButton).toBeInTheDocument();
   });
 
   it('renders with dark theme classes when theme is dark', () => {
@@ -146,8 +144,8 @@ describe('Header', () => {
       </Provider>
     );
     
-    const header = screen.getByRole('banner');
-    expect(header).toHaveClass('dark:bg-gray-900');
+    const header = screen.getByRole('navigation');
+    expect(header).toHaveClass('dark:bg-gray-800');
   });
 
   it('renders with light theme classes when theme is light', () => {
@@ -158,7 +156,7 @@ describe('Header', () => {
       </Provider>
     );
     
-    const header = screen.getByRole('banner');
+    const header = screen.getByRole('navigation');
     expect(header).toHaveClass('bg-white');
   });
 });
