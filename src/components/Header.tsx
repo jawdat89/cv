@@ -5,6 +5,7 @@ import { setTheme } from "@/store/cvSlice";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useI18n } from "@/hooks";
 import { FaSun, FaMoon, FaPrint, FaDownload } from "react-icons/fa";
+import clsx from "clsx";
 
 interface HeaderProps {
   title?: string;
@@ -53,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({
     <nav className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-8">
+          <div className={clsx("flex items-center space-x-8")}>
             {title && (
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                 {title}
