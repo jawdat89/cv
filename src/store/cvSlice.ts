@@ -70,7 +70,7 @@ export interface CVData {
   }>;
   template: "modern" | "classic" | "creative" | "minimal";
   theme: "light" | "dark";
-  currentLanguage: "en" | "ar" | "fr" | "he";
+  currentLanguage: "en" | "ar" | "he";
 }
 
 const initialState: CVData = {

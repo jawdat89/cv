@@ -88,7 +88,7 @@ const LanguageSelector: React.FC = () => {
   }, [isOpen]);
 
   const handleLanguageChange = (languageCode: string) => {
-    dispatch(setLanguage(languageCode as "en" | "ar" | "fr" | "he"));
+    dispatch(setLanguage(languageCode as "en" | "ar" | "he"));
     i18n.changeLanguage(languageCode);
     setIsOpen(false);
   };

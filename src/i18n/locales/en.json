@@ -55,7 +55,7 @@
       "title": "Personal Information",
       "aboutMe": "About Me",
       "contactDetails": "Contact Details",
-      "summary": "Experienced Automation and Monitoring Engineer with 5+ years of expertise in industrial automation systems and electrical engineering. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, maintaining electrical systems, and optimizing production processes. Proven track record of delivering high-quality automation solutions and technical support."
+      "summary": "Experienced Full Stack Developer with 5+ years of expertise in <b>React</b>, <b>Node.js</b>, and <b>cloud technologies</b>. Currently specializing in <b>industrial automation</b>, <b>ERP SAP systems</b>, and <b>logistics automation</b> with hands-on experience in designing and implementing automation solutions and optimizing production processes. Passionate about bridging software development skills with <b>industrial and logistics automation</b> to deliver high-quality, efficient solutions."
     },
     "experience": {
       "title": "Work Experience",
@@ -148,7 +148,7 @@
   },
   "sampleData": {
     "personalInfo": {
-      "summary": "Experienced Automation and Monitoring Engineer with 5+ years of expertise in industrial automation systems and electrical engineering. Former Full Stack Developer with strong background in React, Node.js, and cloud technologies. Passionate about designing and implementing automation solutions, maintaining electrical systems, and optimizing production processes. Proven track record of delivering high-quality automation solutions and technical support."
+      "summary": "Experienced Full Stack Developer with 5+ years of expertise in <b>React</b>, <b>Node.js</b>, and <b>cloud technologies</b>. Currently specializing in <b>industrial automation</b>, <b>ERP SAP systems</b>, and <b>logistics automation</b> with hands-on experience in designing and implementing automation solutions and optimizing production processes. Passionate about bridging software development skills with <b>industrial and logistics automation</b> to deliver high-quality, efficient solutions."
     },
     "experience": {
       "title": "Automation and Monitoring Manager",

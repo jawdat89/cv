@@ -429,7 +429,7 @@ const Dashboard: React.FC = () => {
                   {t("sections.personalInfo.aboutMe")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t("sections.personalInfo.summary")}
+                  <HtmlRenderer content={t("sections.personalInfo.summary")} />
                 </p>
               </div>
               <div>
