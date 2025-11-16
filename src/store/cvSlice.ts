@@ -339,7 +339,7 @@ const initialState: CVData = {
       title: "myShop - Ticket Management System",
       name: "myShop - Ticket Management System",
       description:
-        "A comprehensive ticket management system designed to help manage user tickets across multiple platforms. Features include WPF desktop application for local machines, SyncService API for data synchronization, and React Native mobile app for on-the-go ticket management. Provides seamless ticket tracking, status updates, and cross-platform synchronization.",
+        "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using Deno v2 for the backend API and React for the web frontend, all running in Docker for consistent local development and deployment. For mobile, implemented a React Native app that integrates with Supabase, combining synchronized cloud and local Supabase servers and Supabase Edge Functions to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience.",
       technologies: [
         "React Native",
         "TypeScript",
