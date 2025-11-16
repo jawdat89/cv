@@ -259,22 +259,27 @@ const initialState: CVData = {
   projects: [
     {
       id: "1",
-      title: "iPresent - Digital Signage System",
-      name: "iPresent - Digital Signage System",
+      title: "myShop - Ticket Management System",
+      name: "myShop - Ticket Management System",
       description:
-        "A comprehensive WPF-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (PDF, PPT, videos, images). Includes background synchronization service and role-based user management.",
+        "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using Deno v2 for the backend API and React for the web frontend, all running in Docker for consistent local development and deployment. For mobile, implemented a React Native app that integrates with Supabase, combining synchronized cloud and local Supabase servers and Supabase Edge Functions to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience.",
       technologies: [
-        "WPF",
-        "C#",
-        "Entity Framework",
-        "SQL Server",
-        "WebView2",
-        "MahApps.Metro",
-        "NLog",
+        "React",
+        "React Native",
+        "Supabase",        
+        "Deno",
+        "Docker",
+        "TypeScript",
+        "Migration",
+        "API Development",
+        "SyncService",
+        "Mobile Development",
+        "Desktop Application",
+        "Cross-platform",
       ],
-      link: "https://github.com/jawdat/ipresent",
-      startDate: "2024",
-      endDate: "2025",
+      link: "https://github.com/jawdat/myshop",
+      startDate: "2023",
+      endDate: "Present",
     },
     {
       id: "2",
@@ -298,6 +303,25 @@ const initialState: CVData = {
     },
     {
       id: "3",
+      title: "iPresent - Digital Signage System",
+      name: "iPresent - Digital Signage System",
+      description:
+        "A comprehensive WPF-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (PDF, PPT, videos, images). Includes background synchronization service and role-based user management.",
+      technologies: [
+        "WPF",
+        "C#",
+        "Entity Framework",
+        "SQL Server",
+        "WebView2",
+        "MahApps.Metro",
+        "NLog",
+      ],
+      link: "https://github.com/jawdat/ipresent",
+      startDate: "2024",
+      endDate: "2025",
+    },
+    {
+      id: "4",
       title: "GoFresh - Drinks Shop Menu App",
       name: "GoFresh - Drinks Shop Menu App",
       description:
@@ -316,7 +340,7 @@ const initialState: CVData = {
       endDate: "2024",
     },
     {
-      id: "4",
+      id: "5",
       title: "ASend - Automated Congratulations Cards",
       name: "ASend - Automated Congratulations Cards",
       description:
@@ -333,27 +357,6 @@ const initialState: CVData = {
       link: "https://github.com/jawdat/asend",
       startDate: "2023",
       endDate: "2024",
-    },
-    {
-      id: "5",
-      title: "myShop - Ticket Management System",
-      name: "myShop - Ticket Management System",
-      description:
-        "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using Deno v2 for the backend API and React for the web frontend, all running in Docker for consistent local development and deployment. For mobile, implemented a React Native app that integrates with Supabase, combining synchronized cloud and local Supabase servers and Supabase Edge Functions to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience.",
-      technologies: [
-        "React Native",
-        "TypeScript",
-        "Deno",
-        "Docker",
-        "API Development",
-        "SyncService",
-        "Mobile Development",
-        "Desktop Application",
-        "Cross-platform",
-      ],
-      link: "https://github.com/jawdat/myshop",
-      startDate: "2023",
-      endDate: "Present",
     },
   ],
   certifications: [
