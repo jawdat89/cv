@@ -124,7 +124,7 @@
       },
       "myshop": {
         "title": "myShop - Ticket Management System",
-        "description": "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using Deno v2 for the backend API and React for the web frontend, all running in Docker for consistent local development and deployment. For mobile, implemented a React Native app that integrates with Supabase, combining synchronized cloud and local Supabase servers and Supabase Edge Functions to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience."
+        "description": "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using <b>Deno v2</b> for the <b>backend API</b> and <b>React</b> for the web frontend, all running in <b>Docker</b> for consistent local development and deployment. For mobile, implemented a <b>React Native</b> app that integrates with <b>Supabase</b>, combining synchronized cloud and local Supabase servers and <b>Supabase Edge Functions</b> to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience."
       }
     },
     "certifications": {
