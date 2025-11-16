@@ -723,11 +723,11 @@ const Dashboard: React.FC = () => {
                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
                 >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {t(project.titleKey)}
+                    {t(project.title)}
                   </h3>
         
                   <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-                    <HtmlRenderer content={t(project.descriptionKey)} />
+                    <HtmlRenderer content={t(project.description)} />
                   </p>
         
                   <div className="flex flex-wrap gap-1 sm:gap-2">
