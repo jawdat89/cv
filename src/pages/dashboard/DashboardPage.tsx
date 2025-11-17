@@ -57,6 +57,8 @@ const Dashboard: React.FC = () => {
     { id: "languages", title: t("navigation.languages"), icon: FaLanguage },
   ];
 
+  const projects = useSelector((state: RootState) => state.cv.projects);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -717,7 +719,7 @@ const Dashboard: React.FC = () => {
             </h2>
         
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-              {useSelector((state: RootState) => state.cv.projects).map((project) => (
+              {projects.map((project) => (
                 <div
                   key={project.id}
                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
