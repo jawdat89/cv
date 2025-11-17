@@ -153,13 +153,16 @@ const ProjectsComponent: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-2">
               {[
-                "Node.js",
+                "Deno V2",
                 "React",
+                "React Native",
+                "Typescript",
                 "PWA",
+                "Supabase",
                 "API Development",
                 "Modern Architecture",
                 "Web Development",
-                "Desktop Application",
+                "Migration",
                 "Cross-platform",
               ].map((tech, techIndex) => (
                 <span
