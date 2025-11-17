@@ -288,7 +288,7 @@ const initialState: CVData = {
       ],
     },
     {
-      id: "iPresent",
+      id: "ipresent",
       title: "sections.projects.ipresent.title",
       description: "sections.projects.ipresent.description",
       technologies: [
