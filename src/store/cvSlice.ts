@@ -47,12 +47,8 @@ export interface CVData {
   projects: Array<{
     id: string;
     title: string;
-    name: string;
     description: string;
     technologies: string[];
-    link: string;
-    startDate: string;
-    endDate: string;
   }>;
   certifications: Array<{
     id: string;
@@ -258,11 +254,9 @@ const initialState: CVData = {
   ],
   projects: [
     {
-      id: "1",
-      title: "myShop - Ticket Management System",
-      name: "myShop - Ticket Management System",
-      description:
-        "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using <b>Deno v2</b> for the backend API and <b>React</b> for the web frontend, all running in Docker for consistent local development and deployment. For mobile, implemented a <b>React Native</b> app that integrates with <b>Supabase</b>, combining synchronized cloud and local Supabase servers and <b>Supabase Edge Functions</b> to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience.",
+      id: "myShop",
+      title: "sections.projects.myShop.title",
+      description: "sections.projects.myShop.description",
       technologies: [
         "React",
         "React Native",
@@ -277,16 +271,11 @@ const initialState: CVData = {
         "Desktop Application",
         "Cross-platform",
       ],
-      link: "https://github.com/jawdat/myshop",
-      startDate: "2023",
-      endDate: "Present",
     },
     {
-      id: "2",
-      title: "iManage - Small Business ERP System",
-      name: "iManage - Small Business ERP System",
-      description:
-        "A comprehensive ERP (Enterprise Resource Planning) system designed specifically for small businesses. Features include inventory management, customer relationship management (CRM), financial accounting, sales and purchase order processing, employee management, and reporting dashboards. Built with modern .NET Core backend and React frontend for optimal user experience and scalability.",
+      id: "imanage",
+      title: "sections.projects.imanage.title",
+      description: "sections.projects.imanage.description",
       technologies: [
         ".NET Core",
         "C#",
@@ -297,16 +286,11 @@ const initialState: CVData = {
         "Business Logic",
         "Reporting",
       ],
-      link: "https://github.com/jawdat/imanage",
-      startDate: "2023",
-      endDate: "2024",
     },
     {
-      id: "3",
-      title: "iPresent - Digital Signage System",
-      name: "iPresent - Digital Signage System",
-      description:
-        "A comprehensive WPF-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (PDF, PPT, videos, images). Includes background synchronization service and role-based user management.",
+      id: "iPresent",
+      title: "sections.projects.ipresent.title",
+      description: "sections.projects.ipresent.description",
       technologies: [
         "WPF",
         "C#",
@@ -314,18 +298,12 @@ const initialState: CVData = {
         "SQL Server",
         "WebView2",
         "MahApps.Metro",
-        "NLog",
       ],
-      link: "https://github.com/jawdat/ipresent",
-      startDate: "2024",
-      endDate: "2025",
     },
     {
-      id: "4",
-      title: "GoFresh - Drinks Shop Menu App",
-      name: "GoFresh - Drinks Shop Menu App",
-      description:
-        "A digital menu application for a drinks shop built with serverless architecture. Features include dynamic menu management with Sanity.io integration, like functionality for menu items, real-time menu updates, and responsive design for customers to browse drinks and place orders.",
+      id: "gofresh",
+      title: "sections.projects.gofresh.title",
+      description: "sections.projects.gofresh.description",
       technologies: [
         "Azure Functions",
         "TypeScript",
@@ -335,15 +313,11 @@ const initialState: CVData = {
         "CORS",
         "Menu Management",
       ],
-      link: "https://github.com/jawdat/gofresh",
-      startDate: "2023",
-      endDate: "2024",
     },
     {
-      id: "5",
-      title: "ASend - Automated Congratulations Cards",
-      name: "ASend - Automated Congratulations Cards",
-      description:
+      id: "asend",
+      title: "sections.projects.asend.title",
+      description: "sections.projects.asend.description",
         "An automated congratulations card system built with Supabase for seamless card generation and customization. Features include automated card creation, customizable templates, real-time database management, and user-friendly interface for creating personalized congratulatory messages.",
       technologies: [
         "Supabase",
@@ -354,9 +328,6 @@ const initialState: CVData = {
         "Card Templates",
         "Real-time",
       ],
-      link: "https://github.com/jawdat/asend",
-      startDate: "2023",
-      endDate: "2024",
     },
   ],
   certifications: [
