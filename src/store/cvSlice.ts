@@ -318,7 +318,6 @@ const initialState: CVData = {
       id: "asend",
       title: "sections.projects.asend.title",
       description: "sections.projects.asend.description",
-        "An automated congratulations card system built with Supabase for seamless card generation and customization. Features include automated card creation, customizable templates, real-time database management, and user-friendly interface for creating personalized congratulatory messages.",
       technologies: [
         "Supabase",
         "React",
