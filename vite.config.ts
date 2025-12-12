@@ -2,13 +2,24 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import { visualizer } from "rollup-plugin-visualizer";
 
 // Determine if we are in development mode
 const isDevelopment = process.env.NODE_ENV === "development";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Bundle analyzer (only in production builds)
+    !isDevelopment &&
+      visualizer({
+        open: false,
+        filename: "dist/stats.html",
+        gzipSize: true,
+        brotliSize: true,
+      }),
+  ].filter(Boolean),
   server: {
     hmr: {},
     port: 5173,
@@ -42,6 +53,8 @@ export default defineConfig({
         assetFileNames: "assets/[name]-[hash][extname]",
       },
     },
-    chunkSizeWarningLimit: 750, // Adjust the limit as needed
+    chunkSizeWarningLimit: 500,
+    minify: "esbuild",
+    cssCodeSplit: true,
   },
 });
