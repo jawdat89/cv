@@ -74,7 +74,7 @@ A modern, responsive CV showcase website built with React, TypeScript, and Tailw
 - **Professional Animations**: Subtle, professional animations using Framer Motion and Tailwind CSS
 - **Comprehensive Testing**: Unit tests covering all components, hooks, and utilities
 - **Type Safety**: Full TypeScript implementation with strict type checking
-- **Performance Optimized**: Lazy loading, code splitting, and optimized bundle size
+- **Performance Optimized**: Route-based code splitting, lazy loading, and optimized bundle size
 - **State Management**: Redux Toolkit with persistence for theme and CV data
 
 ## Project Structure
@@ -86,7 +86,6 @@ src/
 │   ├── LanguageSelector.tsx # Language switcher
 │   ├── CVDownloadSelect.tsx # CV download dropdown selector
 │   ├── AnimatedProgressBar.tsx # Animated skill bars
-│   ├── ImageModal.tsx   # Image modal viewer
 │   └── LoadingSpinner.tsx # Loading indicator
 ├── hooks/              # Custom React hooks
 │   ├── useI18n.ts      # Internationalization hook
@@ -129,6 +128,9 @@ npm run coverage  # Run with coverage report
 
 ## Recent Updates
 
+- **Bundle Size Optimization**: Implemented route-based code splitting with React.lazy for Preview and Templates pages
+- **Build Configuration**: Simplified Vite config with safe optimizations (esbuild minification, CSS code splitting)
+- **Hero Image**: Removed click functionality and modal viewer for hero section image
 - Updated to Vite 7.2.7 and Vitest 4.0.15 (security fixes)
 - Replaced separate CV download buttons with unified Select dropdown component
 - Updated job title to "Logistics Process Lead"

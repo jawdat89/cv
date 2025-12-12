@@ -6,7 +6,6 @@ import { setTheme } from "@/store/cvSlice";
 import { motion } from "framer-motion";
 import LanguageSelector from "@/components/LanguageSelector";
 import CVDownloadSelect from "@/components/CVDownloadSelect";
-import ImageModal from "@/components/ImageModal";
 import { HtmlRenderer } from "@/utils/htmlRenderer";
 import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
 import clsx from "clsx";
@@ -29,7 +28,6 @@ const Dashboard: React.FC = () => {
   const cvData = useSelector((state: RootState) => state.cv);
   const dispatch = useDispatch();
   const [activeSection, setActiveSection] = useState("personal");
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Function to get the appropriate name based on current language
@@ -213,12 +211,10 @@ const Dashboard: React.FC = () => {
                 src="/images/IMG-20241010-WA0030.jpg"
                 alt={getLocalizedName()}
                 className={clsx(
-                  "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-center border-4 border-primary shadow-lg transform -translate-y-2 cursor-pointer hover:scale-105 transition-transform mb-4 sm:mb-0",
+                  "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-center border-4 border-primary shadow-lg transform -translate-y-2 mb-4 sm:mb-0",
                   direction === "rtl" ? "sm:translate-x-5" : "sm:-translate-x-5"
                 )}
                 style={{ objectPosition: "center 30%" }}
-                onClick={() => setIsImageModalOpen(true)}
-                title="Click to view full size"
               />
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white text-center sm:text-left">
                 {getLocalizedName()}
@@ -736,14 +732,6 @@ const Dashboard: React.FC = () => {
           </motion.div>
         </section>
       </div>
-
-      {/* Image Modal */}
-      <ImageModal
-        isOpen={isImageModalOpen}
-        onClose={() => setIsImageModalOpen(false)}
-        imageSrc="/images/IMG-20241010-WA0030.jpg"
-        imageAlt={getLocalizedName()}
-      />
     </div>
   );
 };

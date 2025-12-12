@@ -5,11 +5,9 @@ import { useI18n } from "@/hooks";
 import { RootState } from "@/store";
 import clsx from "clsx";
 
-interface HeroProps {
-  onImageClick: () => void;
-}
+interface HeroProps {}
 
-const HeroComponent: React.FC<HeroProps> = ({ onImageClick }) => {
+const HeroComponent: React.FC<HeroProps> = () => {
   const { t, currentLanguage, direction } = useI18n();
   const cvData = useSelector((state: RootState) => state.cv);
 
@@ -44,12 +42,10 @@ const HeroComponent: React.FC<HeroProps> = ({ onImageClick }) => {
             src="/images/IMG-20241010-WA0030.jpg"
             alt={getLocalizedName()}
             className={clsx(
-              "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-center border-4 border-primary shadow-lg transform -translate-y-2 cursor-pointer hover:scale-105 transition-transform mb-4 sm:mb-0",
+              "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-center border-4 border-primary shadow-lg transform -translate-y-2 mb-4 sm:mb-0",
               direction === "rtl" ? "sm:translate-x-5" : "sm:-translate-x-5"
             )}
             style={{ objectPosition: "center 30%" }}
-            onClick={onImageClick}
-            title="Click to view full size"
           />
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white text-center sm:text-left">
             {getLocalizedName()}
