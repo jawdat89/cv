@@ -40,14 +40,16 @@
   "actions": {
     "print": "Print",
     "downloadPDF": "PDF",
+    "downloadCV": "Download CV",
+    "downloadEnglishCV": "English CV",
     "downloadHebrewCV": "Hebrew CV",
     "switchToDark": "Switch to dark mode",
     "switchToLight": "Switch to light mode"
   },
   "hero": {
-    "title": "Full Stack Developer & Automation Engineer",
+    "title": "Full Stack Developer + Control & Automation Engineering Student",
     "available": "Available for opportunities",
-    "employer1": "Automation and Monitoring Manager at Strauss Group",
+    "employer1": "Logistics Process Lead at Strauss Group",
     "employer2": "Freelance Software Engineer at BestTuqay"
   },
   "sections": {
@@ -61,7 +63,7 @@
       "title": "Work Experience",
       "present": "Present",
       "strauss": {
-        "title": "Automation Manager",
+        "title": "Logistics Process Lead",
         "company": "Strauss Group",
         "description": "Managing delivery processes (inbound and outbound) in various warehouses, using <b>SAP EWM</b>, <b>SAP S/4HANA</b> on <b>SAP WM</b>, including integration of <b>RF</b> devices. Training new users, writing procedures and guides. Supervising warehouse process automation, including integration of <b>PLCs HMI</b>. Partner in implementing autonomous projects. Strategic liaison between operations and <b>IT</b>."
       },
@@ -122,7 +124,7 @@
         "title": "ASend - Automated Congratulations Cards",
         "description": "An automated congratulations card system built with <b>Supabase</b> for seamless card generation and customization. Features include automated card creation, customizable templates, real-time database management, and user-friendly interface for creating personalized congratulatory messages."
       },
-      "myshop": {
+      "myShop": {
         "title": "myShop - Ticket Management System",
         "description": "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using <b>Deno v2</b> for the <b>backend API</b> and <b>React</b> for the web frontend, all running in <b>Docker</b> for consistent local development and deployment. For mobile, implemented a <b>React Native</b> app that integrates with <b>Supabase</b>, combining synchronized cloud and local Supabase servers and <b>Supabase Edge Functions</b> to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience."
       }
@@ -151,7 +153,7 @@
       "summary": "Experienced Full Stack Developer with 5+ years of expertise in <b>React</b>, <b>Node.js</b>, and <b>cloud technologies</b>. Currently specializing in <b>industrial automation</b>, <b>ERP SAP systems</b>, and <b>logistics automation</b> with hands-on experience in designing and implementing automation solutions and optimizing production processes. Passionate about bridging software development skills with <b>industrial and logistics automation</b> to deliver high-quality, efficient solutions."
     },
     "experience": {
-      "title": "Automation and Monitoring Manager",
+      "title": "Logistics Process Lead",
       "company": "Strauss Group",
       "description": "Responsible for designing, implementing, and maintaining automation systems and monitoring solutions with electrical engineering expertise.",
       "achievements": [

@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store";
 import { setTheme } from "@/store/cvSlice";
 import LanguageSelector from "@/components/LanguageSelector";
+import CVDownloadSelect from "@/components/CVDownloadSelect";
 import { useI18n } from "@/hooks";
-import { FaSun, FaMoon, FaPrint, FaDownload } from "react-icons/fa";
+import { FaSun, FaMoon, FaPrint } from "react-icons/fa";
 import clsx from "clsx";
 
 interface HeaderProps {
@@ -46,27 +47,6 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
-  const handleDownload = () => {
-    if (onDownload) {
-      onDownload();
-    } else {
-      console.log("Download functionality not implemented");
-    }
-  };
-
-  const handleDownloadHebrewCV = () => {
-    if (onDownloadHebrewCV) {
-      onDownloadHebrewCV();
-    } else {
-      // Default behavior: download the Hebrew CV file
-      const link = document.createElement('a');
-      link.href = '/static/גודאת עבדאללה - קורות חיים 2025.pdf';
-      link.download = 'גודאת עבדאללה - קורות חיים 2025.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
@@ -110,29 +90,7 @@ const Header: React.FC<HeaderProps> = ({
               </button>
             )}
 
-            {showDownload && (
-              <button
-                onClick={handleDownload}
-                className="flex items-center space-x-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
-              >
-                <FaDownload className="w-4 h-4" />
-                <span className="hidden sm:inline">
-                  {t("actions.downloadPDF")}
-                </span>
-              </button>
-            )}
-
-            {showHebrewCV && (
-              <button
-                onClick={handleDownloadHebrewCV}
-                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                <FaDownload className="w-4 h-4" />
-                <span className="hidden sm:inline">
-                  {t("actions.downloadHebrewCV")}
-                </span>
-              </button>
-            )}
+            {(showDownload || showHebrewCV) && <CVDownloadSelect />}
           </div>
         </div>
       </div>

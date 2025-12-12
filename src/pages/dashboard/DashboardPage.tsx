@@ -5,6 +5,7 @@ import { RootState } from "@/store";
 import { setTheme } from "@/store/cvSlice";
 import { motion } from "framer-motion";
 import LanguageSelector from "@/components/LanguageSelector";
+import CVDownloadSelect from "@/components/CVDownloadSelect";
 import ImageModal from "@/components/ImageModal";
 import { HtmlRenderer } from "@/utils/htmlRenderer";
 import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
@@ -22,7 +23,6 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import { US, IL } from "country-flag-icons/react/3x2";
 
 const Dashboard: React.FC = () => {
   const { t, currentLanguage, direction } = useI18n();
@@ -67,25 +67,6 @@ const Dashboard: React.FC = () => {
     }
   };
 
-  const handlePrint = () => {
-    // Download Hebrew version PDF
-    const link = document.createElement("a");
-    link.href = "/static/גודאת עבדאללה - קורות חיים 2025.pdf";
-    link.download = "גודאת עבדאללה - קורות חיים 2025.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  const handleDownload = () => {
-    // Download English version PDF
-    const link = document.createElement("a");
-    link.href = "/static/Jawdat Abdullah - 2025.pdf";
-    link.download = "Jawdat Abdullah - CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const toggleTheme = () => {
     const newTheme = cvData.theme === "light" ? "dark" : "light";
@@ -153,46 +134,7 @@ const Dashboard: React.FC = () => {
                   <FaSun className="w-4 h-4" />
                 )}
               </button>
-              <button
-                onClick={handlePrint}
-                className={clsx(
-                  "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
-                  direction === "rtl"
-                    ? "space-x-reverse space-x-2"
-                    : "space-x-2"
-                )}
-                title="Download Hebrew CV"
-              >
-                <div
-                  className={clsx(
-                    "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
-                    direction === "rtl" ? "ml-2" : ""
-                  )}
-                >
-                  <IL className="w-full h-full object-cover" />
-                </div>
-                <span className="hidden sm:inline">CV</span>
-              </button>
-              <button
-                onClick={handleDownload}
-                className={clsx(
-                  "flex items-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm",
-                  direction === "rtl"
-                    ? "space-x-reverse space-x-2"
-                    : "space-x-2"
-                )}
-                title="Download English CV"
-              >
-                <div
-                  className={clsx(
-                    "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
-                    direction === "rtl" ? "ml-2" : ""
-                  )}
-                >
-                  <US className="w-full h-full object-cover" />
-                </div>
-                <span className="hidden sm:inline">CV</span>
-              </button>
+              <CVDownloadSelect />
             </div>
 
             {/* Mobile Menu Button */}
@@ -241,36 +183,8 @@ const Dashboard: React.FC = () => {
                     {section.title}
                   </button>
                 ))}
-                <div className="pt-4 pb-2 flex space-x-2">
-                  <button
-                    onClick={handlePrint}
-                    className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
-                    title="Download Hebrew CV"
-                  >
-                    <div
-                      className={clsx(
-                        "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
-                        direction === "rtl" ? "ml-2" : "mr-2"
-                      )}
-                    >
-                      <IL className="w-full h-full object-cover" />
-                    </div>
-                    CV
-                  </button>
-                  <button
-                    onClick={handleDownload}
-                    className="flex-1 flex items-center justify-center px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm"
-                  >
-                    <div
-                      className={clsx(
-                        "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
-                        direction === "rtl" ? "ml-2" : "mr-2"
-                      )}
-                    >
-                      <US className="w-full h-full object-cover" />
-                    </div>
-                    CV
-                  </button>
+                <div className="pt-4 pb-2">
+                  <CVDownloadSelect />
                 </div>
               </div>
             </div>
@@ -362,7 +276,7 @@ const Dashboard: React.FC = () => {
                 direction === "rtl" ? "space-x-reverse space-x-6" : "space-x-6"
               )}
             >
-              <span>📍 {t("hero.available")}</span>
+              {/* <span>📍 {t("hero.available")}</span> */}
               <span>
                 📧{" "}
                 <a
@@ -386,9 +300,9 @@ const Dashboard: React.FC = () => {
 
             {/* Contact Info - Mobile */}
             <div className="md:hidden space-y-2 text-sm text-gray-500 dark:text-gray-400">
-              <div className="flex items-center justify-center">
+              {/* <div className="flex items-center justify-center">
                 <span>📍 {t("hero.available")}</span>
-              </div>
+              </div> */}
               <div className="flex flex-col items-center space-y-1">
                 <a
                   href={`mailto:${cvData.personalInfo.email}`}

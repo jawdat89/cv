@@ -88,9 +88,9 @@ const initialState: CVData = {
   experience: [
     {
       id: "1",
-      title: "Automation Manager",
+      title: "Logistics Process Lead",
       company: "Strauss Group",
-      position: "Automation Manager",
+      position: "Logistics Process Lead",
       location: "Israel",
       startDate: "2025",
       endDate: "Present",

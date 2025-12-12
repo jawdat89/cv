@@ -107,7 +107,7 @@ const HeroComponent: React.FC<HeroProps> = ({ onImageClick }) => {
             direction === "rtl" ? "space-x-reverse space-x-6" : "space-x-6"
           )}
         >
-          <span>📍 {t("hero.available")}</span>
+          {/* <span>📍 {t("hero.available")}</span> */}
           <span>
             📧{" "}
             <a
@@ -131,9 +131,9 @@ const HeroComponent: React.FC<HeroProps> = ({ onImageClick }) => {
 
         {/* Contact Info - Mobile */}
         <div className="md:hidden space-y-2 text-sm text-gray-500 dark:text-gray-400">
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <span>📍 {t("hero.available")}</span>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center space-y-1">
             <a
               href={`mailto:${cvData.personalInfo.email}`}
