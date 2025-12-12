@@ -1,18 +1,18 @@
 # Jawdat Abdullah - CV Showcase
 
-A modern, responsive CV showcase website built with React, TypeScript, and Tailwind CSS. Features multilingual support (English, Hebrew, Arabic, French) with smooth animations and professional design.
+A modern, responsive CV showcase website built with React, TypeScript, and Tailwind CSS. Features multilingual support (English, Hebrew, Arabic) with smooth animations and professional design.
 
 ## Features
 
-- **Multilingual Support** - English, Hebrew, Arabic, and French
+- **Multilingual Support** - English, Hebrew, and Arabic with full RTL support
 - **Single Page Layout** - All CV sections in one seamless page
 - **Responsive Design** - Works perfectly on all devices
-- **Dark/Light Mode** - Automatic theme switching
+- **Dark/Light Mode** - Automatic theme switching with persistence
 - **Smooth Animations** - Elegant transitions, lazy loading, and animated progress bars
 - **Print Ready** - Optimized for printing and PDF generation
 - **Modern UI** - Clean, professional design with Tailwind CSS
-- **Rich Text Support** - HTML rendering for formatted content
-- **Download CV** - Hebrew PDF version available for download
+- **Rich Text Support** - HTML rendering for formatted content with XSS protection
+- **CV Download** - Unified dropdown selector for downloading English and Hebrew CV PDFs
 
 ## Tech Stack
 
@@ -22,9 +22,9 @@ A modern, responsive CV showcase website built with React, TypeScript, and Tailw
 - **Redux Toolkit** - State management
 - **Framer Motion** - Smooth animations
 - **React i18next** - Internationalization
-- **Vite** - Fast build tool
-- **Vitest** - Testing framework
-- **React Testing Library** - Component testing
+- **Vite 7** - Fast build tool and dev server
+- **Vitest 4** - Testing framework with coverage support
+- **React Testing Library** - Component testing utilities
 
 ## Sections
 
@@ -64,45 +64,58 @@ A modern, responsive CV showcase website built with React, TypeScript, and Tailw
 
 ## Key Features Implemented
 
-- **Multilingual Support**: Full i18n implementation with 4 languages (English, Hebrew, Arabic, French)
+- **Multilingual Support**: Full i18n implementation with 3 languages (English, Hebrew, Arabic) and RTL support
+- **CV Download Selector**: Unified dropdown component for downloading English and Hebrew CV PDFs
 - **Animated Progress Bars**: Skills section with smooth progress animations triggered on scroll
 - **Lazy Loading**: Sections animate into view using Intersection Observer API
 - **Rich Text Rendering**: Safe HTML rendering for formatted content with XSS protection
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Dark/Light Theme**: Automatic theme switching with localStorage persistence
+- **Dark/Light Theme**: Automatic theme switching with Redux persistence
 - **Professional Animations**: Subtle, professional animations using Framer Motion and Tailwind CSS
-- **Comprehensive Testing**: 59 unit tests covering all components, hooks, and utilities
+- **Comprehensive Testing**: Unit tests covering all components, hooks, and utilities
 - **Type Safety**: Full TypeScript implementation with strict type checking
 - **Performance Optimized**: Lazy loading, code splitting, and optimized bundle size
+- **State Management**: Redux Toolkit with persistence for theme and CV data
 
 ## Project Structure
 
 ```
 src/
 ├── components/          # React components
-│   ├── Header.tsx      # Navigation and theme toggle
+│   ├── Header.tsx       # Navigation and theme toggle
 │   ├── LanguageSelector.tsx # Language switcher
-│   └── AnimatedProgressBar.tsx # Animated skill bars
+│   ├── CVDownloadSelect.tsx # CV download dropdown selector
+│   ├── AnimatedProgressBar.tsx # Animated skill bars
+│   ├── ImageModal.tsx   # Image modal viewer
+│   └── LoadingSpinner.tsx # Loading indicator
 ├── hooks/              # Custom React hooks
-│   ├── useI18n.tsx     # Internationalization hook
+│   ├── useI18n.ts      # Internationalization hook
 │   ├── useHtmlTranslation.tsx # HTML-safe translations
-│   └── useIntersectionObserver.tsx # Lazy loading
+│   ├── useIntersectionObserver.tsx # Lazy loading
+│   ├── useLanguage.ts  # Language management
+│   └── useLocalizedText.ts # Localized text utilities
 ├── i18n/               # Internationalization files
-│   └── locales/        # Language JSON files
+│   └── locales/        # Language JSON files (en, he, ar)
 ├── pages/              # Page components
-│   └── Dashboard.tsx   # Main CV display
+│   ├── Dashboard.tsx   # Main dashboard page
+│   ├── Preview.tsx     # CV preview page
+│   └── Templates.tsx   # Template selection
+├── pages/dashboard/   # Dashboard components
+│   └── components/     # Section components (Hero, Experience, etc.)
 ├── store/              # Redux store and slices
-│   └── cvSlice.ts      # CV data and state management
+│   ├── cvSlice.ts      # CV data and state management
+│   └── index.ts        # Store configuration
 ├── utils/              # Utility functions
-│   └── htmlRenderer.tsx # Safe HTML rendering
+│   ├── htmlRenderer.tsx # Safe HTML rendering
+│   └── serviceWorker.ts # Service worker utilities
 └── test/               # Test setup and utilities
 ```
 
 ## Testing
 
-The project includes comprehensive test coverage with 59 unit tests:
+The project includes comprehensive test coverage:
 
-- **Component Tests**: Header, LanguageSelector, and other UI components
+- **Component Tests**: Header, LanguageSelector, CVDownloadSelect, and other UI components
 - **Hook Tests**: Custom hooks for i18n, HTML translation, and intersection observer
 - **Utility Tests**: HTML renderer and sanitization functions
 - **Store Tests**: Redux slice and state management
@@ -111,9 +124,19 @@ The project includes comprehensive test coverage with 59 unit tests:
 Run tests with:
 ```bash
 npm test          # Run tests in watch mode
-npm run test:run  # Run tests once
 npm run coverage  # Run with coverage report
 ```
+
+## Recent Updates
+
+- Updated to Vite 7.2.7 and Vitest 4.0.15 (security fixes)
+- Replaced separate CV download buttons with unified Select dropdown component
+- Updated job title to "Logistics Process Lead"
+- Updated hero title to "Full Stack Developer + Control & Automation Engineering Student"
+- Fixed translation key case mismatches
+- Improved CV download UX with dropdown selector
+- Commented out "Available for opportunities" text
+- Updated skill naming (Deno v2)
 
 ## License
 

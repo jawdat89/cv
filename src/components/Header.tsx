@@ -25,8 +25,8 @@ const Header: React.FC<HeaderProps> = ({
   showDownload = false,
   showHebrewCV = false,
   onPrint,
-  onDownload,
-  onDownloadHebrewCV,
+  onDownload: _onDownload,
+  onDownloadHebrewCV: _onDownloadHebrewCV,
   children,
 }) => {
   const { t } = useI18n();

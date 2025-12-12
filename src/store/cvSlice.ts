@@ -247,7 +247,7 @@ const initialState: CVData = {
     { id: "30", name: ".NET Core", proficiency: 85, category: "Backend" },
     { id: "31", name: "Azure Functions", proficiency: 80, category: "Cloud" },
     { id: "32", name: "TypeScript", proficiency: 80, category: "Frontend" },
-    { id: "33", name: "Deno API", proficiency: 80, category: "Backend" },
+    { id: "33", name: "Deno v2", proficiency: 80, category: "Backend" },
     { id: "34", name: "Serverless", proficiency: 80, category: "Backend" },
     { id: "35", name: "Docker", proficiency: 75, category: "Backend" },
     { id: "36", name: "Vercel", proficiency: 80, category: "Cloud" }
