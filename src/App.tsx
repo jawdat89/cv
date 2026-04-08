@@ -1,12 +1,10 @@
 import "@/index.css";
 import { useEffect } from "react";
 import { Provider, useSelector } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
-import { store, persistor, RootState } from "@/store";
+import { store, RootState } from "@/store";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AppRouter from "@/AppRouter";
-import LoadingSpinner from "@/components/LoadingSpinner";
 import { useI18n } from "@/hooks";
 
 function AppContent() {
@@ -60,9 +58,7 @@ function AppContent() {
 function App() {
   return (
     <Provider store={store}>
-      <PersistGate loading={<LoadingSpinner />} persistor={persistor}>
-        <AppContent />
-      </PersistGate>
+      <AppContent />
     </Provider>
   );
 }
