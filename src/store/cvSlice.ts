@@ -80,7 +80,7 @@ const initialState: CVData = {
     email: "ajawdat.dev@gmail.com",
     phone: "+972 526 449858",
     address: "Kisra, Israel",
-    linkedin: "https://www.linkedin.com/in/jawdat89/",
+    linkedin: "https://www.linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
       "Experienced Full Stack Developer with over 5 years of expertise in React, Node.js, .NET. I aspire to develop as an autonomous and leading developer in ERP systems, with emphasis on integrating advanced technologies, automation and innovation. Based on practical experience in SAP system management, software development and implementing autonomous solutions, I am committed to leading complex technological processes and bringing significant value to the organization.",

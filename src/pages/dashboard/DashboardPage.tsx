@@ -29,6 +29,8 @@ const Dashboard: React.FC = () => {
   const dispatch = useDispatch();
   const [activeSection, setActiveSection] = useState("personal");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const normalizeExternalUrl = (url: string) =>
+    /^https?:\/\//i.test(url) ? url : `https://${url}`;
 
   // Function to get the appropriate name based on current language
   const getLocalizedName = () => {
@@ -375,7 +377,7 @@ const Dashboard: React.FC = () => {
                   <p>
                     🔗{" "}
                     <a
-                      href={`https://www.${cvData.personalInfo.linkedin}`}
+                      href={normalizeExternalUrl(cvData.personalInfo.linkedin)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
@@ -386,7 +388,7 @@ const Dashboard: React.FC = () => {
                   <p>
                     💻{" "}
                     <a
-                      href={`https://www.${cvData.personalInfo.website}`}
+                      href={normalizeExternalUrl(cvData.personalInfo.website)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"

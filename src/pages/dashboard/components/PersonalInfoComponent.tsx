@@ -9,6 +9,8 @@ import clsx from "clsx";
 const PersonalInfoComponent: React.FC = () => {
   const { t, direction } = useI18n();
   const cvData = useSelector((state: RootState) => state.cv);
+  const normalizeExternalUrl = (url: string) =>
+    /^https?:\/\//i.test(url) ? url : `https://${url}`;
 
   return (
     <section id="personal" className="mb-16">
@@ -64,7 +66,7 @@ const PersonalInfoComponent: React.FC = () => {
               <p>
                 🔗{" "}
                 <a
-                  href={`https://www.${cvData.personalInfo.linkedin}`}
+                  href={normalizeExternalUrl(cvData.personalInfo.linkedin)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -75,7 +77,7 @@ const PersonalInfoComponent: React.FC = () => {
               <p>
                 💻{" "}
                 <a
-                  href={`https://www.${cvData.personalInfo.website}`}
+                  href={normalizeExternalUrl(cvData.personalInfo.website)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
