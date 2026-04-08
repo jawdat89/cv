@@ -43,11 +43,20 @@ const migrations: MigrationManifest = {
       skills: normalizeSkills(skills),
     } as PersistedState;
   },
+  2: (state: PersistedState): PersistedState => {
+    const persisted = (state ?? {}) as PersistedCvState;
+    const skills = Array.isArray(persisted.skills) ? persisted.skills : [];
+
+    return {
+      ...persisted,
+      skills: normalizeSkills(skills),
+    } as PersistedState;
+  },
 };
 
 const persistConfig = {
   key: 'cv-builder',
-  version: 1,
+  version: 2,
   storage,
   // Persist the whole cv slice, including currentLanguage/theme/user edits.
   migrate: createMigrate(migrations, { debug: false }),
