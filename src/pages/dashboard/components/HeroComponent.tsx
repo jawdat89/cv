@@ -25,9 +25,9 @@ const HeroComponent: React.FC = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: -56 }}
+      initial={{ opacity: 0, y: -28 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.64, ease: [0.46, 1, 0.3, 1] }}
+      transition={{ duration: 0.85, ease: [0.25, 1, 0.5, 1] }}
       className="mt-0 mb-16"
     >
         <div className="relative overflow-hidden rounded-b-3xl rounded-t-none border border-gray-200/80 bg-white/95 p-6 shadow-xl backdrop-blur-sm dark:border-gray-700/80 dark:bg-gray-800/95 sm:p-8 lg:p-10">
