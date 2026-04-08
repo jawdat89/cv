@@ -28,14 +28,14 @@ export const AnimatedProgressBar: React.FC<AnimatedProgressBarProps> = ({
   const percentage = Math.min((value / max) * 100, 100);
 
   return (
-    <div ref={ref} className={clsx('w-full', className)}>
+    <div ref={ref} className={clsx('w-full min-w-0', className)}>
       {label && (
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <div className="mb-2 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+          <span className="min-w-0 text-sm font-medium text-gray-700 dark:text-gray-300 break-words">
             {label}
           </span>
           {showPercentage && (
-            <span className="text-sm text-gray-500 dark:text-gray-400">
+            <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400 sm:text-sm">
               {value}%
             </span>
           )}

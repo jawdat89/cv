@@ -28,7 +28,7 @@ const SkillsComponent: React.FC = () => {
           />
           {t("sections.skills.title")}
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2">
           {Object.entries(
             cvData.skills.reduce((acc, skill) => {
               if (!acc[skill.category]) acc[skill.category] = [];
@@ -36,7 +36,7 @@ const SkillsComponent: React.FC = () => {
               return acc;
             }, {} as Record<string, typeof cvData.skills>)
           ).map(([category, skills]) => (
-            <div key={category}>
+            <div key={category} className="min-w-0">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 {t(
                   `skillCategories.${
