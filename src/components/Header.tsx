@@ -14,8 +14,6 @@ interface HeaderProps {
   showDownload?: boolean;
   showHebrewCV?: boolean;
   onPrint?: () => void;
-  onDownload?: () => void;
-  onDownloadHebrewCV?: () => void;
   children?: React.ReactNode;
 }
 
@@ -25,8 +23,6 @@ const Header: React.FC<HeaderProps> = ({
   showDownload = false,
   showHebrewCV = false,
   onPrint,
-  onDownload: _onDownload,
-  onDownloadHebrewCV: _onDownloadHebrewCV,
   children,
 }) => {
   const { t } = useI18n();
@@ -46,7 +42,6 @@ const Header: React.FC<HeaderProps> = ({
       window.print();
     }
   };
-
 
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">

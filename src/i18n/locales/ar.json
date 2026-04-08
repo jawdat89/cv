@@ -47,10 +47,23 @@
     "switchToLight": "التبديل إلى الوضع الفاتح"
   },
   "hero": {
-    "title": "مطور Full Stack + طالب هندسة التحكم والأتمتة",
+    "title": "مطور Full Stack + مطور برمجيات",
+    "badge": "منفتح على فرص Full-Stack مؤثرة",
+    "subtitle": "أبني منتجات قابلة للتوسع باستخدام React وNode.js و.NET ومعمارية سحابية حديثة.",
+    "viewProjects": "عرض المشاريع",
+    "linkedin": "لينكدإن",
+    "github": "جيت هب",
+    "yearsExperience": "5+ سنوات خبرة",
+    "fullStackDeveloper": "قائد عمليات لوجستية ومطور برمجيات",
+    "sapWebSystems": "أنظمة SAP + Web",
+    "years": "سنوات",
+    "skills": "مهارات",
+    "currentFocusTitle": "التركيز الحالي",
+    "currentFocusBody": "أنظمة ERP، الأتمتة، ومنصات Web قابلة للتوسع.",
     "available": "متاح للفرص",
     "employer1": "قائد عمليات اللوجستيات في مجموعة شتراوس",
-    "employer2": "BestTuqay مهندس برمجيات مستقل في"
+    "employer2": "BestTuqay مهندس برمجيات مستقل في",
+    "studentAtid": "الأتمتة في كلية عتيد"
   },
   "sections": {
     "personalInfo": {
@@ -144,7 +157,7 @@
   },
   "languageNames": {
     "English": "الإنجليزية",
-    "Arabic": "العربية", 
+    "Arabic": "العربية",
     "Hebrew": "العبرية"
   },
   "proficiencyLevels": {
@@ -192,7 +205,9 @@
     "database": "قاعدة البيانات",
     "cloud": "السحابة",
     "versionControl": "التحكم بالإصدارات",
-    "devOps": "تطوير العمليات"
+    "devOps": "تطوير العمليات",
+    "erpManagement": "إدارة أنظمة ERP",
+    "automation": "الأتمتة"
   },
   "expertise": {
     "title": "الخبرات",

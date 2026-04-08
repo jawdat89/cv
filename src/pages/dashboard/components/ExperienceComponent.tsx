@@ -27,7 +27,7 @@ const ExperienceComponent: React.FC = () => {
         </h2>
         <div className="space-y-6">
           {/* Strauss Group Experience */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.experience.strauss.title")}
             </h3>
@@ -43,7 +43,7 @@ const ExperienceComponent: React.FC = () => {
           </div>
 
           {/* BestTuqay Experience */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.experience.besttuqay.title")}
             </h3>
@@ -59,7 +59,7 @@ const ExperienceComponent: React.FC = () => {
           </div>
 
           {/* Innovisec Experience */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.experience.innovisec.title")}
             </h3>
@@ -75,7 +75,7 @@ const ExperienceComponent: React.FC = () => {
           </div>
 
           {/* Strauss Technical Support Experience */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.experience.strauss_tech.title")}
             </h3>
@@ -91,7 +91,7 @@ const ExperienceComponent: React.FC = () => {
           </div>
 
           {/* Qualitest Experience */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.experience.qualitest.title")}
             </h3>

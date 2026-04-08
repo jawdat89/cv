@@ -9,6 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
+    "test:run": "vitest run",
+    "ci": "npm run lint && npm run test:run && npm run build",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
@@ -41,7 +43,6 @@
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.1.1",
     "react-toastify": "^11.0.3",
-    "react-toggle-dark-mode": "^1.1.1",
     "react-webcam": "^7.2.0",
     "redux-persist": "^6.0.0",
     "spinners-react": "^1.0.10",

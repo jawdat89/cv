@@ -26,7 +26,7 @@ const EducationComponent: React.FC = () => {
         </h2>
         <div className="space-y-6">
           {/* Atid Maloot Education */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.education.atid.degree")}
             </h3>
@@ -42,7 +42,7 @@ const EducationComponent: React.FC = () => {
           </div>
 
           {/* Ort Braude Education */}
-          <div className="border-l-4 border-primary pl-6">
+          <div className="border-l-4 border-primary pl-6 py-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {t("sections.education.ort.degree")}
             </h3>

@@ -31,7 +31,7 @@ const CertificationsComponent: React.FC = () => {
           {cvData.certifications.map((cert, index) => (
             <div
               key={index}
-              className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
+              className="rounded-xl border border-gray-200/80 dark:border-gray-700/80 bg-white/70 dark:bg-gray-800/60 p-4 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {cert.name}

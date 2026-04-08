@@ -59,6 +59,10 @@ vi.mock('../LanguageSelector', () => ({
   ),
 }));
 
+vi.mock('../CVDownloadSelect', () => ({
+  default: () => <button data-testid="cv-download-select">CV Download</button>,
+}));
+
 describe('Header', () => {
   let mockStore: ReturnType<typeof createMockStore>;
 
@@ -93,22 +97,17 @@ describe('Header', () => {
 
   it('renders download button when showHebrewCV is true', () => {
     renderHeader({ showHebrewCV: true });
-    expect(screen.getByText('actions.downloadHebrewCV')).toBeInTheDocument();
+    expect(screen.getByTestId('cv-download-select')).toBeInTheDocument();
   });
 
   it('does not render download button when showHebrewCV is false', () => {
     renderHeader({ showHebrewCV: false });
-    expect(screen.queryByText('actions.downloadHebrewCV')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('cv-download-select')).not.toBeInTheDocument();
   });
 
-  it('calls onDownloadHebrewCV when download button is clicked', () => {
-    const mockOnDownload = vi.fn();
-    renderHeader({ showHebrewCV: true, onDownloadHebrewCV: mockOnDownload });
-    
-    const downloadButton = screen.getByText('actions.downloadHebrewCV');
-    fireEvent.click(downloadButton);
-    
-    expect(mockOnDownload).toHaveBeenCalledTimes(1);
+  it('renders download selector when showDownload is true', () => {
+    renderHeader({ showDownload: true });
+    expect(screen.getByTestId('cv-download-select')).toBeInTheDocument();
   });
 
   it('renders children when provided', () => {

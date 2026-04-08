@@ -11,7 +11,10 @@ import { useI18n } from "@/hooks";
 
 function AppContent() {
   const theme = useSelector((state: RootState) => state.cv.theme);
-  const { direction } = useI18n();
+  const currentLanguage = useSelector(
+    (state: RootState) => state.cv.currentLanguage
+  );
+  const { direction, i18n } = useI18n();
 
   useEffect(() => {
     // Set up global error handling
@@ -27,6 +30,13 @@ function AppContent() {
     // Apply theme to document
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
+
+  useEffect(() => {
+    // Keep i18n runtime language aligned with persisted Redux selection.
+    if (i18n.language !== currentLanguage) {
+      void i18n.changeLanguage(currentLanguage);
+    }
+  }, [currentLanguage, i18n]);
 
   return (
     <div className="min-h-screen w-full" dir={direction}>

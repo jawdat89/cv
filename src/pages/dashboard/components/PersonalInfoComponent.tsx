@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { useI18n } from "@/hooks";
 import { RootState } from "@/store";
+import { HtmlRenderer } from "@/utils/htmlRenderer";
+import { normalizeExternalUrl } from "@/utils/url";
 import { FaUser } from "react-icons/fa";
 import clsx from "clsx";
 
 const PersonalInfoComponent: React.FC = () => {
   const { t, direction } = useI18n();
   const cvData = useSelector((state: RootState) => state.cv);
-  const normalizeExternalUrl = (url: string) =>
-    /^https?:\/\//i.test(url) ? url : `https://${url}`;
 
   return (
     <section id="personal" className="mb-16">
@@ -35,7 +35,7 @@ const PersonalInfoComponent: React.FC = () => {
               {t("sections.personalInfo.aboutMe")}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t("sections.personalInfo.summary")}
+              <HtmlRenderer content={t("sections.personalInfo.summary")} />
             </p>
           </div>
           <div>

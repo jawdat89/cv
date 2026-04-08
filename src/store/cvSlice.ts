@@ -224,7 +224,7 @@ const initialState: CVData = {
     { id: "7", name: ".Net Core WPF", proficiency: 80, category: "Frontend" },
     { id: "8", name: "SQL", proficiency: 90, category: "Database" },
     { id: "9", name: "Azure", proficiency: 80, category: "Cloud" },
-    { id: "10", name: "AWS", proficiency: 70, category: "Cloud" },
+    { id: "10", name: "AWS", proficiency: 60, category: "Cloud" },
     { id: "11", name: "Git", proficiency: 80, category: "Version Control" },
     { id: "12", name: "CI/CD", proficiency: 80, category: "DevOps" },
     { id: "13", name: "Python", proficiency: 75, category: "Backend" },
@@ -238,7 +238,7 @@ const initialState: CVData = {
     { id: "21", name: "SAP WM", proficiency: 70, category: "Backend" },
     { id: "22", name: "SAP ABAP", proficiency: 70, category: "Backend" },
     { id: "23", name: "SAP HANA", proficiency: 70, category: "Backend" },
-    { id: "24", name: "SAP Fiori", proficiency: 70, category: "Frontend" },
+    { id: "24", name: "SAP Fiori", proficiency: 60, category: "Frontend" },
     { id: "25", name: "SAP UI5", proficiency: 70, category: "Frontend" },
     { id: "26", name: "WPF", proficiency: 85, category: "Frontend" },
     { id: "27", name: "C#", proficiency: 90, category: "Backend" },
@@ -250,7 +250,10 @@ const initialState: CVData = {
     { id: "33", name: "Deno v2", proficiency: 80, category: "Backend" },
     { id: "34", name: "Serverless", proficiency: 80, category: "Backend" },
     { id: "35", name: "Docker", proficiency: 75, category: "Backend" },
-    { id: "36", name: "Vercel", proficiency: 80, category: "Cloud" }
+    { id: "36", name: "Vercel", proficiency: 80, category: "Cloud" },
+    { id: "37", name: "IWS", proficiency: 55, category: "ERP Management" },
+    { id: "38", name: "Management Skills", proficiency: 55, category: "ERP Management" },
+    { id: "39", name: "Siemens HMI Operating", proficiency: 80, category: "Automation" }
   ],
   projects: [
     {

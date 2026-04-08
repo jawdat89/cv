@@ -44,9 +44,14 @@ const SkillsComponent: React.FC = () => {
                       ? "versionControl"
                       : category === "DevOps"
                       ? "devOps"
+                      : category === "ERP Management"
+                      ? "erpManagement"
+                      : category === "Automation"
+                      ? "automation"
                       : category.toLowerCase()
-                  }`
-                ) || category}
+                  }`,
+                  { defaultValue: category }
+                )}
               </h3>
               <div className="space-y-4">
                 {skills.map((skill, index) => (

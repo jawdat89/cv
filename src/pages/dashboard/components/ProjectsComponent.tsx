@@ -33,7 +33,7 @@ const ProjectsComponent: React.FC = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 sm:p-6"
+              className="rounded-xl border border-gray-200/80 dark:border-gray-700/80 bg-white/70 dark:bg-gray-800/60 p-4 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {t(project.title)}
@@ -47,7 +47,7 @@ const ProjectsComponent: React.FC = () => {
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                    className="px-2.5 py-1 bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light text-xs rounded-full border border-primary/20"
                   >
                     {tech}
                   </span>

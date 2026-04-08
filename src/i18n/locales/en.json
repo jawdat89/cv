@@ -47,10 +47,23 @@
     "switchToLight": "Switch to light mode"
   },
   "hero": {
-    "title": "Full Stack Developer + Control & Automation Engineering Student",
+    "title": "Full Stack Developer + Software Developer",
+    "badge": "Open to impactful full-stack opportunities",
+    "subtitle": "Building scalable products with React, Node.js, .NET, and cloud-first architectures.",
+    "viewProjects": "View Projects",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "yearsExperience": "5+ Years Experience",
+    "fullStackDeveloper": "Logistics Process Lead & Software Developer",
+    "sapWebSystems": "SAP + Web Systems",
+    "years": "Years",
+    "skills": "Skills",
+    "currentFocusTitle": "Current Focus",
+    "currentFocusBody": "ERP systems, automation, and scalable web platforms.",
     "available": "Available for opportunities",
     "employer1": "Logistics Process Lead at Strauss Group",
-    "employer2": "Freelance Software Engineer at BestTuqay"
+    "employer2": "Freelance Software Engineer at BestTuqay",
+    "studentAtid": "Automation at Atid College"
   },
   "sections": {
     "personalInfo": {
@@ -138,7 +151,7 @@
   },
   "languageNames": {
     "English": "English",
-    "Arabic": "Arabic", 
+    "Arabic": "Arabic",
     "Hebrew": "Hebrew"
   },
   "proficiencyLevels": {
@@ -186,7 +199,9 @@
     "database": "Database",
     "cloud": "Cloud",
     "versionControl": "Version Control",
-    "devOps": "DevOps"
+    "devOps": "DevOps",
+    "erpManagement": "ERP Management",
+    "automation": "Automation"
   },
   "expertise": {
     "title": "Expertise",

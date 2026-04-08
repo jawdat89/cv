@@ -31,7 +31,7 @@ const LanguagesComponent: React.FC = () => {
           {cvData.languages.map((lang, index) => (
             <div
               key={index}
-              className="text-center p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
+              className="text-center p-3 sm:p-4 rounded-xl border border-gray-200/80 dark:border-gray-700/80 bg-white/70 dark:bg-gray-800/60 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {t(`languageNames.${lang.name}`) || lang.name}

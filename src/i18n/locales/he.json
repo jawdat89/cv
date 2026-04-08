@@ -47,10 +47,23 @@
     "switchToLight": "מעבר למצב בהיר"
   },
   "hero": {
-    "title": "מפתח Full Stack + סטודנט הנדסת בקרה ואוטומציה",
+    "title": "מפתח Full Stack + מפתח תוכנה",
+    "badge": "פתוח להזדמנויות Full-Stack בעלות השפעה",
+    "subtitle": "בונה מוצרים סקיילביליים עם React, Node.js, ‏.NET וארכיטקטורות ענן מודרניות.",
+    "viewProjects": "לצפייה בפרויקטים",
+    "linkedin": "לינקדאין",
+    "github": "גיטהאב",
+    "yearsExperience": "5+ שנות ניסיון",
+    "fullStackDeveloper": "מוביל תהליכי לוגיסטיקה ומפתח תוכנה",
+    "sapWebSystems": "מערכות SAP + Web",
+    "years": "שנים",
+    "skills": "מיומנויות",
+    "currentFocusTitle": "מיקוד נוכחי",
+    "currentFocusBody": "מערכות ERP, אוטומציה ופלטפורמות Web סקיילביליות.",
     "available": "זמין להזדמנויות",
     "employer1": "מוביל תהליכי לוגיסטיקה בקבוצת שטראוס",
-    "employer2": "תוכנה פרילנס בחברת BestTuqay"
+    "employer2": "תוכנה פרילנס בחברת BestTuqay",
+    "studentAtid": "אוטומציה במכללת עתיד"
   },
   "sections": {
     "personalInfo": {
@@ -138,7 +151,7 @@
   },
   "languageNames": {
     "English": "אנגלית",
-    "Arabic": "ערבית", 
+    "Arabic": "ערבית",
     "Hebrew": "עברית"
   },
   "proficiencyLevels": {
@@ -186,7 +199,9 @@
     "database": "מסד נתונים",
     "cloud": "ענן",
     "versionControl": "בקרת גרסאות",
-    "devOps": "פיתוח ותפעול"
+    "devOps": "פיתוח ותפעול",
+    "erpManagement": "ניהול מערכות ERP",
+    "automation": "אוטומציה"
   },
   "expertise": {
     "title": "מומחיות",
