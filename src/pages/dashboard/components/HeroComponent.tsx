@@ -93,16 +93,6 @@ const HeroComponent: React.FC = () => {
               </a>
             </div>
 
-            <div
-              className={clsx(
-                "mt-6 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm lg:justify-start",
-                direction === "rtl" && "lg:justify-end"
-              )}
-            >
-              <span className="rounded-full border border-gray-200/80 bg-white/70 px-3 py-1 text-gray-600 dark:border-gray-600/70 dark:bg-gray-800/70 dark:text-gray-300">{t("hero.yearsExperience")}</span>
-              <span className="rounded-full border border-gray-200/80 bg-white/70 px-3 py-1 text-gray-600 dark:border-gray-600/70 dark:bg-gray-800/70 dark:text-gray-300">{t("hero.fullStackDeveloper")}</span>
-              <span className="rounded-full border border-gray-200/80 bg-white/70 px-3 py-1 text-gray-600 dark:border-gray-600/70 dark:bg-gray-800/70 dark:text-gray-300">{t("hero.sapWebSystems")}</span>
-            </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
@@ -122,17 +112,6 @@ const HeroComponent: React.FC = () => {
                   <p className="text-sm text-primary dark:text-primary-light">
                     {t("hero.fullStackDeveloper")}
                   </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 text-center">
-                <div className="rounded-xl border border-gray-200/80 bg-white/70 p-3 dark:border-gray-700/70 dark:bg-gray-800/70">
-                  <p className="text-xl font-extrabold text-gray-900 dark:text-white">5+</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">{t("hero.years")}</p>
-                </div>
-                <div className="rounded-xl border border-gray-200/80 bg-white/70 p-3 dark:border-gray-700/70 dark:bg-gray-800/70">
-                  <p className="text-xl font-extrabold text-gray-900 dark:text-white">30+</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">{t("hero.skills")}</p>
                 </div>
               </div>
 

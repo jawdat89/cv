@@ -49,7 +49,7 @@
   "hero": {
     "title": "Full Stack Developer + Software Developer",
     "badge": "Open to impactful full-stack opportunities",
-    "subtitle": "Building scalable products with React, Node.js, .NET, and cloud-first architectures.",
+    "subtitle": "Driving logistics and ERP excellence through automation, SAP systems, and practical software solutions.",
     "viewProjects": "View Projects",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -57,6 +57,7 @@
     "fullStackDeveloper": "Logistics Process Lead & Software Developer",
     "sapWebSystems": "SAP + Web Systems",
     "years": "Years",
+    "licensesDegrees": "Licenses & Degrees",
     "skills": "Skills",
     "currentFocusTitle": "Current Focus",
     "currentFocusBody": "ERP systems, automation, and scalable web platforms.",

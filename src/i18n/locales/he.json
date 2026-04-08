@@ -49,7 +49,7 @@
   "hero": {
     "title": "מפתח Full Stack + מפתח תוכנה",
     "badge": "פתוח להזדמנויות Full-Stack בעלות השפעה",
-    "subtitle": "בונה מוצרים סקיילביליים עם React, Node.js, ‏.NET וארכיטקטורות ענן מודרניות.",
+    "subtitle": "מוביל מצוינות בלוגיסטיקה ובמערכות ERP באמצעות אוטומציה, מערכות SAP ופתרונות תוכנה מעשיים.",
     "viewProjects": "לצפייה בפרויקטים",
     "linkedin": "לינקדאין",
     "github": "גיטהאב",
@@ -57,6 +57,7 @@
     "fullStackDeveloper": "מוביל תהליכי לוגיסטיקה ומפתח תוכנה",
     "sapWebSystems": "מערכות SAP + Web",
     "years": "שנים",
+    "licensesDegrees": "רישיונות ותארים",
     "skills": "מיומנויות",
     "currentFocusTitle": "מיקוד נוכחי",
     "currentFocusBody": "מערכות ERP, אוטומציה ופלטפורמות Web סקיילביליות.",
