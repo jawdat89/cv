@@ -25,11 +25,12 @@ const HeroComponent: React.FC = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: -56 }}
       animate={{ opacity: 1, y: 0 }}
-      className="mb-16"
+      transition={{ duration: 1.64, ease: [0.46, 1, 0.3, 1] }}
+      className="mt-0 mb-16"
     >
-      <div className="relative overflow-hidden rounded-3xl border border-gray-200/80 bg-white/95 p-6 shadow-2xl backdrop-blur-sm dark:border-gray-700/80 dark:bg-gray-800/95 sm:p-8 lg:p-10">
+        <div className="relative overflow-hidden rounded-b-3xl rounded-t-none border border-gray-200/80 bg-white/95 p-6 shadow-xl backdrop-blur-sm dark:border-gray-700/80 dark:bg-gray-800/95 sm:p-8 lg:p-10">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10" />
         <div className="pointer-events-none absolute -top-24 -left-20 h-64 w-64 rounded-full bg-primary/20 blur-3xl dark:bg-primary/25" />
         <div className="pointer-events-none absolute -right-20 bottom-0 h-48 w-48 rounded-full bg-blue-400/20 blur-3xl dark:bg-blue-500/20" />
@@ -232,7 +233,7 @@ const HeroComponent: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>
+        </div>
     </motion.section>
   );
 };

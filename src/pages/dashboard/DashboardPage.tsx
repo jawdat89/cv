@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 import { useI18n } from "@/hooks";
 import { RootState } from "@/store";
 import { setTheme } from "@/store/cvSlice";
@@ -182,15 +183,21 @@ const Dashboard: React.FC = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8">
         <HeroComponent />
-        <PersonalInfoComponent />
-        <ExperienceComponent />
-        <EducationComponent />
-        <SkillsComponent />
-        <ProjectsComponent />
-        <CertificationsComponent />
-        <LanguagesComponent />
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.06, duration: 0.4, ease: "easeOut" }}
+        >
+          <PersonalInfoComponent />
+          <ExperienceComponent />
+          <EducationComponent />
+          <SkillsComponent />
+          <ProjectsComponent />
+          <CertificationsComponent />
+          <LanguagesComponent />
+        </motion.div>
       </div>
     </div>
   );
