@@ -1,15 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { useI18n } from "@/hooks";
-import { RootState } from "@/store";
-import { AnimatedProgressBar } from "@/components/AnimatedProgressBar";
+import { Badge, Card } from "@/components/ui";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { FaCode } from "react-icons/fa";
-import clsx from "clsx";
+
+const SKILL_GROUP_KEYS = [
+  "frontend",
+  "backend",
+  "database",
+  "cloud",
+  "dataAnalysis",
+  "design",
+  "sapErp",
+  "automation",
+] as const;
 
 const SkillsComponent: React.FC = () => {
   const { t, direction } = useI18n();
-  const cvData = useSelector((state: RootState) => state.cv);
 
   return (
     <section id="skills" className="mb-16">
@@ -17,56 +25,36 @@ const SkillsComponent: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
         className="cv-section"
       >
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-          <FaCode
-            className={clsx(
-              "w-6 h-6 text-primary",
-              direction === "rtl" ? "ml-3" : "mr-3"
-            )}
-          />
-          {t("sections.skills.title")}
-        </h2>
-        <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2">
-          {Object.entries(
-            cvData.skills.reduce((acc, skill) => {
-              if (!acc[skill.category]) acc[skill.category] = [];
-              acc[skill.category].push(skill);
-              return acc;
-            }, {} as Record<string, typeof cvData.skills>)
-          ).map(([category, skills]) => (
-            <div key={category} className="min-w-0">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                {t(
-                  `skillCategories.${
-                    category === "Version Control"
-                      ? "versionControl"
-                      : category === "DevOps"
-                      ? "devOps"
-                      : category === "ERP Management"
-                      ? "erpManagement"
-                      : category === "Automation"
-                      ? "automation"
-                      : category.toLowerCase()
-                  }`,
-                  { defaultValue: category }
-                )}
-              </h3>
-              <div className="space-y-4">
-                {skills.map((skill, index) => (
-                  <AnimatedProgressBar
-                    key={index}
-                    value={skill.proficiency}
-                    label={skill.name}
-                    showPercentage={true}
-                    className="mb-2"
-                    barClassName="bg-gradient-to-r from-primary to-primary-dark"
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
+        <SectionHeading
+          icon={FaCode}
+          title={t("sections.skills.title")}
+          subtitle={t("sections.skills.intro")}
+          direction={direction}
+        />
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {SKILL_GROUP_KEYS.map((groupKey) => {
+            const skills = t(`skillGroups.${groupKey}`, {
+              returnObjects: true,
+            }) as string[];
+
+            return (
+              <Card key={groupKey} hover={false}>
+                <h3 className="mb-4 text-lg font-semibold text-brand-text">
+                  {t(`skillCategories.${groupKey}`)}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {Array.isArray(skills) &&
+                    skills.map((skill) => (
+                      <Badge key={skill} text={skill} />
+                    ))}
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </motion.div>
     </section>

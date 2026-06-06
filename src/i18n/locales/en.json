@@ -1,12 +1,14 @@
 {
   "navigation": {
     "dashboard": "Dashboard",
-    "personalInfo": "Personal Info",
+    "personalInfo": "About",
+    "valueProposition": "Who Am I",
     "experience": "Experience",
     "education": "Education",
-    "expertise": "Expertise",
+    "expertise": "Skills",
     "projects": "Projects",
     "languages": "Languages",
+    "contact": "Contact",
     "preview": "Preview",
     "templates": "Templates"
   },
@@ -47,10 +49,13 @@
     "switchToLight": "Switch to light mode"
   },
   "hero": {
-    "title": "Full Stack Developer + Software Developer",
+    "title": "Software & Automation Engineer for ERP, Logistics, and Automation Systems",
+    "role": "Software & Automation Engineer",
     "badge": "Open to impactful full-stack opportunities",
-    "subtitle": "Driving logistics and ERP excellence through automation, SAP systems, and practical software solutions.",
+    "subtitle": "I build practical software that connects business operations, SAP processes, and modern web platforms.",
     "viewProjects": "View Projects",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "yearsExperience": "5+ Years Experience",
@@ -64,71 +69,128 @@
     "available": "Available for opportunities",
     "employer1": "Logistics Process Lead at Strauss Group",
     "employer2": "Freelance Software Engineer at BestTuqay",
-    "studentAtid": "Automation at Atid College"
+    "studentAtid": "Control & Automation Engineering at Atid Maloot"
+  },
+  "valueProposition": {
+    "title": "Who Am I",
+    "intro": "A combination of software engineering, enterprise systems understanding, and operational thinking.",
+    "cards": {
+      "businessSystems": {
+        "title": "Business Systems",
+        "description": "I design and build web and mobile applications for real operational use, including internal tools, workflow systems, and ERP-style platforms."
+      },
+      "sapLogistics": {
+        "title": "SAP & Logistics",
+        "description": "My hands-on experience with SAP EWM, SAP WM, warehouse operations, and delivery processes helps me build software that fits real business environments."
+      },
+      "automationMindset": {
+        "title": "Automation Mindset",
+        "description": "Through control and automation engineering studies, I bring a practical approach to software that interacts with industrial processes and operational systems."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact details and CV downloads for professional reference."
   },
   "sections": {
     "personalInfo": {
-      "title": "Personal Information",
+      "title": "About Me",
       "aboutMe": "About Me",
-      "contactDetails": "Contact Details",
-      "summary": "Experienced Full Stack Developer with over 5 years of expertise in <b>React</b>, <b>Node.js</b>, and <b>.NET</b>. I aspire to develop as an autonomous and leading developer in ERP systems, with emphasis on integrating advanced technologies, automation and innovation. Based on practical experience in SAP system management, software development and implementing autonomous solutions, I am committed to leading complex technological processes and bringing significant value to the organization."
+      "summary": "I am a Software & Automation Engineer with more than 5 years of experience building web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background also includes SAP logistics processes and warehouse systems, giving me strong business and operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering and aim to build intelligent systems that combine software, operations, and industrial automation."
     },
     "experience": {
-      "title": "Work Experience",
+      "title": "Experience",
+      "intro": "From software development to logistics operations and SAP-driven environments, my career combines technical implementation with practical business understanding.",
       "present": "Present",
       "strauss": {
         "title": "Logistics Process Lead",
         "company": "Strauss Group",
-        "description": "Managing delivery processes (inbound and outbound) in various warehouses, using <b>SAP EWM</b>, <b>SAP S/4HANA</b> on <b>SAP WM</b>, including integration of <b>RF</b> devices. Training new users, writing procedures and guides. Supervising warehouse process automation, including integration of <b>PLCs HMI</b>. Partner in implementing autonomous projects. Strategic liaison between operations and <b>IT</b>."
+        "dates": "2021 – Present",
+        "bullets": [
+          "Manage inbound and outbound delivery processes across warehouse environments using SAP EWM and SAP WM.",
+          "Support integration of RF devices and operational workflows.",
+          "Train users and create process documentation and operational guides.",
+          "Contribute to warehouse automation initiatives and coordination between operations and IT."
+        ]
       },
       "besttuqay": {
         "title": "Freelance Software Engineer",
         "company": "BestTuqay",
-        "description": "Developed and maintained web applications using <b>modern technologies</b>. Collaborated with clients to understand requirements and deliver high-quality solutions."
+        "dates": "2020 – Present",
+        "bullets": [
+          "Develop and maintain modern web applications for client needs.",
+          "Translate requirements into practical, maintainable software solutions.",
+          "Deliver features with focus on usability, quality, and business value."
+        ]
       },
       "innovisec": {
         "title": "Senior Software Developer",
-        "company": "Innovisec, ICTS Europe",
-        "description": "Worked in a multidisciplinary development team, with close collaboration in managing <b>DevOps</b> processes to improve workflow and advanced automation in <b>R&D</b> projects that were successfully implemented to <b>PROD</b>. Actively participated in managing technological projects, with teamwork to ensure meeting deadlines and maintaining high quality. Implemented real-time solutions using <b>WebSocket</b> and <b>R-Signal</b>, which enhanced user engagement. Designed and developed applications in <b>NodeJS</b>, <b>Angular</b>, <b>React</b> and <b>.Net</b> languages, with emphasis on performance and user experience. Developed cross-platform mobile applications with <b>React Native</b>. Implemented advanced algorithms and <b>Serverless</b> solutions in various <b>Azure Services</b>, to improve performance and system efficiency."
+        "company": "Innovisec / ICTS Europe",
+        "dates": "2018 – 2021",
+        "bullets": [
+          "Built and maintained applications using Node.js, React, Angular, .NET, and React Native.",
+          "Implemented real-time solutions and serverless services to improve product performance.",
+          "Collaborated across development and DevOps workflows to support production delivery.",
+          "Contributed to R&D projects with focus on reliability, scalability, and user experience."
+        ]
       },
       "strauss_tech": {
-        "title": "Technical Support Specialist (Tier 1)",
-        "company": "Strauss-Group",
-        "description": "Managed user access and resolved technical issues across <b>Active Directory</b>, <b>SAP</b>, and other systems, enhancing system reliability. Provided comprehensive support for network troubleshooting. Supported <b>SAP EWM/WMS</b> and <b>GUI</b>, creating and maintaining essential support documentation to enhance operational efficiency and logistics management."
+        "title": "Technical Support Specialist",
+        "company": "Strauss Group",
+        "dates": "2017 – 2018",
+        "bullets": [
+          "Supported users across SAP, Active Directory, and internal systems.",
+          "Improved operational efficiency through support documentation and process assistance.",
+          "Helped maintain stable warehouse-related support processes."
+        ]
       },
       "qualitest": {
         "title": "QA Automation and Manual Junior Tester",
-        "company": "Qualitest Haifa",
-        "description": "Enhanced software quality for <b>Microsoft Security</b> tools through both automated and manual testing. Developed robust <b>Hyper-V</b> and <b>MS Server</b> testing environments, focusing on <b>UAG/TMG</b> for precise scenarios. Led automation testing efforts, including hotfix installations, reporting, troubleshooting, and code adjustments using <b>Microsoft tools</b>. Executed detailed manual testing, configuring complex environments and ensuring compatibility across various infrastructures. Collaborated with <b>Microsoft developers</b> for on-demand testing, directly influencing software improvements with targeted feedback. Crafted and followed comprehensive test plans, scripts, and use cases, analyzing results to provide actionable optimization insights. Proficient in <b>Forefront UAG/TMG 2010</b>, <b>Microsoft Exchange Server</b>, <b>SharePoint</b>, and <b>Active Directory Federation Services</b>. Maintained office workstations, guaranteeing security and performance for Qualitest endpoint stations."
+        "company": "Qualitest",
+        "dates": "2015 – 2017",
+        "bullets": [
+          "Performed automated and manual testing for Microsoft security-related products.",
+          "Built and configured complex test environments.",
+          "Worked with developers to validate fixes and improve software quality."
+        ]
       }
     },
     "education": {
-      "title": "Education",
+      "title": "Education & Certifications",
       "atid": {
         "institution": "Atid Maloot",
         "degree": "Control & Automation Engineering",
         "field": "Automation & Control",
-        "description": "Currently pursuing a Control & Automation Engineering degree with electrical license."
+        "dates": "2025 – Present",
+        "description": "Currently pursuing engineering studies with electrical licensing track."
       },
       "ort": {
         "institution": "Ort Braude College of Engineering",
         "degree": "Software Practical Engineer with honors",
         "field": "Software Engineering",
-        "description": "Graduated with honors in Software Engineering with focus on software engineering and software development."
+        "dates": "2015 – 2018",
+        "description": "Graduated with honors, focused on software engineering and development."
       }
     },
     "skills": {
-      "title": "Skills"
+      "title": "Skills",
+      "intro": "Technologies and domains I use to build scalable, practical solutions."
     },
     "projects": {
-      "title": "Projects",
+      "title": "Featured Projects",
+      "intro": "Selected projects that reflect my experience in business systems, enterprise software, modern cross-platform development, and open-source tools.",
+      "viewCode": "View Code",
+      "openSource": "Open Source",
       "ipresent": {
         "title": "iPresent - Digital Signage System",
-        "description": "A comprehensive <b>WPF</b>-based digital signage presentation system for displaying content on multiple screens. Features include content scheduling, multi-station support, real-time updates, and support for various media types (<b>PDF</b>, <b>PPT</b>, videos, images). Includes background synchronization service and role-based user management."
+        "description": "Developed a WPF-based digital signage platform for multi-screen content delivery in operational environments. Supports scheduling, real-time updates, and diverse media types to improve communication across business locations.",
+        "outcome": "Improved multi-location content delivery and operational communication."
       },
       "imanage": {
         "title": "iManage - Small Business ERP System",
-        "description": "A comprehensive <b>ERP</b> (Enterprise Resource Planning) system designed specifically for small businesses. Features include inventory management, customer relationship management (<b>CRM</b>), financial accounting, sales and purchase order processing, employee management, and reporting dashboards. Built with modern <b>.NET Core</b> backend and <b>React</b> frontend for optimal user experience and scalability."
+        "description": "Built a small business ERP platform covering inventory, CRM, accounting, orders, and reporting. Designed to support operational visibility and scalable business workflows using .NET Core, SQL Server, and React.",
+        "outcome": "Enabled operational visibility and scalable business workflows for small businesses."
       },
       "gofresh": {
         "title": "GoFresh - Drinks Shop Menu App",
@@ -140,11 +202,23 @@
       },
       "myShop": {
         "title": "myShop - Ticket Management System",
-        "description": "Built a comprehensive ticket management system to manage user tickets across web and mobile platforms. Re-architected a legacy WPF application into a modern, containerized stack using <b>Deno v2</b> for the <b>backend API</b> and <b>React</b> for the web frontend, all running in <b>Docker</b> for consistent local development and deployment. For mobile, implemented a <b>React Native</b> app that integrates with <b>Supabase</b>, combining synchronized cloud and local Supabase servers and <b>Supabase Edge Functions</b> to handle business logic at the edge. This architecture delivers seamless ticket tracking, status updates, and robust cross-platform synchronization while significantly improving performance, reliability, and user experience."
+        "description": "Modernized a legacy ticket management system into a cross-platform solution spanning web, mobile, and containerized backend services. Built with React, React Native, Deno, Docker, and Supabase to improve synchronization, maintainability, and user experience.",
+        "outcome": "Improved cross-platform synchronization, maintainability, and user experience."
+      },
+      "dup_py": {
+        "title": "Dup_py - Duplicate File Finder",
+        "description": "Maintained an open-source fork of DUDE, a cross-platform desktop utility for finding and managing duplicate files on Linux and Windows. Supports multi-folder scanning, SHA1 content hashing, image similarity detection, and safe delete or link workflows with headless CSV export.",
+        "outcome": "Helps users reclaim disk space safely with transparent duplicate review and cross-platform portability."
       }
     },
     "certifications": {
-      "title": "Certifications"
+      "title": "Certifications",
+      "items": {
+        "sapEwm": "SAP EWM 100",
+        "sapS4": "SAP S/4HANA Record of Achievement",
+        "mcse": "MCITP / MCSE",
+        "ccna": "Cisco CCNA"
+      }
     },
     "languages": {
       "title": "Languages"
@@ -197,12 +271,25 @@
   "skillCategories": {
     "frontend": "Frontend",
     "backend": "Backend",
-    "database": "Database",
-    "cloud": "Cloud",
+    "database": "Databases",
+    "cloud": "Cloud & DevOps",
+    "dataAnalysis": "Data Analysis",
+    "design": "Design",
+    "sapErp": "SAP & ERP",
+    "automation": "Automation / Industrial",
     "versionControl": "Version Control",
     "devOps": "DevOps",
-    "erpManagement": "ERP Management",
-    "automation": "Automation"
+    "erpManagement": "ERP Management"
+  },
+  "skillGroups": {
+    "frontend": ["React", "React Native", "TypeScript", "Angular", "WPF"],
+    "backend": ["Node.js", "Python", ".NET Core", "C#", "Deno", "Serverless APIs"],
+    "database": ["PostgreSQL", "SQL Server", "MySQL", "MongoDB", "Redis", "Supabase", "Entity Framework"],
+    "cloud": ["Azure", "Azure Functions", "AWS", "Docker", "CI/CD", "Vercel"],
+    "dataAnalysis": ["Power BI"],
+    "design": ["Microsoft Visio", "draw.io", "Visual Paradigm"],
+    "sapErp": ["SAP EWM", "SAP WM", "SAP HANA", "SAP ABAP", "SAP Fiori", "SAP UI5"],
+    "automation": ["Python", "National Instruments", "PLC/HMI exposure", "Operational automation support", "Control engineering studies"]
   },
   "expertise": {
     "title": "Expertise",

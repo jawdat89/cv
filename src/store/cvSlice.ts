@@ -49,6 +49,8 @@ export interface CVData {
     title: string;
     description: string;
     technologies: string[];
+    githubLink?: string;
+    featured?: boolean;
   }>;
   certifications: Array<{
     id: string;
@@ -83,7 +85,7 @@ const initialState: CVData = {
     linkedin: "https://www.linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
-      "Experienced Full Stack Developer with over 5 years of expertise in React, Node.js, .NET. I aspire to develop as an autonomous and leading developer in ERP systems, with emphasis on integrating advanced technologies, automation and innovation. Based on practical experience in SAP system management, software development and implementing autonomous solutions, I am committed to leading complex technological processes and bringing significant value to the organization.",
+      "I am a Software & Automation Engineer with more than 5 years of experience building web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background also includes SAP logistics processes and warehouse systems, giving me strong business and operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering and aim to build intelligent systems that combine software, operations, and industrial automation.",
   },
   experience: [
     {
@@ -263,17 +265,11 @@ const initialState: CVData = {
       technologies: [
         "React",
         "React Native",
-        "Supabase",        
         "Deno",
         "Docker",
-        "TypeScript",
-        "Migration",
-        "API Development",
-        "SyncService",
-        "Mobile Development",
-        "Desktop Application",
-        "Cross-platform",
+        "Supabase",
       ],
+      featured: true,
     },
     {
       id: "imanage",
@@ -281,14 +277,12 @@ const initialState: CVData = {
       description: "sections.projects.imanage.description",
       technologies: [
         ".NET Core",
-        "C#",
-        "Entity Framework Core",
         "SQL Server",
         "React",
-        "TypeScript",
-        "Business Logic",
-        "Reporting",
+        "C#",
+        "Entity Framework",
       ],
+      featured: true,
     },
     {
       id: "ipresent",
@@ -297,11 +291,25 @@ const initialState: CVData = {
       technologies: [
         "WPF",
         "C#",
-        "Entity Framework",
         "SQL Server",
-        "WebView2",
-        "MahApps.Metro",
+        "Entity Framework",
       ],
+      featured: true,
+    },
+    {
+      id: "dup_py",
+      title: "sections.projects.dup_py.title",
+      description: "sections.projects.dup_py.description",
+      technologies: [
+        "Python",
+        "Tkinter",
+        "PyInstaller",
+        "NumPy",
+        "SciPy",
+        "PIL",
+      ],
+      githubLink: "https://github.com/jawdat89/dup_py",
+      featured: true,
     },
     {
       id: "gofresh",
@@ -382,7 +390,7 @@ const initialState: CVData = {
     { id: "3", name: "Hebrew", language: "Hebrew", proficiency: "Native" },
   ],
   template: "modern",
-  theme: "light",
+  theme: "dark",
   currentLanguage: "en",
 };
 

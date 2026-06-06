@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,47 +6,143 @@
 
 @layer base {
   html {
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
   }
-  
+
+  /* Dark theme — warm charcoal + royal blue accent */
+  html.dark {
+    --brand-bg: 14 14 16;
+    --brand-surface: 26 26 30;
+    --brand-elevated: 36 36 42;
+    --brand-border: 58 58 66;
+    --brand-text: 244 244 245;
+    --brand-muted: 161 161 170;
+    --brand-accent: 65 105 225;
+    --brand-accent-hover: 107 141 242;
+    --brand-accent-subtle: 65 105 225;
+    --brand-teal: 20 184 166;
+    --brand-highlight: 251 191 36;
+  }
+
+  /* Light theme — clean paper + royal blue accent */
+  html:not(.dark) {
+    --brand-bg: 250 250 250;
+    --brand-surface: 255 255 255;
+    --brand-elevated: 244 244 245;
+    --brand-border: 228 228 231;
+    --brand-text: 24 24 27;
+    --brand-muted: 113 113 122;
+    --brand-accent: 37 99 235;
+    --brand-accent-hover: 29 78 216;
+    --brand-accent-subtle: 37 99 235;
+    --brand-teal: 17 94 89;
+    --brand-highlight: 217 119 6;
+  }
+
   body {
-    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    @apply bg-brand-bg text-brand-text antialiased;
   }
 
   h1,
   h2,
-  h3 {
-    font-family: 'Space Grotesk', 'Manrope', system-ui, sans-serif;
+  h3,
+  h4 {
     letter-spacing: -0.02em;
   }
 
-  h4,
-  h5,
-  h6 {
-    font-family: 'Manrope', system-ui, sans-serif;
-    letter-spacing: -0.01em;
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer components {
   .cv-section {
-    @apply relative overflow-hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-md border border-gray-200/80 dark:border-gray-700/80 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl;
+    @apply relative overflow-hidden rounded-xl border border-brand-border/40 bg-brand-surface/80 p-6 shadow-sm backdrop-blur-sm;
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-border/70 hover:shadow-md;
   }
 
-  .cv-section::before {
-    content: "";
-    @apply pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent;
+  html.dark .cv-section {
+    box-shadow: 0 1px 0 rgb(var(--brand-border) / 0.3) inset;
   }
-  
+
   .cv-input {
-    @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:text-white;
+    @apply w-full rounded-lg border border-brand-border bg-brand-surface px-3 py-2 text-brand-text;
+    @apply focus:border-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-accent/30;
   }
-  
+
   .cv-button {
-    @apply px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors duration-200;
+    @apply rounded-lg bg-brand-accent px-4 py-2 font-semibold text-white;
+    @apply transition-all duration-150 hover:bg-brand-accent-hover hover:shadow-md;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:ring-offset-2 focus:ring-offset-brand-bg;
   }
-  
+
   .cv-button-secondary {
-    @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors duration-200;
+    @apply rounded-lg border border-brand-border bg-brand-elevated/40 px-4 py-2 font-semibold text-brand-text;
+    @apply transition-all duration-150 hover:border-brand-accent/40 hover:bg-brand-accent-subtle/10 hover:text-brand-accent;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:ring-offset-2 focus:ring-offset-brand-bg;
+  }
+
+  .hero-glow {
+    background: radial-gradient(
+      ellipse 70% 50% at 50% -10%,
+      rgb(var(--brand-accent-subtle) / 0.12),
+      transparent 70%
+    );
+  }
+}
+
+@layer utilities {
+  .layer-drops {
+    @apply pointer-events-none fixed inset-0 z-layer-drops h-[100dvh] w-screen opacity-70 dark:opacity-80;
+  }
+
+  .layer-content {
+    @apply relative z-layer-content;
+  }
+
+  .layer-nav {
+    @apply sticky top-0 z-layer-nav;
+  }
+
+  .layer-overlay {
+    @apply z-layer-overlay;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 }

@@ -2,45 +2,36 @@ import React, { useState, useRef, useEffect } from "react";
 import { useI18n } from "@/hooks";
 import { FaDownload, FaChevronDown } from "react-icons/fa";
 import clsx from "clsx";
+import { CVOption, ENGLISH_CV, HEBREW_CV, downloadCV } from "@/utils/cvDownload";
 
-interface CVOption {
-  value: string;
-  label: string;
-  file: string;
-  filename: string;
+type CVDownloadSelectVariant = "nav" | "secondary";
+
+interface CVDownloadSelectProps {
+  variant?: CVDownloadSelectVariant;
+  className?: string;
+  showLabel?: boolean;
 }
 
-const CVDownloadSelect: React.FC = () => {
+const CVDownloadSelect: React.FC<CVDownloadSelectProps> = ({
+  variant = "nav",
+  className,
+  showLabel = true,
+}) => {
   const { t, direction } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const selectRef = useRef<HTMLDivElement>(null);
 
   const cvOptions: CVOption[] = [
     {
-      value: "english",
-      label: t("actions.downloadEnglishCV") || "English CV",
-      file: "/static/Jawdat Abdullah - 2025.pdf",
-      filename: "Jawdat Abdullah - CV.pdf",
+      ...ENGLISH_CV,
+      label: t("actions.downloadEnglishCV") || ENGLISH_CV.label,
     },
     {
-      value: "hebrew",
-      label: t("actions.downloadHebrewCV") || "Hebrew CV",
-      file: "/static/גודאת עבדאללה - קורות חיים 2025.pdf",
-      filename: "גודאת עבדאללה - קורות חיים 2025.pdf",
+      ...HEBREW_CV,
+      label: t("actions.downloadHebrewCV") || HEBREW_CV.label,
     },
   ];
 
-  const handleDownload = (option: CVOption) => {
-    const link = document.createElement("a");
-    link.href = option.file;
-    link.download = option.filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setIsOpen(false);
-  };
-
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
@@ -48,57 +39,78 @@ const CVDownloadSelect: React.FC = () => {
       }
     };
 
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleEscape);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
     };
   }, [isOpen]);
 
+  const triggerLabel = t(
+    variant === "secondary" ? "hero.downloadCV" : "actions.downloadCV"
+  );
+
   return (
-    <div className="relative" ref={selectRef}>
+    <div className={clsx("relative inline-flex", className)} ref={selectRef}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        type="button"
+        onClick={() => setIsOpen((open) => !open)}
         className={clsx(
-          "flex items-center space-x-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors",
-          direction === "rtl" && "space-x-reverse"
+          "inline-flex items-center gap-2 rounded-lg font-semibold transition-all duration-150",
+          variant === "nav" &&
+            "bg-brand-accent px-4 py-2 text-white shadow-sm hover:bg-brand-accent-hover hover:shadow-md",
+          variant === "secondary" &&
+            "border border-brand-border bg-brand-elevated/40 px-[22px] py-[10px] text-brand-text hover:border-brand-accent/40 hover:bg-brand-accent-subtle/10 hover:text-brand-accent",
+          direction === "rtl" && "flex-row-reverse"
         )}
         aria-expanded={isOpen}
-        aria-haspopup="true"
+        aria-haspopup="menu"
+        aria-label={triggerLabel}
       >
-        <FaDownload className="w-4 h-4" />
-        <span className="hidden sm:inline">{t("actions.downloadCV") || "Download CV"}</span>
+        {variant === "nav" && <FaDownload className="h-4 w-4 shrink-0" aria-hidden />}
+        {(showLabel || variant === "secondary") && (
+          <span className={clsx(variant === "nav" && "hidden sm:inline")}>
+            {triggerLabel}
+          </span>
+        )}
         <FaChevronDown
           className={clsx(
-            "w-3 h-3 transition-transform",
+            "h-3 w-3 shrink-0 transition-transform",
             isOpen && "rotate-180"
           )}
+          aria-hidden
         />
       </button>
 
       {isOpen && (
         <div
-          className={clsx(
-            "absolute z-50 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700",
-            direction === "rtl" ? "left-0" : "right-0"
-          )}
+          role="menu"
+          className="absolute start-0 top-[calc(100%+0.5rem)] z-50 min-w-full overflow-hidden rounded-lg border border-brand-border/50 bg-brand-surface py-1 shadow-xl"
         >
-          <div className="py-1">
-            {cvOptions.map((option) => (
-              <button
-                key={option.value}
-                onClick={() => handleDownload(option)}
-                className={clsx(
-                  "w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors",
-                  direction === "rtl" && "text-right"
-                )}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
+          {cvOptions.map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              role="menuitem"
+              onClick={() => {
+                downloadCV(option);
+                setIsOpen(false);
+              }}
+              className="w-full px-4 py-2 text-start text-sm text-brand-muted transition-colors hover:bg-brand-elevated/50 hover:text-brand-text"
+            >
+              {option.label}
+            </button>
+          ))}
         </div>
       )}
     </div>
@@ -106,4 +118,3 @@ const CVDownloadSelect: React.FC = () => {
 };
 
 export default CVDownloadSelect;
-

@@ -108,14 +108,14 @@ const LanguageSelector: React.FC = () => {
           }
         }}
         className={clsx(
-          "flex items-center px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent",
+          "flex items-center rounded-lg border border-brand-border/50 bg-brand-surface px-3 py-2 transition-colors duration-150 hover:border-brand-accent/30 hover:bg-brand-elevated/50",
           direction === "rtl" ? "space-x-reverse space-x-2" : "space-x-2"
         )}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-label={`Current language: ${currentLang.name}. Click to change language.`}
       >
-        <FaGlobe className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+        <FaGlobe className="h-4 w-4 text-brand-muted" />
         <div
           className={clsx(
             "w-5 h-4 rounded-sm overflow-hidden border border-gray-200",
@@ -124,13 +124,14 @@ const LanguageSelector: React.FC = () => {
         >
           <CurrentFlag className="w-full h-full object-cover" />
         </div>
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hidden sm:inline">
+        <span className="hidden text-sm font-medium text-brand-text sm:inline">
           {currentLang.name}
         </span>
         <FaChevronDown
-          className={`w-3 h-3 text-gray-500 transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={clsx(
+            "h-3 w-3 text-brand-muted transition-transform duration-200",
+            isOpen && "rotate-180"
+          )}
           aria-hidden="true"
         />
       </button>
@@ -138,7 +139,7 @@ const LanguageSelector: React.FC = () => {
       {isOpen && (
         <div
           className={clsx(
-            "absolute top-full mt-1 w-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg z-50",
+            "absolute top-full z-50 mt-1 w-48 rounded-lg border border-brand-border/50 bg-brand-surface shadow-xl",
             direction === "rtl" ? "right-0" : "left-0"
           )}
           role="listbox"
@@ -158,13 +159,13 @@ const LanguageSelector: React.FC = () => {
                     }
                   }}
                   className={clsx(
-                    "w-full flex items-center px-4 py-3 text-left hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-600",
+                    "flex w-full items-center px-4 py-3 text-left transition-colors duration-150 focus:outline-none",
                     direction === "rtl"
                       ? "space-x-reverse space-x-3"
                       : "space-x-3",
                     currentLanguage === language.code
-                      ? "bg-primary text-white hover:bg-primary-dark"
-                      : "text-gray-700 dark:text-gray-300"
+                      ? "bg-brand-accent/15 text-brand-accent"
+                      : "text-brand-muted hover:bg-brand-elevated/50 hover:text-brand-text"
                   )}
                   role="option"
                   aria-selected={currentLanguage === language.code}

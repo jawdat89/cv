@@ -1,0 +1,134 @@
+# CV Portfolio — Cursor Rules
+
+## Project Context
+
+**Owner:** Jawdat Abdullah  
+**Stack:** Vite + React 18 + TypeScript + Tailwind CSS + Redux Toolkit + i18next  
+**Repo:** https://github.com/jawdat89/cv  
+**Reference docs:** `agent/` folder (design system, copy, roadmap)
+
+## Core Positioning
+
+> "I build practical software at the intersection of ERP, logistics, automation, and modern web development."
+
+The site should feel **modern, industrial, trustworthy, and enterprise-focused** — not like a generic developer template.
+
+---
+
+## Design System (Strict)
+
+### Colors — use ONLY these via `brand-*` Tailwind tokens or `src/lib/theme.ts`
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Background | `#0F172A` | Page background (`brand-bg`) |
+| Surface | `#1F2937` | Cards, nav (`brand-surface`) |
+| Text Primary | `#F9FAFB` | Headings, body (`brand-text`) |
+| Text Secondary | `#9CA3AF` | Subtitles, meta (`brand-muted`) |
+| Accent | `#3B82F6` | CTAs, links (`brand-accent`) |
+| Teal | `#14B8A6` | Alternative accent (`brand-teal`) |
+| Highlight | `#F59E0B` | Sparingly (`brand-highlight`) |
+
+### Typography (Inter font)
+
+- h1: `3.5rem` — Hero name only
+- h2: `2.5rem` — Section titles
+- h3: `1.75rem` — Subsection titles
+- h4: `1.25rem` — Card titles
+- body: `1rem`
+- small: `0.875rem`
+
+### Spacing — 8px base scale
+
+8, 16, 24, 32, 48, 64, 96 px — no arbitrary values.
+
+### Components
+
+Use shared UI in `src/components/ui/`:
+- **Card** — surface bg, subtle border, 24px padding, 2px hover lift
+- **Button** — primary (filled accent) and secondary (outlined) only
+- **Badge** — tech stack tags, no percentage bars
+- **Section** — max-width 1200px, consistent vertical padding
+
+---
+
+## Content Rules
+
+Approved copy lives in `src/i18n/locales/en.json` (sourced from `agent/.homepage_copy.md`, `agent/.section_rewrite.md`).
+
+- **Contact details** appear ONLY in the Contact section
+- **About text** appears ONLY in the About section
+- **Skills** use grouped badges — NO percentage bars
+- **Experience** uses outcome-focused bullet lists
+- **Projects** lead with business-oriented descriptions
+
+### Section Order
+
+1. Hero → 2. What I Bring → 3. About → 4. Featured Projects → 5. Experience → 6. Skills → 7. Education & Certifications → 8. Languages → 9. Contact
+
+---
+
+## Code Standards
+
+- TypeScript strict mode — no `any`
+- Components under 200 lines; split if larger
+- Use `@/` path aliases
+- Semantic HTML: `nav`, `main`, `section`, proper heading hierarchy (h1 → h2 → h3)
+- ARIA labels on all interactive elements
+- WCAG AA color contrast minimum
+- Support keyboard navigation and `prefers-reduced-motion`
+
+---
+
+## Animation Guidelines
+
+Allowed:
+- Fade in on scroll (~300ms)
+- Card hover lift (2px, 200ms)
+- Button hover (150ms)
+
+NOT allowed:
+- Parallax, heavy motion, auto-playing animations, bright gradients, excessive glows
+
+---
+
+## i18n
+
+- English (`en.json`) is the source of truth for approved copy
+- Add new keys to `en.json` first; update `he.json` and `ar.json` when translating
+- Use `t()` with `returnObjects: true` for arrays (bullets, skill lists)
+
+---
+
+## File Structure
+
+```
+src/
+  components/ui/     # Card, Button, Badge, Section
+  lib/theme.ts       # Design tokens
+  pages/dashboard/   # Dashboard sections
+  i18n/locales/      # Translations
+  store/             # Redux state
+agent/               # Design docs and Cursor prompts (reference only)
+```
+
+---
+
+## Implementation Phases
+
+1. **Foundation** — theme, Tailwind, base components ✅
+2. **Content** — Hero, Value Prop, About, Skills refactor
+3. **Advanced** — Projects, Experience, Education, Contact
+4. **Polish** — animations, responsive audit, accessibility, Lighthouse 90+
+
+See `agent/.CURSOR_GUIDE.md` and `agent/.cursor-prompts.md` for detailed prompts.
+
+---
+
+## Do NOT
+
+- Introduce colors outside the approved palette
+- Add skill percentage bars or ratings
+- Duplicate contact info across sections
+- Use Next.js patterns (this is Vite, not Next.js)
+- Over-engineer abstractions for one-off use cases

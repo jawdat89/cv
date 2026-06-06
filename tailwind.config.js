@@ -8,7 +8,15 @@ module.exports = {
   safelist: [
     {
       pattern: /^col-span-\d+$/, // This ensures all col-span-* classes are included
-    }
+    },
+    "layer-drops",
+    "layer-content",
+    "layer-nav",
+    "layer-overlay",
+    "z-layer-drops",
+    "z-layer-content",
+    "z-layer-nav",
+    "z-layer-overlay",
   ],
   theme: {
     stroke: {
@@ -73,15 +81,33 @@ module.exports = {
         180: "180",
         190: "190",
         200: "200",
+        "layer-base": "0",
+        "layer-drops": "1",
+        "layer-content": "10",
+        "layer-nav": "50",
+        "layer-overlay": "100",
       },
       colors: {
+        brand: {
+          bg: "rgb(var(--brand-bg) / <alpha-value>)",
+          surface: "rgb(var(--brand-surface) / <alpha-value>)",
+          elevated: "rgb(var(--brand-elevated) / <alpha-value>)",
+          border: "rgb(var(--brand-border) / <alpha-value>)",
+          text: "rgb(var(--brand-text) / <alpha-value>)",
+          muted: "rgb(var(--brand-muted) / <alpha-value>)",
+          accent: "rgb(var(--brand-accent) / <alpha-value>)",
+          "accent-hover": "rgb(var(--brand-accent-hover) / <alpha-value>)",
+          "accent-subtle": "rgb(var(--brand-accent-subtle) / <alpha-value>)",
+          teal: "rgb(var(--brand-teal) / <alpha-value>)",
+          highlight: "rgb(var(--brand-highlight) / <alpha-value>)",
+        },
         primary: {
-          lightest: "#E3F2FD",
-          lighter: "#BBDEFB",
-          light: "#64B5F6",
-          DEFAULT: "#1E88E5",
-          dark: "#1565C0",
-          darkest: "#0D47A1",
+          lightest: "#DBEAFE",
+          lighter: "#BFDBFE",
+          light: "#93C5FD",
+          DEFAULT: "#4169E1",
+          dark: "#2563EB",
+          darkest: "#1D4ED8",
         },
         secondary: {
           lightest: "#F5F5F5",

@@ -28,3 +28,6 @@ dist-ssr
 .env.*.local
 
 .vercel
+
+# Local agent / Cursor planning docs (not published)
+agent/

@@ -37,7 +37,7 @@ function AppContent() {
   }, [currentLanguage, i18n]);
 
   return (
-    <div className="min-h-screen w-full" dir={direction}>
+    <div className="layer-content min-h-screen w-full" dir={direction}>
       <AppRouter />
       <ToastContainer
         position={direction === "rtl" ? "top-left" : "top-right"}

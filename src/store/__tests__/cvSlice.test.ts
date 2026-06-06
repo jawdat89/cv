@@ -5,7 +5,7 @@ describe('cvSlice', () => {
   it('should return the initial state', () => {
     const initialState = cvSlice.reducer(undefined, { type: 'unknown' });
     expect(initialState).toBeDefined();
-    expect(initialState.theme).toBe('light');
+    expect(initialState.theme).toBe('dark');
   });
 
   it('should handle setTheme', () => {
