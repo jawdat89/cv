@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import clsx from "clsx";
-import { FaArrowLeft, FaMapMarkerAlt, FaMoon, FaSun } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt, FaMoon, FaSun } from "react-icons/fa";
 import { RootState } from "@/store";
 import { setTheme } from "@/store/cvSlice";
 import { useI18n } from "@/hooks";
@@ -27,6 +27,9 @@ const LocationPage: React.FC = () => {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
+  const isRtl = direction === "rtl";
+  const BackIcon = isRtl ? FaArrowRight : FaArrowLeft;
+
   return (
     <div className="relative min-h-screen">
       <RelaxingDropsBackground theme={cvData.theme} />
@@ -38,16 +41,10 @@ const LocationPage: React.FC = () => {
         <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className={clsx(
-              "inline-flex items-center gap-2 text-sm font-semibold text-brand-muted transition-colors hover:text-brand-accent",
-              direction === "rtl" && "flex-row-reverse"
-            )}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-muted transition-colors hover:text-brand-accent"
             ariaLabel={t("location.backToHome")}
           >
-            <FaArrowLeft
-              className={clsx("h-3.5 w-3.5", direction === "rtl" && "-scale-x-100")}
-              aria-hidden
-            />
+            <BackIcon className="h-3.5 w-3.5 shrink-0" aria-hidden />
             {t("location.backToHome")}
           </Link>
 
