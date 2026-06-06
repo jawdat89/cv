@@ -163,7 +163,6 @@ const HeroComponent: React.FC = () => {
               height={288}
               className="aspect-square w-full rounded-2xl object-cover ring-2 ring-brand-accent/30"
               style={{ objectPosition: PROFILE_OBJECT_POSITION }}
-              fetchPriority="high"
               decoding="sync"
             />
           </div>
