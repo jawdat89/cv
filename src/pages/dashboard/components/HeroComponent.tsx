@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/hooks";
 import { RootState } from "@/store";
 import { normalizeExternalUrl } from "@/utils/url";
-import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa";
-import { Button } from "@/components/ui";
+import { LOCATION_PAGE_PATH } from "@/utils/googleMaps";
+import { FaArrowRight, FaGithub, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
+import { Button, Link } from "@/components/ui";
 import CVDownloadSelect from "@/components/CVDownloadSelect";
 import clsx from "clsx";
 
@@ -65,6 +66,28 @@ const HeroComponent: React.FC = () => {
           <p className="mt-3 text-xl font-semibold text-brand-accent sm:text-2xl">
             {t("hero.role")}
           </p>
+
+          <div
+            className={clsx(
+              "mt-2 flex justify-center md:justify-start",
+              direction === "rtl" && "md:justify-end"
+            )}
+          >
+            <Link
+              to={LOCATION_PAGE_PATH}
+              className={clsx(
+                "inline-flex items-center gap-1.5 text-sm text-brand-muted transition-colors hover:text-brand-accent",
+                direction === "rtl" && "flex-row-reverse"
+              )}
+              ariaLabel={t("hero.location")}
+            >
+              <FaMapMarkerAlt
+                className="h-3.5 w-3.5 shrink-0 text-brand-accent/80"
+                aria-hidden
+              />
+              {t("hero.location")}
+            </Link>
+          </div>
 
           <div
             className={clsx(

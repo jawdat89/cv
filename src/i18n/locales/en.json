@@ -55,7 +55,8 @@
     "contactMe": "Contact Me",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "employer1": "Logistics Process Lead at Strauss Group"
+    "employer1": "Logistics Process Lead at Strauss Group",
+    "location": "Kisra, Israel"
   },
   "valueProposition": {
     "title": "Who Am I",
@@ -78,6 +79,14 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Contact details and CV downloads for professional reference."
+  },
+  "location": {
+    "eyebrow": "Location",
+    "title": "Find me on the map",
+    "mapTitle": "Map showing Kisra, Israel",
+    "mapUnavailable": "Map preview is unavailable. Open the location in Google Maps instead.",
+    "openInGoogleMaps": "Open in Google Maps",
+    "backToHome": "Back to portfolio"
   },
   "sections": {
     "personalInfo": {

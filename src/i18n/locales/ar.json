@@ -55,7 +55,8 @@
     "contactMe": "تواصل معي",
     "linkedin": "لينكدإن",
     "github": "جيت هب",
-    "employer1": "قائد عمليات اللوجستيات في مجموعة شتراوس"
+    "employer1": "قائد عمليات اللوجستيات في مجموعة شتراوس",
+    "location": "كسراء، إسرائيل"
   },
   "valueProposition": {
     "title": "من أنا",
@@ -78,6 +79,14 @@
   "contact": {
     "title": "تواصل",
     "subtitle": "تفاصيل الاتصال وتحميل السيرة الذاتية للمرجعية المهنية."
+  },
+  "location": {
+    "eyebrow": "الموقع",
+    "title": "اعثر عليّ على الخريطة",
+    "mapTitle": "خريطة: كسراء، إسرائيل",
+    "mapUnavailable": "معاينة الخريطة غير متاحة. افتح الموقع في Google Maps.",
+    "openInGoogleMaps": "افتح في Google Maps",
+    "backToHome": "العودة إلى المعرض"
   },
   "sections": {
     "personalInfo": {

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/hooks";
 import { RootState } from "@/store";
 import { normalizeExternalUrl } from "@/utils/url";
+import { LOCATION_PAGE_PATH } from "@/utils/googleMaps";
 import {
   FaEnvelope,
   FaGithub,
@@ -11,7 +12,7 @@ import {
   FaMapMarkerAlt,
   FaPhone,
 } from "react-icons/fa";
-import { Section } from "@/components/ui";
+import { Link, Section } from "@/components/ui";
 import CVDownloadSelect from "@/components/CVDownloadSelect";
 import clsx from "clsx";
 
@@ -35,7 +36,7 @@ const ContactComponent: React.FC = () => {
     {
       icon: FaMapMarkerAlt,
       label: cvData.personalInfo.address,
-      href: undefined,
+      href: LOCATION_PAGE_PATH,
       ariaLabel: `Location ${cvData.personalInfo.address}`,
     },
     {
@@ -78,18 +79,17 @@ const ContactComponent: React.FC = () => {
         >
           {contactLinks.map(({ icon: Icon, label, href, ariaLabel, external }) =>
             href ? (
-              <a
+              <Link
                 key={label}
-                href={href}
-                target={external ? "_blank" : undefined}
-                rel={external ? "noopener noreferrer" : undefined}
-                aria-label={ariaLabel}
+                to={href}
+                external={external}
+                ariaLabel={ariaLabel}
                 className="inline-flex min-h-[44px] items-center gap-2 text-brand-muted transition-colors duration-150 hover:text-brand-accent"
                 dir={Icon === FaPhone ? "ltr" : undefined}
               >
                 <Icon className="h-5 w-5 shrink-0" aria-hidden />
                 <span>{label}</span>
-              </a>
+              </Link>
             ) : (
               <span
                 key={label}

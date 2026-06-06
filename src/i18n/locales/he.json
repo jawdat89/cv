@@ -55,7 +55,8 @@
     "contactMe": "צור קשר",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "employer1": "מוביל תהליכי לוגיסטיקה בקבוצת שטראוס"
+    "employer1": "מוביל תהליכי לוגיסטיקה בקבוצת שטראוס",
+    "location": "כסרא, ישראל"
   },
   "valueProposition": {
     "title": "מי אני",
@@ -78,6 +79,14 @@
   "contact": {
     "title": "יצירת קשר",
     "subtitle": "פרטי קשר והורדת קורות חיים לצורך התייחסות מקצועית."
+  },
+  "location": {
+    "eyebrow": "מיקום",
+    "title": "מצאו אותי על המפה",
+    "mapTitle": "מפה: כסרא, ישראל",
+    "mapUnavailable": "תצוגת המפה אינה זמינה. פתחו את המיקום ב-Google Maps.",
+    "openInGoogleMaps": "פתח ב-Google Maps",
+    "backToHome": "חזרה לפורטפוליו"
   },
   "sections": {
     "personalInfo": {
