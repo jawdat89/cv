@@ -52,14 +52,6 @@ const HeroComponent: React.FC = () => {
           {getLocalizedName()}
         </h1>
 
-        <p className="mt-4 max-w-3xl text-xl font-medium leading-snug text-brand-text/90 max-sm:text-lg sm:text-2xl">
-          {t("hero.title")}
-        </p>
-
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-brand-muted">
-          {t("hero.subtitle")}
-        </p>
-
         <div
           className={clsx(
             "mt-8 flex flex-wrap items-center justify-center gap-3",

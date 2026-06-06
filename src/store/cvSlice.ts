@@ -85,7 +85,7 @@ const initialState: CVData = {
     linkedin: "https://www.linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
-      "I am a Software & Automation Engineer with more than 5 years of experience building reliable, scalable web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background in SAP logistics and warehouse operations adds precise operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering, focused on intelligent systems that combine software, operations, and industrial automation with engineering discipline.",
+      "Software & Automation Engineer with 5+ years of experience building web, mobile, and enterprise applications using React, .NET, Node.js, and cloud technologies. Combining software engineering expertise with hands-on SAP logistics and operational experience, I develop practical solutions that improve business processes, automation, and system reliability.",
   },
   experience: [
     {
@@ -236,10 +236,9 @@ const initialState: CVData = {
     { id: "17", name: "MySQL", proficiency: 80, category: "Database" },
     { id: "18", name: "MongoDB", proficiency: 70, category: "Database" },
     { id: "19", name: "Redis", proficiency: 80, category: "Database" },
-    { id: "20", name: "SAP EWM", proficiency: 70, category: "Backend" },
+    { id: "20", name: "SAP EWM / S/4HANA", proficiency: 70, category: "Backend" },
     { id: "21", name: "SAP WM", proficiency: 70, category: "Backend" },
     { id: "22", name: "SAP ABAP", proficiency: 70, category: "Backend" },
-    { id: "23", name: "SAP HANA", proficiency: 70, category: "Backend" },
     { id: "24", name: "SAP Fiori", proficiency: 60, category: "Frontend" },
     { id: "25", name: "SAP UI5", proficiency: 70, category: "Frontend" },
     { id: "26", name: "WPF", proficiency: 85, category: "Frontend" },
@@ -257,6 +256,21 @@ const initialState: CVData = {
     { id: "39", name: "Siemens HMI Operating", proficiency: 80, category: "Automation" }
   ],
   projects: [
+    {
+      id: "cvPortfolio",
+      title: "sections.projects.cvPortfolio.title",
+      description: "sections.projects.cvPortfolio.description",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux",
+        "Vite",
+        "i18next",
+      ],
+      githubLink: "https://github.com/jawdat89/cv",
+      featured: true,
+    },
     {
       id: "myShop",
       title: "sections.projects.myShop.title",
@@ -342,19 +356,12 @@ const initialState: CVData = {
   certifications: [
     {
       id: "1",
-      name: "SAP EWM 100",
+      name: "SAP EWM 100 / S/4HANA",
       issuer: "SAP",
-      date: "2025",
+      date: "2024–2025",
       link: "",
-      description: "Official SAP certification in Extended Warehouse Management.",
-    },
-    {
-      id: "2",
-      name: "Discovering Extended Warehouse Management with SAP S/4HANA - Record of Achievement",
-      issuer: "SAP",
-      date: "Nov 2024",
-      link: "",
-      description: "Record of Achievement in Extended Warehouse Management with SAP S/4HANA.",
+      description:
+        "SAP EWM 100 certification and S/4HANA Record of Achievement in Extended Warehouse Management.",
     },
     {
       id: "3",

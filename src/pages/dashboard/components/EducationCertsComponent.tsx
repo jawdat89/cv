@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { FaGraduationCap } from "react-icons/fa";
 
 const EDUCATION_KEYS = ["atid", "ort"] as const;
-const CERT_KEYS = ["sapEwm", "sapS4", "mcse", "ccna"] as const;
+const CERT_KEYS = ["sapEwm", "mcse", "ccna"] as const;
 
 const EducationCertsComponent: React.FC = () => {
   const { t, direction } = useI18n();

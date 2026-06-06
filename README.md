@@ -9,7 +9,7 @@ Modern, responsive CV portfolio at [jawdat-dev.online](https://jawdat-dev.online
 - **Design system** — Warm charcoal surfaces with royal blue accent; dark/light theme with persistence
 - **Animated background** — Subtle canvas ripple effect (respects `prefers-reduced-motion`)
 - **CV downloads** — Shared dropdown for English and Hebrew PDFs (nav, hero, contact)
-- **Featured projects** — Including open-source [dup_py](https://github.com/jawdat89/dup_py) with GitHub links
+- **Featured projects** — Including this portfolio ([cv](https://github.com/jawdat89/cv)), myShop, iManage, iPresent, and open-source [dup_py](https://github.com/jawdat89/dup_py)
 - **SEO** — Meta tags, Open Graph, JSON-LD, `robots.txt`, and `sitemap.xml`
 - **Accessibility** — Skip link, focus styles, semantic sections, ARIA on interactive controls
 - **CI-ready** — Lint, 59 tests, and production build via `npm run ci`
@@ -23,13 +23,13 @@ Modern, responsive CV portfolio at [jawdat-dev.online](https://jawdat-dev.online
 
 ## Page Sections
 
-1. **Hero** — Name, role (Software & Automation Engineer), CTAs, Strauss employer badge
+1. **Hero** — Role eyebrow, name, CTAs, Strauss employer badge (no duplicate title/subtitle)
 2. **Who Am I** — Value proposition cards (business systems, SAP & logistics, automation)
 3. **About** — Professional summary
 4. **Projects** — Featured work with outcomes and open-source badges
 5. **Experience** — Timeline with localized copy
-6. **Skills** — Grouped badge layout (frontend, backend, data, design, SAP, automation, etc.)
-7. **Education & Certifications** — Combined section
+6. **Skills** — Grouped badge layout (frontend, backend, data, design, SAP & ERP, automation/industrial)
+7. **Education & Certifications** — Combined section (SAP EWM 100 / S/4HANA merged cert)
 8. **Languages** — Proficiency levels
 9. **Contact** — Professional contact details and CV download
 
@@ -94,10 +94,17 @@ npm run coverage   # with coverage report
 
 ## Recent Updates
 
+- **CV portfolio** added as a featured project with GitHub link
+- Shortened featured project descriptions and outcomes (EN / HE / AR)
+- Hero simplified — removed duplicate title and subtitle lines
+- About Me summary tightened across locales and Redux store
+- Skills: Python under **Backend** only; **Arduino** added to Automation / Industrial
+- SAP **EWM 100 / S/4HANA** merged (certifications badge + SAP & ERP skills)
+- i18n cleanup — removed unused hero keys and legacy `sampleData` block
 - Portfolio redesign with design system and royal blue theme
 - Title updated to **Software & Automation Engineer**
 - **Who Am I** section (formerly What I Bring)
-- Skills expanded: Power BI, Visio, draw.io, Visual Paradigm, National Instruments, Python
+- Skills expanded: Power BI, Visio, draw.io, Visual Paradigm, National Instruments
 - Featured **dup_py** open-source project
 - Shared **CVDownloadSelect** with RTL-aware positioning
 - Relaxing drops canvas background with Tailwind layer stack

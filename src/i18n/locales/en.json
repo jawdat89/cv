@@ -49,25 +49,13 @@
     "switchToLight": "Switch to light mode"
   },
   "hero": {
-    "title": "Software & Automation Engineer for ERP, Logistics, and Automation Systems",
     "role": "Software & Automation Engineer",
-    "subtitle": "Building high-impact software at the intersection of ERP systems, SAP logistics, and industrial automation.",
     "viewProjects": "View Projects",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "yearsExperience": "5+ Years Experience",
-    "fullStackDeveloper": "Logistics Process Lead & Software Developer",
-    "sapWebSystems": "SAP + Web Systems",
-    "years": "Years",
-    "licensesDegrees": "Licenses & Degrees",
-    "skills": "Skills",
-    "currentFocusTitle": "Current Focus",
-    "currentFocusBody": "ERP systems, automation, and scalable web platforms.",
-    "employer1": "Logistics Process Lead at Strauss Group",
-    "employer2": "Freelance Software Engineer at BestTuqay",
-    "studentAtid": "Control & Automation Engineering at Atid Maloot"
+    "employer1": "Logistics Process Lead at Strauss Group"
   },
   "valueProposition": {
     "title": "Who Am I",
@@ -95,7 +83,7 @@
     "personalInfo": {
       "title": "About Me",
       "aboutMe": "About Me",
-      "summary": "I am a Software & Automation Engineer with more than 5 years of experience building reliable, scalable web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background in SAP logistics and warehouse operations adds precise operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering, focused on intelligent systems that combine software, operations, and industrial automation with engineering discipline."
+      "summary": "Software & Automation Engineer with 5+ years of experience building web, mobile, and enterprise applications using React, .NET, Node.js, and cloud technologies. Combining software engineering expertise with hands-on SAP logistics and operational experience, I develop practical solutions that improve business processes, automation, and system reliability."
     },
     "experience": {
       "title": "Experience",
@@ -177,18 +165,23 @@
     },
     "projects": {
       "title": "Featured Projects",
-      "intro": "Selected projects that reflect my experience in business systems, enterprise software, modern cross-platform development, and open-source tools.",
+      "intro": "Selected work in business systems, cross-platform development, and open source.",
       "viewCode": "View Code",
       "openSource": "Open Source",
+      "cvPortfolio": {
+        "title": "CV Portfolio — jawdat-dev.online",
+        "description": "Multilingual portfolio built with React, TypeScript, and Tailwind. RTL support, CV downloads, and a focused ERP/SAP/automation showcase.",
+        "outcome": "Live portfolio with SEO, i18n, and responsive design."
+      },
       "ipresent": {
         "title": "iPresent - Digital Signage System",
-        "description": "Architected a WPF-based digital signage platform for multi-screen content delivery with scheduling, real-time updates, and diverse media support across operational sites.",
-        "outcome": "Standardized multi-location communication and improved content delivery reliability."
+        "description": "WPF digital signage for multi-screen delivery with scheduling and real-time updates.",
+        "outcome": "Reliable multi-location content communication."
       },
       "imanage": {
         "title": "iManage - Small Business ERP System",
-        "description": "Engineered a scalable ERP platform covering inventory, CRM, accounting, orders, and reporting using .NET Core, SQL Server, and React.",
-        "outcome": "Centralized inventory, accounting, and sales into a single source of truth for small business operations."
+        "description": ".NET Core + React ERP for inventory, CRM, accounting, and reporting.",
+        "outcome": "Single source of truth for small business operations."
       },
       "gofresh": {
         "title": "GoFresh - Drinks Shop Menu App",
@@ -200,20 +193,19 @@
       },
       "myShop": {
         "title": "myShop - Ticket Management System",
-        "description": "Architected a modern ticketing solution spanning web, mobile, and containerized backend services—migrated from a legacy system using React, React Native, Deno, Docker, and Supabase.",
-        "outcome": "Synchronized local and cloud data flows, reduced maintenance overhead, and improved terminal uptime across platforms."
+        "description": "Cross-platform ticketing migrated from legacy stack using React, React Native, Deno, Docker, and Supabase.",
+        "outcome": "Synced cloud/local data and improved terminal uptime."
       },
       "dup_py": {
         "title": "Dup_py - Duplicate File Finder",
-        "description": "Maintained an open-source fork of DUDE, a cross-platform desktop utility for finding and managing duplicate files on Linux and Windows. Supports multi-folder scanning, SHA1 hashing, image similarity detection, and safe delete workflows.",
-        "outcome": "Helps users reclaim disk space safely with transparent duplicate review and cross-platform portability."
+        "description": "Open-source duplicate file finder for Linux and Windows with SHA1 hashing and safe cleanup.",
+        "outcome": "Safe disk space recovery with cross-platform support."
       }
     },
     "certifications": {
       "title": "Certifications",
       "items": {
-        "sapEwm": "SAP EWM 100",
-        "sapS4": "SAP S/4HANA Record of Achievement",
+        "sapEwm": "SAP EWM 100 / S/4HANA",
         "mcse": "MCITP / MCSE",
         "ccna": "Cisco CCNA"
       }
@@ -233,38 +225,6 @@
     "Advanced": "Advanced",
     "Intermediate": "Intermediate",
     "Beginner": "Beginner"
-  },
-  "sampleData": {
-    "personalInfo": {
-      "summary": "Experienced Full Stack Developer with over 5 years of expertise in <b>React</b>, <b>Node.js</b>, and <b>.NET</b>. I aspire to develop as an autonomous and leading developer in ERP systems, with emphasis on integrating advanced technologies, automation and innovation. Based on practical experience in SAP system management, software development and implementing autonomous solutions, I am committed to leading complex technological processes and bringing significant value to the organization."
-    },
-    "experience": {
-      "title": "Logistics Process Lead",
-      "company": "Strauss Group",
-      "description": "Responsible for designing, implementing, and maintaining automation systems and monitoring solutions with electrical engineering expertise.",
-      "achievements": [
-        "Design and implement automation systems for industrial processes",
-        "Develop monitoring solutions for electrical and mechanical systems",
-        "Maintain and troubleshoot electrical systems and equipment",
-        "Ensure compliance with electrical safety standards and regulations",
-        "Collaborate with cross-functional teams to optimize production processes",
-        "Provide technical support and training for automation systems"
-      ]
-    },
-    "education": {
-      "degree": "Bachelor's Degree",
-      "field": "Computer Science",
-      "description": "Currently pursuing a Bachelor's degree in Computer Science at Atid Maloot."
-    },
-    "projects": {
-      "title": "E-commerce Platform",
-      "description": "A full-stack e-commerce platform built with React, Node.js, and MongoDB."
-    },
-    "certifications": {
-      "name": "SAP EWM 100",
-      "issuer": "SAP",
-      "description": "Certified in SAP Extended Warehouse Management (EWM) implementation and configuration."
-    }
   },
   "skillCategories": {
     "frontend": "Frontend",
@@ -286,8 +246,8 @@
     "cloud": ["Azure", "Azure Functions", "AWS", "Docker", "CI/CD", "Vercel"],
     "dataAnalysis": ["Power BI"],
     "design": ["Microsoft Visio", "draw.io", "Visual Paradigm"],
-    "sapErp": ["SAP EWM", "SAP WM", "SAP HANA", "SAP ABAP", "SAP Fiori", "SAP UI5"],
-    "automation": ["Python", "National Instruments", "PLC/HMI exposure", "Operational automation support", "Control engineering studies"]
+    "sapErp": ["SAP EWM / S/4HANA", "SAP WM", "SAP ABAP", "SAP Fiori", "SAP UI5"],
+    "automation": ["National Instruments", "Arduino", "PLC/HMI exposure", "Operational automation support", "Control engineering studies"]
   },
   "expertise": {
     "title": "Expertise",

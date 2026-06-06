@@ -49,25 +49,13 @@
     "switchToLight": "מעבר למצב בהיר"
   },
   "hero": {
-    "title": "מהנדס תוכנה ואוטומציה למערכות ERP, לוגיסטיקה ואוטומציה",
     "role": "מהנדס תוכנה ואוטומציה",
-    "subtitle": "בונה תוכנה בעלת השפעה בצומת של מערכות ERP, לוגיסטיקת SAP ואוטומציה תעשייתית.",
     "viewProjects": "לצפייה בפרויקטים",
     "downloadCV": "הורד קורות חיים",
     "contactMe": "צור קשר",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "yearsExperience": "5+ שנות ניסיון",
-    "fullStackDeveloper": "מוביל תהליכי לוגיסטיקה ומפתח תוכנה",
-    "sapWebSystems": "SAP + מערכות Web",
-    "years": "שנים",
-    "licensesDegrees": "רישיונות ותארים",
-    "skills": "מיומנויות",
-    "currentFocusTitle": "מיקוד נוכחי",
-    "currentFocusBody": "מערכות ERP, אוטומציה ופלטפורמות Web סקלביליות.",
-    "employer1": "מוביל תהליכי לוגיסטיקה בקבוצת שטראוס",
-    "employer2": "מהנדס תוכנה פרילנס ב-BestTuqay",
-    "studentAtid": "הנדסת בקרה ואוטומציה בעתיד מעלות"
+    "employer1": "מוביל תהליכי לוגיסטיקה בקבוצת שטראוס"
   },
   "valueProposition": {
     "title": "מי אני",
@@ -95,7 +83,7 @@
     "personalInfo": {
       "title": "אודותיי",
       "aboutMe": "אודותיי",
-      "summary": "אני מהנדס תוכנה ואוטומציה עם יותר מ-5 שנות ניסיון בבניית אפליקציות Web, מובייל וארגוניות אמינות וסקלביליות באמצעות React, Node.js, Python, .NET, TypeScript וטכנולוגיות ענן. הרקע שלי בלוגיסטיקת SAP ותפעול מחסנים מוסיף הבנה תפעולית מדויקת לצד כישורי הנדסת תוכנה. כיום אני לומד הנדסת בקרה ואוטומציה, עם מיקוד במערכות חכמות שמשלבות תוכנה, תפעול ואוטומציה תעשייתית במשמעת הנדסית."
+      "summary": "מהנדס תוכנה ואוטומציה עם יותר מ-5 שנות ניסיון בבניית אפליקציות Web, מובייל וארגוניות באמצעות React, .NET, Node.js וטכנולוגיות ענן. בשילוב מומחיות בהנדסת תוכנה עם ניסיון מעשי בלוגיסטיקת SAP ותפעול, אני מפתח פתרונות מעשיים שמשפרים תהליכים עסקיים, אוטומציה ואמינות מערכות."
     },
     "experience": {
       "title": "ניסיון",
@@ -177,18 +165,23 @@
     },
     "projects": {
       "title": "פרויקטים נבחרים",
-      "intro": "פרויקטים נבחרים המשקפים את הניסיון שלי במערכות עסקיות, תוכנה ארגונית, פיתוח חוצה-פלטפורמות מודרני וכלים בקוד פתוח.",
+      "intro": "עבודות נבחרות במערכות עסקיות, פיתוח חוצה-פלטפורמות וקוד פתוח.",
       "viewCode": "צפייה בקוד",
       "openSource": "קוד פתוח",
+      "cvPortfolio": {
+        "title": "פורטפוליו קורות חיים — jawdat-dev.online",
+        "description": "פורטפוליו רב-לשוני ב-React, TypeScript ו-Tailwind. תמיכה ב-RTL, הורדת קורות חיים ותצוגה ממוקדת של ERP/SAP/אוטומציה.",
+        "outcome": "פורטפוליו חי עם SEO, i18n ועיצוב רספונסיבי."
+      },
       "ipresent": {
         "title": "iPresent - מערכת תצוגה דיגיטלית",
-        "description": "תכנון פלטפורמת תצוגה דיגיטלית מבוססת WPF להפצת תוכן במסכים מרובים, עם תזמון, עדכונים בזמן אמת ותמיכה במדיה מגוונת באתרים תפעוליים.",
-        "outcome": "סטנדרטיזציה של תקשורת רב-מיקומית ושיפור אמינות הפצת התוכן."
+        "description": "תצוגה דיגיטלית ב-WPF למסכים מרובים, עם תזמון ועדכונים בזמן אמת.",
+        "outcome": "תקשורת תוכן אמינה בין מיקומים."
       },
       "imanage": {
         "title": "iManage - מערכת ERP לעסקים קטנים",
-        "description": "הנדסת פלטפורמת ERP סקלבילית הכוללת מלאי, CRM, חשבונאות, הזמנות ודוחות באמצעות .NET Core, SQL Server ו-React.",
-        "outcome": "ריכוז מלאי, חשבונאות ומכירות במקור אמת יחיד לתפעול עסקי קטן."
+        "description": "ERP ב-.NET Core + React למלאי, CRM, חשבונאות ודוחות.",
+        "outcome": "מקור אמת יחיד לתפעול עסקי קטן."
       },
       "gofresh": {
         "title": "GoFresh - אפליקציית תפריט משקאות",
@@ -200,20 +193,19 @@
       },
       "myShop": {
         "title": "myShop - מערכת ניהול כרטיסים",
-        "description": "תכנון פתרון כרטיסים מודרני החוצה Web, מובייל ושירותי Backend ממורכזי-קונטיינרים—מיגרציה ממערכת legacy באמצעות React, React Native, Deno, Docker ו-Supabase.",
-        "outcome": "סנכרון זרימות נתונים מקומיות וענן, הפחתת עומס תחזוקה ושיפור זמינות תחנות בכל הפלטפורמות."
+        "description": "ניהול כרטיסים חוצה-פלטפורמות, מיגרציה ממערכת legacy עם React, React Native, Deno, Docker ו-Supabase.",
+        "outcome": "סנכרון ענן/מקומי ושיפור זמינות תחנות."
       },
       "dup_py": {
         "title": "Dup_py - איתור קבצים כפולים",
-        "description": "תחזוקה של fork בקוד פתוח של DUDE — כלי Desktop חוצה-פלטפורמות לאיתור וניהול קבצים כפולים ב-Linux ו-Windows. תומך בסריקת תיקיות מרובות, hashing לפי SHA1, זיהוי דמיון תמונות, ומחיקה או קישור בטוח עם ייצוא CSV.",
-        "outcome": "מסייע למשתמשים לפנות שטח דיסק בצורה בטוחה עם סקירה שקופה של כפילויות וניידות בין פלטפורמות."
+        "description": "כלי קוד פתוח לאיתור קבצים כפולים ב-Linux ו-Windows עם SHA1 וניקוי בטוח.",
+        "outcome": "שחרור שטח דיסק בבטחה, עם תמיכה חוצה-פלטפורמות."
       }
     },
     "certifications": {
       "title": "הסמכות",
       "items": {
-        "sapEwm": "SAP EWM 100",
-        "sapS4": "SAP S/4HANA Record of Achievement",
+        "sapEwm": "SAP EWM 100 / S/4HANA",
         "mcse": "MCITP / MCSE",
         "ccna": "Cisco CCNA"
       }
@@ -233,38 +225,6 @@
     "Advanced": "מתקדם",
     "Intermediate": "בינוני",
     "Beginner": "מתחיל"
-  },
-  "sampleData": {
-    "personalInfo": {
-      "summary": "מפתח Full Stack מנוסה עם יותר מ-5 שנות ניסיון ב-React, Node.js ו-.NET. אני שואף להתפתח כמפתח אוטונומי ומוביל במערכות ERP, תוך הדגשת שילוב טכנולוגיות מתקדמות, אוטומציה וחדשנות. בהתבסס על ניסיון מעשי בניהול מערכות SAP, פיתוח תוכנה ויישום פתרונות אוטונומיים, אני מחויב להוביל תהליכים טכנולוגיים מורכבים ולהביא ערך משמעותי לארגון."
-    },
-    "experience": {
-      "title": "מוביל תהליכי לוגיסטיקה",
-      "company": "קבוצת שטראוס",
-      "description": "אחראי על תכנון, יישום ותחזוקה של מערכות אוטומציה ופתרונות ניטור עם מומחיות בהנדסה חשמלית.",
-      "achievements": [
-        "תכנון ויישום מערכות אוטומציה לתהליכים תעשייתיים",
-        "פיתוח פתרונות ניטור למערכות חשמליות ומכניות",
-        "תחזוקה ופתרון בעיות במערכות וציוד חשמלי",
-        "הבטחת עמידה בתקני בטיחות חשמלית ותקנות",
-        "שיתוף פעולה עם צוותים רב-תפקידיים לאופטימיזציה של תהליכי ייצור",
-        "מתן תמיכה טכנית והדרכה למערכות אוטומציה"
-      ]
-    },
-    "education": {
-      "degree": "תואר ראשון",
-      "field": "מדעי המחשב",
-      "description": "כרגע לומד לתואר ראשון במדעי המחשב בעתיד מעלות."
-    },
-    "projects": {
-      "title": "פלטפורמת מסחר אלקטרוני",
-      "description": "פלטפורמת מסחר אלקטרוני מלאה שנבנתה עם React, Node.js ו-MongoDB."
-    },
-    "certifications": {
-      "name": "SAP EWM 100",
-      "issuer": "SAP",
-      "description": "מוסמך ביישום ותצורה של ניהול מחסן מורחב SAP (EWM)."
-    }
   },
   "skillCategories": {
     "frontend": "ממשק משתמש",
@@ -286,8 +246,8 @@
     "cloud": ["Azure", "Azure Functions", "AWS", "Docker", "CI/CD", "Vercel"],
     "dataAnalysis": ["Power BI"],
     "design": ["Microsoft Visio", "draw.io", "Visual Paradigm"],
-    "sapErp": ["SAP EWM", "SAP WM", "SAP HANA", "SAP ABAP", "SAP Fiori", "SAP UI5"],
-    "automation": ["Python", "National Instruments", "PLC/HMI exposure", "Operational automation support", "Control engineering studies"]
+    "sapErp": ["SAP EWM / S/4HANA", "SAP WM", "SAP ABAP", "SAP Fiori", "SAP UI5"],
+    "automation": ["National Instruments", "Arduino", "PLC/HMI exposure", "Operational automation support", "Control engineering studies"]
   },
   "expertise": {
     "title": "מומחיות",
