@@ -85,7 +85,7 @@ const initialState: CVData = {
     linkedin: "https://www.linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
-      "I am a Software & Automation Engineer with more than 5 years of experience building web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background also includes SAP logistics processes and warehouse systems, giving me strong business and operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering and aim to build intelligent systems that combine software, operations, and industrial automation.",
+      "I am a Software & Automation Engineer with more than 5 years of experience building reliable, scalable web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background in SAP logistics and warehouse operations adds precise operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering, focused on intelligent systems that combine software, operations, and industrial automation with engineering discipline.",
   },
   experience: [
     {
@@ -248,7 +248,6 @@ const initialState: CVData = {
     { id: "29", name: "SQL Server", proficiency: 85, category: "Database" },
     { id: "30", name: ".NET Core", proficiency: 85, category: "Backend" },
     { id: "31", name: "Azure Functions", proficiency: 80, category: "Cloud" },
-    { id: "32", name: "TypeScript", proficiency: 80, category: "Frontend" },
     { id: "33", name: "Deno v2", proficiency: 80, category: "Backend" },
     { id: "34", name: "Serverless", proficiency: 80, category: "Backend" },
     { id: "35", name: "Docker", proficiency: 75, category: "Backend" },

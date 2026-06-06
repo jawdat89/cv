@@ -9,17 +9,14 @@ const cards = [
   {
     key: "businessSystems",
     icon: FaBuilding,
-    variant: "blue" as const,
   },
   {
     key: "sapLogistics",
     icon: FaCogs,
-    variant: "teal" as const,
   },
   {
     key: "automationMindset",
     icon: FaIndustry,
-    variant: "blue" as const,
   },
 ];
 
@@ -32,7 +29,10 @@ const ValuePropositionComponent: React.FC = () => {
       title={t("valueProposition.title")}
       subtitle={t("valueProposition.intro")}
     >
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+        dir={direction}
+      >
         {cards.map(({ key, icon: Icon }, index) => (
           <motion.div
             key={key}
@@ -45,14 +45,14 @@ const ValuePropositionComponent: React.FC = () => {
               <Icon
                 className={clsx(
                   "mb-4 h-6 w-6 text-brand-accent",
-                  direction === "rtl" && "ml-auto"
+                  direction === "rtl" ? "ms-auto" : ""
                 )}
                 aria-hidden
               />
-              <h3 className="mb-3 text-xl font-semibold text-brand-text">
+              <h3 className="mb-3 text-start text-xl font-semibold text-brand-text">
                 {t(`valueProposition.cards.${key}.title`)}
               </h3>
-              <p className="leading-relaxed text-brand-muted">
+              <p className="text-start leading-relaxed text-brand-muted">
                 {t(`valueProposition.cards.${key}.description`)}
               </p>
             </Card>

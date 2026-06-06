@@ -51,8 +51,7 @@
   "hero": {
     "title": "Software & Automation Engineer for ERP, Logistics, and Automation Systems",
     "role": "Software & Automation Engineer",
-    "badge": "Open to impactful full-stack opportunities",
-    "subtitle": "I build practical software that connects business operations, SAP processes, and modern web platforms.",
+    "subtitle": "Building high-impact software at the intersection of ERP systems, SAP logistics, and industrial automation.",
     "viewProjects": "View Projects",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
@@ -66,26 +65,25 @@
     "skills": "Skills",
     "currentFocusTitle": "Current Focus",
     "currentFocusBody": "ERP systems, automation, and scalable web platforms.",
-    "available": "Available for opportunities",
     "employer1": "Logistics Process Lead at Strauss Group",
     "employer2": "Freelance Software Engineer at BestTuqay",
     "studentAtid": "Control & Automation Engineering at Atid Maloot"
   },
   "valueProposition": {
     "title": "Who Am I",
-    "intro": "A combination of software engineering, enterprise systems understanding, and operational thinking.",
+    "intro": "Software engineering, enterprise systems, and operational precision—applied where business and automation meet.",
     "cards": {
       "businessSystems": {
-        "title": "Business Systems",
-        "description": "I design and build web and mobile applications for real operational use, including internal tools, workflow systems, and ERP-style platforms."
+        "title": "Business & ERP Systems",
+        "description": "I design and build reliable web and mobile applications for real operational use—internal tools, workflow systems, and ERP-style platforms that scale with the business."
       },
       "sapLogistics": {
-        "title": "SAP & Logistics",
-        "description": "My hands-on experience with SAP EWM, SAP WM, warehouse operations, and delivery processes helps me build software that fits real business environments."
+        "title": "SAP & Logistics Expertise",
+        "description": "Hands-on experience with SAP EWM, SAP WM, warehouse operations, and delivery processes—domain knowledge that helps software fit real logistics environments."
       },
       "automationMindset": {
-        "title": "Automation Mindset",
-        "description": "Through control and automation engineering studies, I bring a practical approach to software that interacts with industrial processes and operational systems."
+        "title": "Automation & Control Engineering",
+        "description": "Through control and automation engineering studies, I bridge software with industrial processes—focused on reliability, precision, and systems that work in the field."
       }
     }
   },
@@ -97,7 +95,7 @@
     "personalInfo": {
       "title": "About Me",
       "aboutMe": "About Me",
-      "summary": "I am a Software & Automation Engineer with more than 5 years of experience building web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background also includes SAP logistics processes and warehouse systems, giving me strong business and operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering and aim to build intelligent systems that combine software, operations, and industrial automation."
+      "summary": "I am a Software & Automation Engineer with more than 5 years of experience building reliable, scalable web, mobile, and enterprise applications using React, Node.js, Python, .NET, TypeScript, and cloud technologies. My background in SAP logistics and warehouse operations adds precise operational understanding alongside software engineering skills. I am currently studying Control and Automation Engineering, focused on intelligent systems that combine software, operations, and industrial automation with engineering discipline."
     },
     "experience": {
       "title": "Experience",
@@ -184,13 +182,13 @@
       "openSource": "Open Source",
       "ipresent": {
         "title": "iPresent - Digital Signage System",
-        "description": "Developed a WPF-based digital signage platform for multi-screen content delivery in operational environments. Supports scheduling, real-time updates, and diverse media types to improve communication across business locations.",
-        "outcome": "Improved multi-location content delivery and operational communication."
+        "description": "Architected a WPF-based digital signage platform for multi-screen content delivery with scheduling, real-time updates, and diverse media support across operational sites.",
+        "outcome": "Standardized multi-location communication and improved content delivery reliability."
       },
       "imanage": {
         "title": "iManage - Small Business ERP System",
-        "description": "Built a small business ERP platform covering inventory, CRM, accounting, orders, and reporting. Designed to support operational visibility and scalable business workflows using .NET Core, SQL Server, and React.",
-        "outcome": "Enabled operational visibility and scalable business workflows for small businesses."
+        "description": "Engineered a scalable ERP platform covering inventory, CRM, accounting, orders, and reporting using .NET Core, SQL Server, and React.",
+        "outcome": "Centralized inventory, accounting, and sales into a single source of truth for small business operations."
       },
       "gofresh": {
         "title": "GoFresh - Drinks Shop Menu App",
@@ -202,12 +200,12 @@
       },
       "myShop": {
         "title": "myShop - Ticket Management System",
-        "description": "Modernized a legacy ticket management system into a cross-platform solution spanning web, mobile, and containerized backend services. Built with React, React Native, Deno, Docker, and Supabase to improve synchronization, maintainability, and user experience.",
-        "outcome": "Improved cross-platform synchronization, maintainability, and user experience."
+        "description": "Architected a modern ticketing solution spanning web, mobile, and containerized backend services—migrated from a legacy system using React, React Native, Deno, Docker, and Supabase.",
+        "outcome": "Synchronized local and cloud data flows, reduced maintenance overhead, and improved terminal uptime across platforms."
       },
       "dup_py": {
         "title": "Dup_py - Duplicate File Finder",
-        "description": "Maintained an open-source fork of DUDE, a cross-platform desktop utility for finding and managing duplicate files on Linux and Windows. Supports multi-folder scanning, SHA1 content hashing, image similarity detection, and safe delete or link workflows with headless CSV export.",
+        "description": "Maintained an open-source fork of DUDE, a cross-platform desktop utility for finding and managing duplicate files on Linux and Windows. Supports multi-folder scanning, SHA1 hashing, image similarity detection, and safe delete workflows.",
         "outcome": "Helps users reclaim disk space safely with transparent duplicate review and cross-platform portability."
       }
     },

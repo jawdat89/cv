@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jawdat-dev.online/sitemap.xml
+Sitemap: https://www.jawdat-dev.online/sitemap.xml
