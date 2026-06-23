@@ -12,6 +12,8 @@ const ProjectsComponent: React.FC = () => {
   const projects = useSelector((state: RootState) => state.cv.projects);
   const featuredProjects = projects.filter((p) => p.featured);
 
+  const hasTranslation = (key: string) => t(key) !== key;
+
   return (
     <section id="projects" className="mb-16">
       <motion.div
@@ -30,12 +32,15 @@ const ProjectsComponent: React.FC = () => {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {featuredProjects.map((project) => {
-            const outcomeKey = `sections.projects.${project.id}.outcome`;
+            const baseKey = `sections.projects.${project.id}`;
+            const problemKey = `${baseKey}.problem`;
+            const solutionKey = `${baseKey}.solution`;
+            const outcomeKey = `${baseKey}.outcome`;
 
             return (
               <Card key={project.id} className="flex h-full flex-col">
                 <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <h3 className="text-xl font-semibold text-brand-text">
+                  <h3 className="text-lg font-semibold text-brand-text">
                     {t(project.title)}
                   </h3>
                   {project.githubLink && (
@@ -45,14 +50,34 @@ const ProjectsComponent: React.FC = () => {
                     />
                   )}
                 </div>
-                <p className="mb-4 flex-grow text-sm leading-relaxed text-brand-muted">
-                  {t(project.description)}
-                </p>
-                {t(outcomeKey) !== outcomeKey && (
-                  <p className="mb-4 text-sm font-medium text-brand-accent">
-                    {t(outcomeKey)}
-                  </p>
-                )}
+
+                <div className="mb-4 flex-grow space-y-3 text-sm leading-relaxed text-brand-muted">
+                  {hasTranslation(problemKey) && (
+                    <p>
+                      <span className="font-medium text-brand-text">
+                        {t("sections.projects.problemLabel")}:{" "}
+                      </span>
+                      {t(problemKey)}
+                    </p>
+                  )}
+                  {hasTranslation(solutionKey) && (
+                    <p>
+                      <span className="font-medium text-brand-text">
+                        {t("sections.projects.solutionLabel")}:{" "}
+                      </span>
+                      {t(solutionKey)}
+                    </p>
+                  )}
+                  {hasTranslation(outcomeKey) && (
+                    <p>
+                      <span className="font-medium text-brand-accent">
+                        {t("sections.projects.outcomeLabel")}:{" "}
+                      </span>
+                      {t(outcomeKey)}
+                    </p>
+                  )}
+                </div>
+
                 <div className="mb-4 flex flex-wrap gap-2">
                   {project.technologies.slice(0, 6).map((tech) => (
                     <Badge key={tech} text={tech} variant="gray" />

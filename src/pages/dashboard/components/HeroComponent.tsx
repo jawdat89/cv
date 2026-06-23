@@ -59,17 +59,21 @@ const HeroComponent: React.FC = () => {
             direction === "rtl" && "md:items-end md:text-end"
           )}
         >
-          <h1 className="max-sm:text-4xl text-[3.5rem] font-extrabold leading-tight tracking-tight text-brand-text">
+          <h1 className="text-[4rem] font-bold leading-tight tracking-tight text-brand-text max-sm:text-4xl">
             {getLocalizedName()}
           </h1>
 
-          <p className="mt-3 text-xl font-semibold text-brand-accent sm:text-2xl">
+          <p className="mt-4 text-2xl font-semibold text-brand-accent">
             {t("hero.role")}
+          </p>
+
+          <p className="mt-3 max-w-xl text-base leading-relaxed text-brand-muted">
+            {t("hero.subtitle")}
           </p>
 
           <div
             className={clsx(
-              "mt-2 flex justify-center md:justify-start",
+              "mt-4 flex justify-center md:justify-start",
               direction === "rtl" && "md:justify-end"
             )}
           >

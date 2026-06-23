@@ -7,6 +7,7 @@
     "education": "Education",
     "expertise": "Skills",
     "projects": "Projects",
+    "articles": "Articles",
     "languages": "Languages",
     "contact": "Contact",
     "preview": "Preview",
@@ -49,7 +50,8 @@
     "switchToLight": "Switch to light mode"
   },
   "hero": {
-    "role": "Software & Automation Engineer",
+    "role": "Software Engineer | SAP EWM & Logistics Systems",
+    "subtitle": "Building software, automation, and operational solutions for logistics and manufacturing.",
     "viewProjects": "View Projects",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
@@ -60,21 +62,29 @@
   },
   "valueProposition": {
     "title": "Who Am I",
-    "intro": "Software engineering, enterprise systems, and operational precision—applied where business and automation meet.",
+    "intro": "Software engineering, SAP domain knowledge, and logistics operations—the combination most teams lack.",
     "cards": {
       "businessSystems": {
-        "title": "Business & ERP Systems",
-        "description": "I design and build reliable web and mobile applications for real operational use—internal tools, workflow systems, and ERP-style platforms that scale with the business."
+        "title": "Software Engineering",
+        "description": "5+ years building web, mobile, and enterprise applications with React, .NET, Node.js, and cloud technologies."
       },
       "sapLogistics": {
-        "title": "SAP & Logistics Expertise",
-        "description": "Hands-on experience with SAP EWM, SAP WM, warehouse operations, and delivery processes—domain knowledge that helps software fit real logistics environments."
+        "title": "SAP & Logistics Operations",
+        "description": "Logistics Process Lead and SAP EWM/WM practitioner—warehouse processes, delivery flows, and operational reality on the floor."
       },
       "automationMindset": {
-        "title": "Automation & Control Engineering",
-        "description": "Through control and automation engineering studies, I bridge software with industrial processes—focused on reliability, precision, and systems that work in the field."
+        "title": "Systems Thinking & Automation",
+        "description": "Process optimizer and control & automation engineering student—applying systems thinking to real business problems."
       }
     }
+  },
+  "articles": {
+    "title": "Articles",
+    "subtitle": "Systems thinking applied to operational decision-making—not financial advice.",
+    "backToHome": "Back to portfolio",
+    "backToArticles": "Back to Articles",
+    "indexPageTitle": "Articles | Jawdat Abdullah",
+    "indexMetaDescription": "Applied thinking — systems design, process optimization, and engineering beyond code."
   },
   "contact": {
     "title": "Contact",
@@ -92,16 +102,29 @@
     "personalInfo": {
       "title": "About Me",
       "aboutMe": "About Me",
-      "summary": "Software & Automation Engineer with 5+ years of experience building web, mobile, and enterprise applications using React, .NET, Node.js, and cloud technologies. Combining software engineering expertise with hands-on SAP logistics and operational experience, I develop practical solutions that improve business processes, automation, and system reliability."
+      "lead": "I build systems that work.",
+      "paragraphs": [
+        "Not just software — operational systems. The kind that reduce friction, eliminate guesswork, and let people focus on what actually matters.",
+        "My background sits at the intersection of software engineering, SAP EWM, and logistics operations. I have spent years working on warehouse floors, inside ERP systems, and across development environments — which means I understand the problem before I write the first line of code.",
+        "I value precision over speed, ownership over excuses, and simplicity over complexity. If something can be automated, it should be. If a process is broken, it should be fixed — not worked around.",
+        "Currently studying Control & Automation Engineering to deepen my understanding of industrial systems and close the gap between software and the physical world."
+      ],
+      "valueTags": [
+        "Precision",
+        "Ownership",
+        "Systems Thinking",
+        "Continuous Learning"
+      ],
+      "valueTagsLabel": "Core values"
     },
     "experience": {
       "title": "Experience",
-      "intro": "From software development to logistics operations and SAP-driven environments, my career combines technical implementation with practical business understanding.",
+      "intro": "Software development, SAP logistics, and hands-on operations—a career built on engineering discipline and process improvement.",
       "present": "Present",
       "strauss": {
         "title": "Logistics Process Lead",
         "company": "Strauss Group",
-        "dates": "2021 – Present",
+        "dates": "2024 – Present",
         "bullets": [
           "Manage inbound and outbound delivery processes across warehouse environments using SAP EWM and SAP WM.",
           "Support integration of RF devices and operational workflows.",
@@ -112,7 +135,7 @@
       "besttuqay": {
         "title": "Freelance Software Engineer",
         "company": "BestTuqay",
-        "dates": "2020 – Present",
+        "dates": "2024 – Present",
         "bullets": [
           "Develop and maintain modern web applications for client needs.",
           "Translate requirements into practical, maintainable software solutions.",
@@ -122,7 +145,7 @@
       "innovisec": {
         "title": "Senior Software Developer",
         "company": "Innovisec / ICTS Europe",
-        "dates": "2018 – 2021",
+        "dates": "2019 – 2024",
         "bullets": [
           "Built and maintained applications using Node.js, React, Angular, .NET, and React Native.",
           "Implemented real-time solutions and serverless services to improve product performance.",
@@ -133,7 +156,7 @@
       "strauss_tech": {
         "title": "Technical Support Specialist",
         "company": "Strauss Group",
-        "dates": "2017 – 2018",
+        "dates": "2015 – 2018",
         "bullets": [
           "Supported users across SAP, Active Directory, and internal systems.",
           "Improved operational efficiency through support documentation and process assistance.",
@@ -143,7 +166,7 @@
       "qualitest": {
         "title": "QA Automation and Manual Junior Tester",
         "company": "Qualitest",
-        "dates": "2015 – 2017",
+        "dates": "2011 – 2012",
         "bullets": [
           "Performed automated and manual testing for Microsoft security-related products.",
           "Built and configured complex test environments.",
@@ -169,28 +192,34 @@
       }
     },
     "skills": {
-      "title": "Skills",
-      "intro": "Technologies and domains I use to build scalable, practical solutions."
+      "title": "Skills & Competencies",
+      "intro": "Grouped by domain, engineering stack, and infrastructure."
     },
     "projects": {
       "title": "Featured Projects",
-      "intro": "Selected work in business systems, cross-platform development, and open source.",
+      "intro": "Problem, solution, and measurable outcome—not just technology lists.",
+      "problemLabel": "Problem",
+      "solutionLabel": "Solution",
+      "outcomeLabel": "Outcome",
       "viewCode": "View Code",
       "openSource": "Open Source",
       "cvPortfolio": {
         "title": "CV Portfolio — jawdat-dev.online",
-        "description": "Multilingual portfolio built with React, TypeScript, and Tailwind. RTL support, CV downloads, and a focused ERP/SAP/automation showcase.",
-        "outcome": "Live portfolio with SEO, i18n, and responsive design."
+        "problem": "Needed a credible way to present software, SAP, and logistics experience in one place.",
+        "solution": "Multilingual React portfolio with i18n, RTL, CV downloads, and focused domain positioning.",
+        "outcome": "Live portfolio that communicates the software + SAP + operations symmetry."
       },
       "ipresent": {
         "title": "iPresent - Digital Signage System",
-        "description": "WPF digital signage for multi-screen delivery with scheduling and real-time updates.",
-        "outcome": "Reliable multi-location content communication."
+        "problem": "Multi-location signage relied on manual, inconsistent content updates.",
+        "solution": "WPF system for scheduled, multi-screen delivery with real-time updates.",
+        "outcome": "Reliable content communication across locations without per-screen manual work."
       },
       "imanage": {
         "title": "iManage - Small Business ERP System",
-        "description": ".NET Core + React ERP for inventory, CRM, accounting, and reporting.",
-        "outcome": "Single source of truth for small business operations."
+        "problem": "Inventory, sales, and accounting ran across fragmented spreadsheets and disconnected tools.",
+        "solution": ".NET Core + React ERP unifying CRM, inventory, accounting, and reporting.",
+        "outcome": "Centralized fragmented business workflows into a single operational system."
       },
       "gofresh": {
         "title": "GoFresh - Drinks Shop Menu App",
@@ -202,13 +231,15 @@
       },
       "myShop": {
         "title": "myShop - Ticket Management System",
-        "description": "Cross-platform ticketing migrated from legacy stack using React, React Native, Deno, Docker, and Supabase.",
-        "outcome": "Synced cloud/local data and improved terminal uptime."
+        "problem": "Legacy ticketing caused data lag between cloud services and local terminals.",
+        "solution": "Migrated to React, React Native, Deno, Docker, and Supabase.",
+        "outcome": "Synchronized cloud and local data, reducing lag and improving terminal uptime."
       },
       "dup_py": {
         "title": "Dup_py - Duplicate File Finder",
-        "description": "Open-source duplicate file finder for Linux and Windows with SHA1 hashing and safe cleanup.",
-        "outcome": "Safe disk space recovery with cross-platform support."
+        "problem": "Duplicate files consumed disk space with no safe cross-platform cleanup option.",
+        "solution": "Open-source SHA1-based duplicate finder for Linux and Windows.",
+        "outcome": "Recoverable disk space with user-controlled, safer cleanup."
       }
     },
     "certifications": {
@@ -236,6 +267,9 @@
     "Beginner": "Beginner"
   },
   "skillCategories": {
+    "coreDomains": "Core Domains",
+    "engineeringStack": "Engineering Stack",
+    "infrastructureTools": "Infrastructure & Tools",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Databases",
@@ -249,6 +283,9 @@
     "erpManagement": "ERP Management"
   },
   "skillGroups": {
+    "coreDomains": ["SAP EWM / S/4HANA", "SAP WM", "Logistics Operations", "ERP Systems", "Process Automation"],
+    "engineeringStack": ["React", "Node.js", ".NET Core", "TypeScript", "C#", "SQL"],
+    "infrastructureTools": ["Azure", "Docker", "CI/CD", "Git", "Supabase", "PostgreSQL"],
     "frontend": ["React", "React Native", "TypeScript", "Angular", "WPF"],
     "backend": ["Node.js", "Python", ".NET Core", "C#", "Deno", "Serverless APIs"],
     "database": ["PostgreSQL", "SQL Server", "MySQL", "MongoDB", "Redis", "Supabase", "Entity Framework"],

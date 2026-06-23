@@ -49,7 +49,7 @@ const ValuePropositionComponent: React.FC = () => {
                 )}
                 aria-hidden
               />
-              <h3 className="mb-3 text-start text-xl font-semibold text-brand-text">
+              <h3 className="mb-3 text-start text-lg font-semibold text-brand-text">
                 {t(`valueProposition.cards.${key}.title`)}
               </h3>
               <p className="text-start leading-relaxed text-brand-muted">

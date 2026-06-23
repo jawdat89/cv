@@ -6,14 +6,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { FaCode } from "react-icons/fa";
 
 const SKILL_GROUP_KEYS = [
-  "frontend",
-  "backend",
-  "database",
-  "cloud",
-  "dataAnalysis",
-  "design",
-  "sapErp",
-  "automation",
+  "coreDomains",
+  "engineeringStack",
+  "infrastructureTools",
 ] as const;
 
 const SkillsComponent: React.FC = () => {
@@ -35,7 +30,7 @@ const SkillsComponent: React.FC = () => {
           direction={direction}
         />
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {SKILL_GROUP_KEYS.map((groupKey) => {
             const skills = t(`skillGroups.${groupKey}`, {
               returnObjects: true,

@@ -64,10 +64,10 @@ const ContactComponent: React.FC = () => {
         transition={{ duration: 0.3 }}
         className="mx-auto max-w-3xl text-center"
       >
-        <h2 className="mb-4 text-[2.5rem] font-bold text-brand-text">
+        <h2 className="mb-4 text-3xl font-bold text-brand-text">
           {t("contact.title")}
         </h2>
-        <p className="mb-10 text-lg leading-relaxed text-brand-muted">
+        <p className="mb-10 text-base leading-relaxed text-brand-muted">
           {t("contact.subtitle")}
         </p>
 

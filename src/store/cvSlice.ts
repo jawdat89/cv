@@ -85,7 +85,7 @@ const initialState: CVData = {
     linkedin: "https://www.linkedin.com/in/jawdat89",
     website: "github.com/jawdat89",
     summary:
-      "Software & Automation Engineer with 5+ years of experience building web, mobile, and enterprise applications using React, .NET, Node.js, and cloud technologies. Combining software engineering expertise with hands-on SAP logistics and operational experience, I develop practical solutions that improve business processes, automation, and system reliability.",
+      "I build systems that work — at the intersection of software engineering, SAP EWM, and logistics operations.",
   },
   experience: [
     {
@@ -94,7 +94,7 @@ const initialState: CVData = {
       company: "Strauss Group",
       position: "Logistics Process Lead",
       location: "Israel",
-      startDate: "2025",
+      startDate: "2024",
       endDate: "Present",
       current: true,
       description:
@@ -155,8 +155,8 @@ const initialState: CVData = {
       company: "Qualitest Haifa",
       position: "QA Automation and Manual Junior Tester",
       location: "Israel",
-      startDate: "2010",
-      endDate: "2015",
+      startDate: "2011",
+      endDate: "2012",
       current: false,
       description:
         "Enhanced software quality for Microsoft Security tools through both automated and manual testing. Developed robust Hyper-V and MS Server testing environments, focusing on UAG/TMG for precise scenarios. Led automation testing efforts, including hotfix installations, reporting, troubleshooting, and code adjustments using Microsoft tools. Executed detailed manual testing, configuring complex environments and ensuring compatibility across various infrastructures. Collaborated with Microsoft developers for on-demand testing, directly influencing software improvements with targeted feedback. Crafted and followed comprehensive test plans, scripts, and use cases, analyzing results to provide actionable optimization insights. Proficient in Forefront UAG/TMG 2010, Microsoft Exchange Server, SharePoint, and Active Directory Federation Services. Maintained office workstations, guaranteeing security and performance for Qualitest endpoint stations.",

@@ -11,6 +11,7 @@ interface LinkProps {
   ariaLabel?: string;
   external?: boolean;
   dir?: "ltr" | "rtl" | "auto";
+  onClick?: () => void;
 }
 
 const Link: React.FC<LinkProps> = ({
@@ -20,6 +21,7 @@ const Link: React.FC<LinkProps> = ({
   ariaLabel,
   external,
   dir,
+  onClick,
 }) => {
   const isExternal = external ?? isExternalUrl(to);
   const opensInNewTab =
@@ -34,6 +36,7 @@ const Link: React.FC<LinkProps> = ({
         target={opensInNewTab ? "_blank" : undefined}
         rel={opensInNewTab ? "noopener noreferrer" : undefined}
         dir={dir}
+        onClick={onClick}
       >
         {children}
       </a>
@@ -41,7 +44,13 @@ const Link: React.FC<LinkProps> = ({
   }
 
   return (
-    <RouterLink to={to} className={className} aria-label={ariaLabel} dir={dir}>
+    <RouterLink
+      to={to}
+      className={className}
+      aria-label={ariaLabel}
+      dir={dir}
+      onClick={onClick}
+    >
       {children}
     </RouterLink>
   );

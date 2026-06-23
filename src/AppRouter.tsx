@@ -12,6 +12,10 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 const Preview = lazy(() => import("@/pages/Preview"));
 const Templates = lazy(() => import("@/pages/Templates"));
 const LocationPage = lazy(() => import("@/pages/LocationPage"));
+const ArticlesIndexPage = lazy(() => import("@/pages/articles/ArticlesIndexPage"));
+const MinimalDirectExpensePage = lazy(
+  () => import("@/pages/articles/MinimalDirectExpensePage")
+);
 
 const AppRouter: React.FC = () => {
   return (
@@ -23,6 +27,11 @@ const AppRouter: React.FC = () => {
           <Route path="/preview" element={<Preview />} />
           <Route path="/templates" element={<Templates />} />
           <Route path="/location" element={<LocationPage />} />
+          <Route path="/articles" element={<ArticlesIndexPage />} />
+          <Route
+            path="/articles/minimal-direct-expense-more-managed"
+            element={<MinimalDirectExpensePage />}
+          />
         </Routes>
       </Suspense>
     </Router>

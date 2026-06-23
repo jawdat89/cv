@@ -16,7 +16,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   direction = "ltr",
 }) => (
   <div className="mb-8">
-    <h2 className="flex items-center text-[2.5rem] font-bold leading-tight text-brand-text">
+    <h2 className="flex items-center text-3xl font-bold leading-tight text-brand-text">
       <Icon
         className={clsx(
           "h-6 w-6 shrink-0 text-brand-accent",
@@ -27,7 +27,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       {title}
     </h2>
     {subtitle && (
-      <p className="mt-2 text-lg leading-relaxed text-brand-muted">{subtitle}</p>
+      <p className="mt-2 text-base leading-relaxed text-brand-muted">{subtitle}</p>
     )}
   </div>
 );

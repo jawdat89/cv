@@ -6,6 +6,7 @@ import { setTheme } from "@/store/cvSlice";
 import LanguageSelector from "@/components/LanguageSelector";
 import CVDownloadSelect from "@/components/CVDownloadSelect";
 import clsx from "clsx";
+import { Link } from "@/components/ui";
 import {
   FaSun,
   FaMoon,
@@ -131,18 +132,27 @@ const Dashboard: React.FC = () => {
                 )}
               >
                 {sections.map((section) => (
-                  <button
-                    key={section.id}
-                    onClick={() => scrollToSection(section.id)}
-                    className={clsx(
-                      "rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150",
-                      activeSection === section.id
-                        ? "bg-brand-accent/15 text-brand-accent"
-                        : "text-brand-muted hover:bg-brand-elevated/50 hover:text-brand-text"
+                  <React.Fragment key={section.id}>
+                    <button
+                      onClick={() => scrollToSection(section.id)}
+                      className={clsx(
+                        "rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150",
+                        activeSection === section.id
+                          ? "bg-brand-accent/15 text-brand-accent"
+                          : "text-brand-muted hover:bg-brand-elevated/50 hover:text-brand-text"
+                      )}
+                    >
+                      {section.title}
+                    </button>
+                    {section.id === "projects" && (
+                      <Link
+                        to="/articles"
+                        className="rounded-md px-3 py-2 text-sm font-medium text-brand-muted transition-colors duration-150 hover:bg-brand-elevated/50 hover:text-brand-text"
+                      >
+                        {t("navigation.articles")}
+                      </Link>
                     )}
-                  >
-                    {section.title}
-                  </button>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
@@ -207,21 +217,31 @@ const Dashboard: React.FC = () => {
             <div className="border-t border-brand-border/50 md:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
                 {sections.map((section) => (
-                  <button
-                    key={section.id}
-                    onClick={() => {
-                      scrollToSection(section.id);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={clsx(
-                      "w-full rounded-md px-3 py-2 text-left text-base font-medium transition-colors",
-                      activeSection === section.id
-                        ? "bg-brand-accent/15 text-brand-accent"
-                        : "text-brand-muted hover:bg-brand-elevated/50 hover:text-brand-text"
+                  <React.Fragment key={section.id}>
+                    <button
+                      onClick={() => {
+                        scrollToSection(section.id);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={clsx(
+                        "w-full rounded-md px-3 py-2 text-left text-base font-medium transition-colors",
+                        activeSection === section.id
+                          ? "bg-brand-accent/15 text-brand-accent"
+                          : "text-brand-muted hover:bg-brand-elevated/50 hover:text-brand-text"
+                      )}
+                    >
+                      {section.title}
+                    </button>
+                    {section.id === "projects" && (
+                      <Link
+                        to="/articles"
+                        className="block w-full rounded-md px-3 py-2 text-left text-base font-medium text-brand-muted transition-colors hover:bg-brand-elevated/50 hover:text-brand-text"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {t("navigation.articles")}
+                      </Link>
                     )}
-                  >
-                    {section.title}
-                  </button>
+                  </React.Fragment>
                 ))}
                 <div className="pb-2 pt-4">
                   <CVDownloadSelect />

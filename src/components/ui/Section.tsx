@@ -31,13 +31,13 @@ const Section: React.FC<SectionProps> = ({
     {title && (
       <h2
         id={`${id}-title`}
-        className="mb-2 text-[2.5rem] font-bold leading-tight text-brand-text"
+        className="mb-2 text-3xl font-bold leading-tight text-brand-text"
       >
         {title}
       </h2>
     )}
     {subtitle && (
-      <p className="mb-8 text-lg leading-relaxed text-brand-muted">{subtitle}</p>
+      <p className="mb-8 text-base leading-relaxed text-brand-muted">{subtitle}</p>
     )}
     {children}
   </section>
