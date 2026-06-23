@@ -98,15 +98,12 @@ const initialState: CVData = {
       endDate: "Present",
       current: true,
       description:
-        "Managing incoming and outgoing delivery processes in various warehouses using SAP EWM, SAP S/4HANA, and SAP WM, including RF device integration. Training new users, writing procedures and guides. Supervising warehouse process automation, including HMI PLCs integration. Partnering in implementing autonomous projects. Strategic liaison between operations and IT.",
+        "Manage end-to-end delivery and warehouse processes using SAP EWM and WM. Lead integration projects for WMS workflows, RF devices, and warehouse automation. Coordinate AGV initiatives to bridge logistics flows with plant operations. Train teams on SAP procedures and IWS (Integrated Work System) standards.",
       achievements: [
-        "Design and implement automation systems for industrial processes",
-        "Manage and optimize logistics operations and warehouse workflows",
-        "Develop monitoring solutions for electrical and mechanical systems",
-        "Coordinate SAP EWM 100 implementation and optimization",
-        "Ensure compliance with electrical safety standards and regulations",
-        "Collaborate with cross-functional teams to optimize production and logistics processes",
-        "Provide technical support and training for automation and SAP systems",
+        "Manage end-to-end delivery and warehouse processes using SAP EWM and WM",
+        "Lead integration projects for WMS workflows, RF devices, and warehouse automation",
+        "Coordinate AGV initiatives to bridge logistics flows with plant operations",
+        "Train teams on SAP procedures and IWS (Integrated Work System) standards",
       ],
     },
     {
