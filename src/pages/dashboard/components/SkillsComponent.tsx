@@ -7,8 +7,8 @@ import { FaCode } from "react-icons/fa";
 
 const SKILL_GROUP_KEYS = [
   "coreDomains",
-  "engineeringStack",
-  "infrastructureTools",
+  "engineering",
+  "infrastructureAutomation",
 ] as const;
 
 const SkillsComponent: React.FC = () => {

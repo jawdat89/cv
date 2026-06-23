@@ -193,7 +193,7 @@
     },
     "skills": {
       "title": "Skills & Competencies",
-      "intro": "Grouped by domain, engineering stack, and infrastructure."
+      "intro": "Domain knowledge, engineering, and infrastructure—organized around how I work, not a generic developer template."
     },
     "projects": {
       "title": "Featured Projects",
@@ -268,6 +268,8 @@
   },
   "skillCategories": {
     "coreDomains": "Core Domains",
+    "engineering": "Engineering",
+    "infrastructureAutomation": "Infrastructure & Automation",
     "engineeringStack": "Engineering Stack",
     "infrastructureTools": "Infrastructure & Tools",
     "frontend": "Frontend",
@@ -283,7 +285,28 @@
     "erpManagement": "ERP Management"
   },
   "skillGroups": {
-    "coreDomains": ["SAP EWM / S/4HANA", "SAP WM", "Logistics Operations", "ERP Systems", "Process Automation"],
+    "coreDomains": [
+      "SAP EWM / WM",
+      "Warehouse Operations",
+      "ERP Systems",
+      "Process Optimization",
+      "Business Systems"
+    ],
+    "engineering": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      ".NET",
+      "Python",
+      "SQL"
+    ],
+    "infrastructureAutomation": [
+      "Azure",
+      "Docker",
+      "CI/CD",
+      "Industrial Automation",
+      "Control Engineering"
+    ],
     "engineeringStack": ["React", "Node.js", ".NET Core", "TypeScript", "C#", "SQL"],
     "infrastructureTools": ["Azure", "Docker", "CI/CD", "Git", "Supabase", "PostgreSQL"],
     "frontend": ["React", "React Native", "TypeScript", "Angular", "WPF"],

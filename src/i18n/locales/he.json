@@ -193,7 +193,7 @@
     },
     "skills": {
       "title": "מיומנויות ויכולות",
-      "intro": "מקובץ לפי תחום, סטק הנדסי ותשתית."
+      "intro": "ידע תחום, הנדסה ותשתית—מאורגן לפי אופן העבודה שלי, לא תבנית של מפתח גנרי."
     },
     "projects": {
       "title": "פרויקטים נבחרים",
@@ -268,6 +268,8 @@
   },
   "skillCategories": {
     "coreDomains": "תחומי ליבה",
+    "engineering": "הנדסה",
+    "infrastructureAutomation": "תשתית ואוטומציה",
     "engineeringStack": "סטק הנדסי",
     "infrastructureTools": "תשתית וכלים",
     "frontend": "ממשק משתמש",
@@ -283,7 +285,28 @@
     "erpManagement": "ניהול מערכות ERP"
   },
   "skillGroups": {
-    "coreDomains": ["SAP EWM / S/4HANA", "SAP WM", "תפעול לוגיסטי", "מערכות ERP", "אוטומציה של תהליכים"],
+    "coreDomains": [
+      "SAP EWM / WM",
+      "תפעול מחסנים",
+      "מערכות ERP",
+      "אופטימיזציה של תהליכים",
+      "מערכות עסקיות"
+    ],
+    "engineering": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      ".NET",
+      "Python",
+      "SQL"
+    ],
+    "infrastructureAutomation": [
+      "Azure",
+      "Docker",
+      "CI/CD",
+      "אוטומציה תעשייתית",
+      "הנדסת בקרה"
+    ],
     "engineeringStack": ["React", "Node.js", ".NET Core", "TypeScript", "C#", "SQL"],
     "infrastructureTools": ["Azure", "Docker", "CI/CD", "Git", "Supabase", "PostgreSQL"],
     "frontend": ["React", "React Native", "TypeScript", "Angular", "WPF"],

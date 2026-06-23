@@ -193,7 +193,7 @@
     },
     "skills": {
       "title": "المهارات والكفاءات",
-      "intro": "مجمّعة حسب المجال والس stack والبنية التحتية."
+      "intro": "معرفة مجالية وهندسة وبنية تحتية—منظمة حول طريقة عملي الفعلية، وليس قالب مطور عام."
     },
     "projects": {
       "title": "مشاريع مميزة",
@@ -268,6 +268,8 @@
   },
   "skillCategories": {
     "coreDomains": "المجالات الأساسية",
+    "engineering": "الهندسة",
+    "infrastructureAutomation": "البنية التحتية والأتمتة",
     "engineeringStack": "المكدس الهندسي",
     "infrastructureTools": "البنية التحتية والأدوات",
     "frontend": "واجهة المستخدم",
@@ -283,7 +285,28 @@
     "erpManagement": "إدارة أنظمة ERP"
   },
   "skillGroups": {
-    "coreDomains": ["SAP EWM / S/4HANA", "SAP WM", "عمليات لوجستية", "أنظمة ERP", "أتمتة العمليات"],
+    "coreDomains": [
+      "SAP EWM / WM",
+      "عمليات المستودعات",
+      "أنظمة ERP",
+      "تحسين العمليات",
+      "أنظمة الأعمال"
+    ],
+    "engineering": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      ".NET",
+      "Python",
+      "SQL"
+    ],
+    "infrastructureAutomation": [
+      "Azure",
+      "Docker",
+      "CI/CD",
+      "الأتمتة الصناعية",
+      "هندسة التحكم"
+    ],
     "engineeringStack": ["React", "Node.js", ".NET Core", "TypeScript", "C#", "SQL"],
     "infrastructureTools": ["Azure", "Docker", "CI/CD", "Git", "Supabase", "PostgreSQL"],
     "frontend": ["React", "React Native", "TypeScript", "Angular", "WPF"],
